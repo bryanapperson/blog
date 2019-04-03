@@ -21,7 +21,7 @@ disqusShortname = "bryanapperson"
     keywords = "blog,developer,personal"
     info = "Site Reliability Engineer"
     avatarurl = "images/avatar.png"
-    footercontent = "All opinions expressed are my own."
+    footercontent = "As of 4/2/2019 this blog is WIP (migrating from wordpress). All opinions expressed are my own."
 
     hideCredits = false
     hideCopyright = false
