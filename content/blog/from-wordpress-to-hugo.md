@@ -31,7 +31,7 @@ Hugo is lightning fast at rendering pages and simple to use, plus the workflow w
 
 I wanted a pretty fresh start, so I just used WordPress to export XML and then found a script [here](https://gist.github.com/mtik00/75c8f555b49365395e32). Then I modified it for python 3 as follows:
 
-``` python
+```python
 #!/usr/bin/env python3
 """
 This script is used to convert a WordPress XML dump to Hugo-formatted posts.

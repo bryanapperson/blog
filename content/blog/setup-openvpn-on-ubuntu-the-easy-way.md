@@ -4,12 +4,14 @@ date = "2014-11-29 22:38:20"
 tags = ['linux-tutorials', 'openvpn', 'security', 'ssl', 'tunnel', 'ubuntu']
 +++
 
-
-				The best way to setup OpenVPN on Ubuntu, like many other things, is to script it. This way it's easier to create uniform deployment across larger networks. So, this is how you setup OpenVPN on Ubuntu the easy way - this neat little script makes installing OpenVPN on an Ubuntu VPS simple:
+    			The best way to setup OpenVPN on Ubuntu, like many other things, is to script it. This way it's easier to create uniform deployment across larger networks. So, this is how you setup OpenVPN on Ubuntu the easy way - this neat little script makes installing OpenVPN on an Ubuntu VPS simple:
 
 Go to your home directory:
+
 <pre class="lang:default decode:true " title="Go to your home directory">cd ~</pre>
+
 Then create a file by running this command:
+
 <pre class="lang:sh decode:true">cat &gt; openvpn.sh
 #!/usr/bin/env bash
 #
@@ -98,11 +100,14 @@ ok "❯❯❯ service openvpn restart"
 service openvpn restart &gt; /dev/null 2&gt;&amp;1
 ok "❯❯❯ Your client config is available at /etc/openvpn/client.ovpn"
 ok "❯❯❯ All done!"</pre>
+
 Press CTRL+D to save.
 
 Then:
+
 <pre class="lang:default decode:true" title="Execute the Script">chmod 755 openvpn.sh
 ./openvpn.sh</pre>
+
 This simple script will got OpenVPN installed and working on your VM or box easily. OpenVPN is a great way to connect to a work network, remain private, and encrypt your endpoint.
 
 It's simple to run:
@@ -111,4 +116,4 @@ It's simple to run:
 
 In just a few seconds you are all set, the script will automatically install OpenVPN and all the necessary dependencies, configure, and add a new user. Then just connect via SFTP and download the files to connect. Place them in the OpenVPN config directory on Windows or setup the values to match on a linux desktop.
 
-OpenVPN is a very secure tunnel and I highly recommend it. I get near native speed running OpenVPN on a 512MB RAM Ubuntu 14.04 VM.		
+OpenVPN is a very secure tunnel and I highly recommend it. I get near native speed running OpenVPN on a 512MB RAM Ubuntu 14.04 VM.

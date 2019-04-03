@@ -4,8 +4,7 @@ date = "2014-11-07 15:45:47"
 tags = ['kickstarter', 'shotgunr', 'technology', 'travelling']
 +++
 
-
-				ShotgunR, which I wrote about <a title="ShotgunR is The New Way to Shotgun Beer" href="http://bryanapperson.com/blog/shotgunr-new-way-shotgun-beer/">here</a>, is now <a title="ShotgunR -Live on Kickstarter" href="https://www.kickstarter.com/projects/840385497/shotgunr-the-best-way-to-shotgun-beer">live on Kickstarter</a>. ShotgunR is the shotgun shaped shotgunning tool guaranteed to make the perfect hole every time.
+    			ShotgunR, which I wrote about <a title="ShotgunR is The New Way to Shotgun Beer" href="http://bryanapperson.com/blog/shotgunr-new-way-shotgun-beer/">here</a>, is now <a title="ShotgunR -Live on Kickstarter" href="https://www.kickstarter.com/projects/840385497/shotgunr-the-best-way-to-shotgun-beer">live on Kickstarter</a>. ShotgunR is the shotgun shaped shotgunning tool guaranteed to make the perfect hole every time.
 
 [caption id="attachment_613" align="alignnone" width="300"]<a href="http://bryanapperson.com/wp-content/uploads/2014/11/shotgun1.jpg"><img class="size-medium wp-image-613" src="http://bryanapperson.com/wp-content/uploads/2014/11/shotgun1-300x200.jpg" alt="Using ShotgunR" width="300" height="200" /></a> Using ShotgunR[/caption]
 
@@ -19,4 +18,4 @@ Stabbing knives at your hand can be dangerous
 
 ShotgunR is a great idea, and only needs 10k in funding to happen. Back it on Kickstarter today.
 
-http://youtu.be/BD0TcPVm_Fo		
+http://youtu.be/BD0TcPVm_Fo

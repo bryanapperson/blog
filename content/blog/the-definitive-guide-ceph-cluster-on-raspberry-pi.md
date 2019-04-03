@@ -4,8 +4,8 @@ date = "2015-05-13 01:35:35"
 tags = ['arm', 'ceph', 'development', 'ha', 'linux-tutorials', 'rados', 'raspberry-pi', 'technology', 'usb']
 +++
 
+    			A Ceph cluster on Raspberry Pi is an awesome way to create a RADOS home storage solution (NAS) that is highly redundant and low power usage. It's also a low cost way to get into Ceph, which may or may not be the future of storage (software defined storage definitely is as a whole). Ceph on ARM is an interesting idea in and of itself. I built one of these as a development environment (playground) for home.  It can be done on a relatively small budget. Since this was a spur of the moment idea, I purchased everything locally. I opted for the <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 B</a> (for the 4 cores and 1GB of RAM). I'd really recommend going with the Pi 2 B, so you have one core and 256MB RAM for each USB port (potential OSD). In this guide I will outline the parts, software I used and some options that you can use for achieving better performance. This guide assumes you have access to a Linux PC with an SD card reader. It also assumes you have a working knowledge of Linux in general and a passing familiarity with Ceph.
 
-				A Ceph cluster on Raspberry Pi is an awesome way to create a RADOS home storage solution (NAS) that is highly redundant and low power usage. It's also a low cost way to get into Ceph, which may or may not be the future of storage (software defined storage definitely is as a whole). Ceph on ARM is an interesting idea in and of itself. I built one of these as a development environment (playground) for home.  It can be done on a relatively small budget. Since this was a spur of the moment idea, I purchased everything locally. I opted for the <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 B</a> (for the 4 cores and 1GB of RAM). I'd really recommend going with the Pi 2 B, so you have one core and 256MB RAM for each USB port (potential OSD). In this guide I will outline the parts, software I used and some options that you can use for achieving better performance. This guide assumes you have access to a Linux PC with an SD card reader. It also assumes you have a working knowledge of Linux in general and a passing familiarity with Ceph.
 <h2>Parts</h2>
 Although I will explain many options in this guide, this is the minimum you will need to get a cluster up and running, this list assumes 3 Pi nodes.
 <pre class="lang:default decode:true" title="Parts List">3 x 3ft Cat6 Cables
@@ -22,6 +22,7 @@ Raspbian. The testing repository for Raspbian has the many packages of Ceph 0.80
 This command will take a few minutes to complete. Once it does run <span class="lang:default decode:true  crayon-inline ">sync</span> to flush all cache to disk and make sure it is safe to remove the device. You'll then boot up into Raspbian, re-size the image to the full size of your MicroSD, set a memorable password, overclock if you want.
 
 Once this is done there are a few modifications to make. We'll get into this in the installation section below. I don't recommend using too large of a MicroSD as later in this tutorial we will image the whole OS from our first MicroSD for deployment to our other Pi nodes.
+
 <h2>Hardware Limitations</h2>
 The first limitation to consider is overall storage space. Ceph OSD processes require roughly 1MB of RAM per GB of storage. Since we are co-locating monitor processes the effective storage limitation is 512GB per Pi 2 B (4 x 128GB sticks) RAW (before Ceph replication or erasure coding overhead). Network speed is also a factor as discussed later in document. You will hit network speed limitations before you hit the speed limitations of the Pi 2 B's single USB 2.0 bus (480Mbit).
 <h2>Network</h2>
@@ -50,17 +51,26 @@ We've replaced <span class="lang:default decode:true  crayon-inline ">wheezy</sp
 Once this process has completed is time to start getting the OS ready for Ceph. Everything we do in this section up to the point of imaging the OS is needed for nodes that will run Ceph.
 
 First we will create a ceph user and give it password-less sudo access. To do so issue these commands:
+
 <pre class="lang:default decode:true" title="Create a ceph user">ssh user@ceph-server
 sudo useradd -d /home/ceph -m ceph
 sudo passwd ceph</pre>
+
 Set the password to a memorable one as it will be used on all of your nodes in this guide. Now we need to give the ceph user sudo access
+
 <pre class="lang:default decode:true " title="Give the Ceph User Sudo Access">echo "ceph ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ceph
 sudo chmod 0440 /etc/sudoers.d/ceph</pre>
+
 We'll be using ceph-deploy later and it's best to have a defult user to login as all the time. Issue this command:
+
 <pre class="lang:default decode:true " title="Create Directory">mkdir -p ~/.ssh/</pre>
+
 Then create this file using vi:
+
 <pre class="lang:default decode:true " title="Create SSH default config">vi ~/.ssh/config</pre>
+
 I assume 3 nodes in this tutorial and a naming convention of piY, where Y is the node number starting from 1.
+
 <pre class="lang:default decode:true " title="Create ssh config">Host pi1  
    Hostname pi1  
    User ceph  
@@ -70,42 +80,62 @@ Host pi2
 Host pi3  
    Hostname pi3  
    User ceph</pre>
+
 Save the file and exit. As far as hostnames, you can use whatever you want of course. As I mentioned, I run local DNS and DHCP with static assignments. If you do not, you'll need to edit <span class="lang:default decode:true  crayon-inline ">/etc/hosts</span>  so that your nodes can resolve each-other. You can do this after the OS image, as each node will have a different IP.
 
 Now it's time to install the <span class="lang:default decode:true  crayon-inline ">ceph-deploy</span> tool. Raspbian <span class="lang:default decode:true  crayon-inline ">wget</span>  can be strange with HTTPS so we will ignore the certificate (do so at your own peril):
+
 <pre class="lang:default decode:true" title="Create Ceph Repository">wget --no-check-certificate -q -O- 'https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc' | sudo apt-key add -
 echo deb http://ceph.com/debian-firefly/ wheezy main | sudo tee /etc/apt/sources.list.d/ceph.list</pre>
+
 Now that we've added the Ceph repository, we can install ceph-deploy:
+
 <pre class="lang:default decode:true" title="Install Ceph Deploy">sudo apt-get update &amp;&amp; sudo apt-get install ceph-deploy ceph ceph-common</pre>
+
 Since we are installing ceph from the Raspbian repositories, we need to change the default behavior of ceph-deploy:
+
 <pre class="lang:default decode:true" title="Change ceph-deploy a bit">sudo vi /usr/share/pyshared/ceph_deploy/hosts/debian/install.py</pre>
+
 Change
+
 <pre class="lang:default decode:true" title="Default ceph-deploy"> def install(distro, version_kind, version, adjust_repos):  
    codename = distro.codename  
    machine = distro.machine_type</pre>
+
 To
+
 <pre class="lang:default decode:true " title="Updated ceph-deploy"> def install(distro, version_kind, version, adjust_repos):  
    adjust_repos = False
    codename = distro.codename  
    machine = distro.machine_type</pre>
+
 This will prevent ceph-deploy from altering repos as the Ceph armhf (Rasberry Pi's processor type) repos are mostly empty.
 
 Finally, we should revert the contents of <span class="lang:default decode:true  crayon-inline ">/etc/apt/sources.list</span> :
+
 <pre class="lang:default decode:true">sudo vi /etc/apt/sources.list</pre>
+
 You'll see the contents of your sources file. Which will look like this:
+
 <pre class="lang:default decode:true " title="Updated sources.list">deb http://mirrordirector.raspbian.org/raspbian/ testing main contrib non-free rpi
 # Uncomment line below then 'apt-get update' to enable 'apt-get source'
 #deb-src http://archive.raspbian.org/raspbian/ testing main contrib non-free rpi</pre>
+
 Modify it to look like this:
+
 <pre class="lang:default decode:true" title="Updated sources.list">deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
 # Uncomment line below then 'apt-get update' to enable 'apt-get source'
 #deb-src http://archive.raspbian.org/raspbian/ wheezy main contrib non-free rpi
 </pre>
+
 &nbsp;
 
 We've replaced <span class="lang:default decode:true  crayon-inline">testing</span>  with <span class="lang:default decode:true  crayon-inline">wheezy</span> .Once this is done, then issue this command:
+
 <pre class="lang:default decode:true" title="Update apt and upgrade Raspbian to testing">sudo apt-get update</pre>
+
 &nbsp;
+
 <h2>Kernel Tweaks</h2>
 We are also going to tweak some kernel parameters for better stability. To do so we will edit <span class="lang:default decode:true  crayon-inline ">/etc/sysctl.conf</span> .
 <pre class="lang:default decode:true" title="Edit sysctl.conf">vi /etc/sysctl.conf</pre>
@@ -127,6 +157,7 @@ Repeat this for a many nodes as you intend to deploy.
 Insert your ceph-pi MicroSD cards into your Pi nodes and power them all on. You've made it this far, now it's time to get "cephy". Deploying with ceph-deploy is a breeze. First we need to SSH to our admin node, make sure you have setup IPs, network and <span class="lang:default decode:true  crayon-inline">/etc/hosts</span> on all Pi nodes if you are not using local DNS and DHCP with static assignments.
 
 We need to generate and distribute an SSH key for password-less authentication between nodes. To do so run (leave the password blank):
+
 <pre class="lang:default decode:true" title="Generate an SSH key">ssh-keygen
 Generating public/private key pair.
 Enter file in which to save the key (/ceph-client/.ssh/id_rsa):
@@ -134,13 +165,17 @@ Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 Your identification has been saved in /ceph-client/.ssh/id_rsa.
 Your public key has been saved in /ceph-client/.ssh/id_rsa.pub.</pre>
+
 Now copy the key to all nodes (assuming 3 with the naming convention from above):
+
 <pre class="lang:default decode:true " title="Copy SSH Key">ssh-copy-id ceph@pi1  
 ssh-copy-id ceph@pi2  
 ssh-copy-id ceph@pi3</pre>
+
 You will be prompted for the password you created for the ceph user each time to establish initial authentication.
 
 Once that is done and you are connected to your admin node (1st node in the cluster) as the <span class="lang:default decode:true  crayon-inline">pi</span> user you'll want to create an admin node directory:
+
 <pre class="lang:default decode:true " title="Create directory for ceph-deploy and cd to it">mkdir -p ~/ceph-pi-cluster
 cd ~/ceph-pi-cluster</pre>
 <h3>Creating an initial Ceph Configuration</h3>
@@ -182,33 +217,39 @@ After the existing lines add:
   osd heartbeat grace = 8
 
 [mon]
-  mon compact on start = true
-  mon osd down out subtree_limit = host
+mon compact on start = true
+mon osd down out subtree_limit = host
 
 [osd]
-  # Filesystem Optimizations
-  osd journal size = 1024
 
-  # Performance tuning
-  max open files = 327680
-  osd op threads = 2
-  filestore op threads = 2
-  
-  #Capacity Tuning
-  osd backfill full ratio = 0.95
-  mon osd nearfull ratio = 0.90
-  mon osd full ratio = 0.95
+# Filesystem Optimizations
 
-  # Recovery tuning
-  osd recovery max active = 1
-  osd recovery max single start = 1
-  osd max backfills = 1
-  osd recovery op priority = 1
+osd journal size = 1024
 
-  # Optimize Filestore Merge and Split
-  filestore merge threshold = 40
-  filestore split multiple = 8</pre>
+# Performance tuning
+
+max open files = 327680
+osd op threads = 2
+filestore op threads = 2
+
+#Capacity Tuning
+osd backfill full ratio = 0.95
+mon osd nearfull ratio = 0.90
+mon osd full ratio = 0.95
+
+# Recovery tuning
+
+osd recovery max active = 1
+osd recovery max single start = 1
+osd max backfills = 1
+osd recovery op priority = 1
+
+# Optimize Filestore Merge and Split
+
+filestore merge threshold = 40
+filestore split multiple = 8</pre>
 &nbsp;
+
 <h3>Creating Initial Monitors</h3>
 Now we can deploy our spiffy ceph.conf, create our initial monitor daemons, deploy our authentication keyring and chmod it as needed. We will be deploying to all 3 nodes for the purposes of this guide:
 <pre class="lang:default decode:true" title="Create initial monitors and deploy admin keyring">ceph-deploy mon create-initial
@@ -224,8 +265,11 @@ So let's deploy our OSDs. Once our USBs are plugged in, use <span class="lang:de
 Create a new partition table, write it to disk and exit. Do this for each OSD on each node. You can craft a bash <span class="lang:default decode:true  crayon-inline ">for</span>  loop if you are feeling "bashy" or programmatic.
 
 Once all OSD drives have a fresh partition table you can use ceph-deploy to create your OSDs (using BTRFS for this guide) where pi1 is our present node and /dev/sda is the OSD we are creating:
+
 <pre class="lang:default decode:true" title="Deploy OSD with BTRFS Filesytem">ceph-deploy osd create --fs-type btrfs pi1:/dev/sda</pre>
+
 Repeat this for all OSD drives on all nodes (or write a for loop). Once you've created at least 3 you are ready to move on.
+
 <h2>Checking Cluster Health</h2>
 Congratulations! You should have a working Ceph-Pi cluster. Trust, but verify. Get the health status of your cluster using this command:
 <pre class="lang:default decode:true" title="Ceph Status">ceph -s</pre>
@@ -238,4 +282,4 @@ http://millibit.blogspot.com/2014/12/ceph-pi-installing-ceph-on-raspberry-pi.htm
 
 http://ceph.com/docs/v0.80.5/start/
 
-https://www.raspberrypi.org/		
+https://www.raspberrypi.org/

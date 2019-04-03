@@ -4,8 +4,8 @@ date = "2014-09-02 00:44:21"
 tags = ['development', 'hhvm', 'mariadb', 'nginx', 'ubuntu', 'wordpress']
 +++
 
+    			HHVM, MariaDB and Nginx Make WordPress fly (seriously). This site is running on what may the fastest possible software stack for WordPress. That stack is HHVM, MariaDB 10.1, Nginx and Ubuntu 14.04. As you are browsing this site you may notice that it is graphically intensive. It also leverages many CPU hungry plugins that would make it take 6-10 seconds to load on even good shared hosting. With this aforementioned software stack pages up to 5MB on this site still load in under a second, end-user pipe permitting. This is all happening on a VPS with 2 x 2.26Ghz cores and 2GB of RAM. Not only that but this stack can serve over 1000 2MB WordPress pages per second without losing stability:
 
-				HHVM, MariaDB and Nginx Make WordPress fly (seriously). This site is running on what may the fastest possible software stack for WordPress. That stack is HHVM, MariaDB 10.1, Nginx and Ubuntu 14.04. As you are browsing this site you may notice that it is graphically intensive. It also leverages many CPU hungry plugins that would make it take 6-10 seconds to load on even good shared hosting. With this aforementioned software stack pages up to 5MB on this site still load in under a second, end-user pipe permitting. This is all happening on a VPS with 2 x 2.26Ghz cores and 2GB of RAM. Not only that but this stack can serve over 1000 2MB WordPress pages per second without losing stability:
 <h2>AB BenchMark</h2>
 <pre class="lang:sh decode:true" title="AB Benchmark for this Site">[user@host ~]# ab -c 50 -n 5000 http://bryanapperson.com/
 This is ApacheBench, Version 2.3 &lt;$Revision: 655654 $&gt;
@@ -25,43 +25,43 @@ Completed 4500 requests
 Completed 5000 requests
 Finished 5000 requests
 
+Server Software: nginx
+Server Hostname: bryanapperson.com
+Server Port: 80
 
-Server Software:        nginx
-Server Hostname:        bryanapperson.com
-Server Port:            80
+Document Path: /
+Document Length: 16138 bytes
 
-Document Path:          /
-Document Length:        16138 bytes
-
-Concurrency Level:      50
-Time taken for tests:   3.916 seconds
-Complete requests:      5000
-Failed requests:        0
-Write errors:           0
-Total transferred:      83046606 bytes
-HTML transferred:       80706138 bytes
-Requests per second:    1276.68 [#/sec] (mean)
-Time per request:       39.164 [ms] (mean)
-Time per request:       0.783 [ms] (mean, across all concurrent requests)
-Transfer rate:          20707.77 [Kbytes/sec] received
+Concurrency Level: 50
+Time taken for tests: 3.916 seconds
+Complete requests: 5000
+Failed requests: 0
+Write errors: 0
+Total transferred: 83046606 bytes
+HTML transferred: 80706138 bytes
+Requests per second: 1276.68 [#/sec](mean)
+Time per request: 39.164 [ms](mean)
+Time per request: 0.783 [ms] (mean, across all concurrent requests)
+Transfer rate: 20707.77 [Kbytes/sec] received
 
 Connection Times (ms)
-              min  mean[+/-sd] median   max
-Connect:        1    1   0.2      1       5
-Processing:    12   38   8.1     37      88
-Waiting:       11   37   8.1     36      87
-Total:         14   39   8.1     38      89
+min mean[+/-sd] median max
+Connect: 1 1 0.2 1 5
+Processing: 12 38 8.1 37 88
+Waiting: 11 37 8.1 36 87
+Total: 14 39 8.1 38 89
 
 Percentage of the requests served within a certain time (ms)
-  50%     38
-  66%     41
-  75%     43
-  80%     44
-  90%     49
-  95%     54
-  98%     60
-  99%     66
- 100%     89 (longest request)</pre>
+50% 38
+66% 41
+75% 43
+80% 44
+90% 49
+95% 54
+98% 60
+99% 66
+100% 89 (longest request)</pre>
+
 <h2>Pingdom Test</h2>
 [stag_image style="no-filter" src="http://bryanapperson.com/wp-content/uploads/2014/09/pingdom.png" alignment="none" url=""]
 <h2>Why HHVM for WordPress?</h2>
@@ -74,6 +74,7 @@ So you may be asking yourself, is that really possible? Yes, HHVM and WordPress 
 Choosing Ubuntu 14.04 for this deployment made sense, because it is LTS (5 years of support) and apt-get makes it almost trivial to get all of this setup. Not to mention that Ubuntu is a stable OS (although I usually prefer CentOS/RHEL). Nginx is built into the native repos for Ubuntu 14.04 and having maintained repos for both HHVM and MariaDB with Ubuntu 14.04 makes this stack easy to update later on. If you need an Ubuntu VPS you can get one for $5 <a title="Ubuntu VM for $5" href="https://www.bitronictech.net/ubuntu-vps-hosting.php">here</a>.
 
 Before you get started with this you will probably want to <a title="Secure Your Ubuntu VPS" href="http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/">secure your Ubuntu VPS</a>.
+
 <h2>WordPRess 3.9.2</h2>
 This series of articles will show you how to set all of this up and make it work with both a WordPress multi-site network, and a single WordPress site. I used the multi-site network with WP MU Domain Mapper and Nginx helper for ease of moving my multiple blogs and family/friends WordPress sites on to one platform. We will also be leveraging <a title="W3 Total Cache" href="https://wordpress.org/plugins/w3-total-cache/" target="_blank">W3 Total Cache</a> and APC (which is built in to HHVM) for Opcode caching.
 <h2>Concluding the Introduction</h2>
@@ -89,4 +90,4 @@ Part 1 - HHVM, MariaDB and Nginx Make WordPress Fly - Intro
 
 <a title="Install HHVM, Nginx on Ubuntu 14.04 – Make WordPress Fly" href="http://bryanapperson.com/blog/install-hhvm-nginx-ubuntu-14-04-make-wordpress-fly/">Part 3 - Install HHVM, Nginx on Ubuntu 14.04 - Make WordPress Fly</a>
 
-The other parts are still in the works. In the meantime, thanks for reading - leave your thoughts in the comments below.		
+The other parts are still in the works. In the meantime, thanks for reading - leave your thoughts in the comments below.

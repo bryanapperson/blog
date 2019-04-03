@@ -4,8 +4,8 @@ date = "2015-08-25 20:19:44"
 tags = ['ceph', 'disk-testing', 'io', 'journal', 'linux-tutorials', 'osd']
 +++
 
+    			Ceph raw disk performance testing is something you should not overlook when architecting a ceph cluster. When choosing media for use as a journal or OSD in a Ceph cluster, determining the raw IO characteristics of the disk when used in the same way ceph will use the disk is of tantamount importance before tens, hundreds or thousands of disks are purchased. The point of this article is to briefly discuss how ceph handles IO. One important point is to estimate the deviation caused by ceph between RAW IOs from disk and ceph IOs.
 
-				Ceph raw disk performance testing is something you should not overlook when architecting a ceph cluster. When choosing media for use as a journal or OSD in a Ceph cluster, determining the raw IO characteristics of the disk when used in the same way ceph will use the disk is of tantamount importance before tens, hundreds or thousands of disks are purchased. The point of this article is to briefly discuss how ceph handles IO. One important point is to estimate the deviation caused by ceph between RAW IOs from disk and ceph IOs.
 <h2>TESTING &amp; GRAPHING WITH FIO</h2>
 For this article I assume you are aware of <a href="https://github.com/axboe/fio">FIO</a>. You will need FIO and GNUPlot installed to run these tests. I have developed an automation tool in my spare time for writing these tests. You can find it here: <a href="https://github.com/bitronictech/ceph-disk-test">Ceph-Disk-Test</a>
 
@@ -16,6 +16,7 @@ The automation produces a nice graphs like this:
 <a href="http://bryanapperson.com/wp-content/uploads/2015/08/150825-1901-osd-4m-samsung-iops.png"><img class="alignnone size-full wp-image-738" src="http://bryanapperson.com/wp-content/uploads/2015/08/150825-1901-osd-4m-samsung-iops.png" alt="Ceph Raw Disk Performance Testing OSD IOPS 4M" width="1920" height="1080" /></a> <a href="http://bryanapperson.com/wp-content/uploads/2015/08/150825-1901-osd-4m-samsung-clat.png"><img class="alignnone size-full wp-image-739" src="http://bryanapperson.com/wp-content/uploads/2015/08/150825-1901-osd-4m-samsung-clat.png" alt="Ceph Raw Disk Performance Testing OSD clat 4M" width="1920" height="1080" /></a> <a href="http://bryanapperson.com/wp-content/uploads/2015/08/150825-1901-osd-4m-samsung-lat.png"><img class="alignnone size-full wp-image-740" src="http://bryanapperson.com/wp-content/uploads/2015/08/150825-1901-osd-4m-samsung-lat.png" alt="Ceph Raw Disk Performance Testing OSD lat 4M" width="1920" height="1080" /></a> <a href="http://bryanapperson.com/wp-content/uploads/2015/08/150825-1901-osd-4m-samsung-slat.png"><img class="alignnone size-full wp-image-741" src="http://bryanapperson.com/wp-content/uploads/2015/08/150825-1901-osd-4m-samsung-slat.png" alt="Ceph Raw Disk Performance Testing OSD slat 4M" width="1920" height="1080" /></a> <a href="http://bryanapperson.com/wp-content/uploads/2015/08/150825-1901-osd-4m-samsung-bw.png"><img class="alignnone size-full wp-image-742" src="http://bryanapperson.com/wp-content/uploads/2015/08/150825-1901-osd-4m-samsung-bw.png" alt="Ceph Raw Disk Performance Testing OSD BW 4M" width="1920" height="1080" /></a>
 
 <a href="https://drive.google.com/file/d/0B_jveeQ1rgGPT1o3ZXE0VUU4MHM">Example test run raw data from a Samsung Extreme USB stick</a>
+
 <h2>Journal IO</h2>
 Journal IO in Ceph uses O_DIRECT and D_SYNC flags. Journals write with an IO Depth of 1 (1 IO at a time). However if you colocate multiple journals you should increase your IO depth to the number of journals you plan to colocate on the drive. Here is an example FIO test for testing journal performance on a disk:
 <pre class="lang:default decode:true" title="Journal Test Example">[global]
@@ -109,4 +110,4 @@ FIO Howto:
 
 Ceph IO, The Bad:
 
-<a class="external-link" href="http://www.sebastien-han.fr/blog/2014/02/17/ceph-io-patterns-the-bad/" rel="nofollow">http://www.sebastien-han.fr/blog/2014/02/17/ceph-io-patterns-the-bad/</a>		
+<a class="external-link" href="http://www.sebastien-han.fr/blog/2014/02/17/ceph-io-patterns-the-bad/" rel="nofollow">http://www.sebastien-han.fr/blog/2014/02/17/ceph-io-patterns-the-bad/</a>
