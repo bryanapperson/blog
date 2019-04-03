@@ -28,6 +28,8 @@ disqusShortname = "bryanapperson"
 
 [taxonomies]
     series = "series"
+    tags = "tags"
+    categories = "categories"
 
 [[params.social]]
     name = "Bryan Apperson's Github"
