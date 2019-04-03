@@ -13,6 +13,7 @@ Ceph OSD performance characteristics are one of the most important consideration
 Optimal Ceph OSD performance can reduce the capital expense and operational expense of meeting deployment requirements for a Ceph storage cluster. There are many considerations and best practices when deploying a Ceph/RADOS cluster which can enhance performance and stability. Many of those, such as kernel optimizations, network stack optimizations, choice of hardware and Ceph tuning parameters are outside the scope of this article. For those interested in other performance enhancement vectors for Ceph deployments, some were covered at the [Ceph ATL Kick-Off Meetup](http://www.meetup.com/Ceph-ATL/events/225907717/), and many can be found in the [Red Hat/Supermicro Ceph reference architecture document](https://www.redhat.com/en/files/resources/en-rhst-cephstorage-supermicro-INC0270868_v2_0715.pdf). However, perhaps obviously, the interface to backing storage block devices is integral in determining the performance of a RADOS cluster. The most widely used deployment is with the OSD filestore backend and the XFS filesystem. There are interesting developments in Ceph Jewel, namely the bluestore backend which may change that.
 
 ## Ceph OSD Backends
+
 As of the Ceph Jewel release there will be multiple backends which can be used for Ceph OSDs. This article covers filestore, bluestore and memstore.
 
 ### Filestore
@@ -22,6 +23,7 @@ At present filestore is the de-facto backend for production Ceph clusters. With 
 One of the largest drawbacks with the OSD filestore backend is the fact that all data is written twice, through the journal and then to the backing data partition. This essentially cuts the write performance of an OSD with co-located journal and data in twain. This has resulted in many deployments using dedicated solid state block devices split up into multiple partitions for journals. Many deployments use a 4:1 or 5:1 ratio for journals to SSD an disk. This requires the use of additional drive bays and increases the cost to performance ratio significantly.
 
 Filestore is the only backend bench-marked in this article.
+
 #### Filesystems
 
 The Ceph filestore OSD backend supports XFS, BTRFS and EXT4 filesystems. The documentation presently recommends XFS for use in production, and BTRFS for testing and development environments. Below is a comparison of Ceph OSD performance for these three filesystems. But before going into Ceph OSD performance, a feature comparison is useful.
@@ -40,14 +42,13 @@ The Ceph filestore OSD backend supports XFS, BTRFS and EXT4 filesystems. The doc
 
 ### Bluestore
 
-\[caption id="attachment\_834" align="alignleft" width="427"\][![Ceph OSD Bluestore](http://bryanapperson.com/wp-content/uploads/2016/04/ceph-osd-bluestore.png)](http://bryanapperson.com/wp-content/uploads/2016/04/ceph-osd-bluestore.png) Ceph OSD Bluestore Architecture\[/caption\] Bluestore is set to release for experimental use in Jewel. The benefits of Bluestore are a direct to block OSD, without filesystem overhead or the need for a "double-write" penalty (associated with the filestore journal). Bluestore utilizes RocksDB, which stores object metadata, a write ahead log, Ceph omap data and allocator metadata. Bluestore can have 2-3 partitions per, one for RocksDB, one for RocksDB WAL and one for OSD data (un-formatted - direct to block). Due to time constraints on the presentation, and the lack of a Ceph Jewel build for Fedora 23. I may follow this up with a comparison of the best performing filestore backend on RHEL7 and Ceph bluestore. RocksDB and RocksDB WAL can be placed on the same partition. For the tests below both RocksDB and OSD data were colocated on the same physical disk for an apples-to-apples comparison with a co-located filestore backend. A great in depth explanation of the OSD bluestore backend is available [here](http://www.sebastien-han.fr/blog/2016/03/21/ceph-a-new-store-is-coming/).
+\[caption id="attachment_834" align="alignleft" width="427"\][![Ceph OSD Bluestore](http://bryanapperson.com/wp-content/uploads/2016/04/ceph-osd-bluestore.png)](http://bryanapperson.com/wp-content/uploads/2016/04/ceph-osd-bluestore.png) Ceph OSD Bluestore Architecture\[/caption\] Bluestore is set to release for experimental use in Jewel. The benefits of Bluestore are a direct to block OSD, without filesystem overhead or the need for a "double-write" penalty (associated with the filestore journal). Bluestore utilizes RocksDB, which stores object metadata, a write ahead log, Ceph omap data and allocator metadata. Bluestore can have 2-3 partitions per, one for RocksDB, one for RocksDB WAL and one for OSD data (un-formatted - direct to block). Due to time constraints on the presentation, and the lack of a Ceph Jewel build for Fedora 23. I may follow this up with a comparison of the best performing filestore backend on RHEL7 and Ceph bluestore. RocksDB and RocksDB WAL can be placed on the same partition. For the tests below both RocksDB and OSD data were colocated on the same physical disk for an apples-to-apples comparison with a co-located filestore backend. A great in depth explanation of the OSD bluestore backend is available [here](http://www.sebastien-han.fr/blog/2016/03/21/ceph-a-new-store-is-coming/).
 
 ### MEMSTORE
 
 Memstore is an available backend for Ceph. However, it should never be used in production due to the obvious volatility of memory. Steps for enabling memstore can be found [here](http://www.sebastien-han.fr/blog/2014/04/03/ceph-memstore-backend/). Due to the fact that memstore is not a serious backend for production use, no performance tests were run with it.
 
-Ceph OSD PERFORMANCE TEST METHOD
---------------------------------
+## Ceph OSD PERFORMANCE TEST METHOD
 
 This section covers how the performance tests in this article were executed, the environment and overall method. Since this article is strictly about OSD backends and filesystems, all tests were executed on a single machine to eliminate network related variance. Journal partitions (for the filestore backend) were co-located on the same physical disks as the data partitions.
 
@@ -55,11 +56,11 @@ This section covers how the performance tests in this article were executed, the
 
 All performance tests in this article were performed using Ceph Hammer. The specifications for the test machine are as follows:
 
-*   CPU: Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
-*   RAM: 32GB DDR4 2133 MHz
-*   OSDs: 5 x  Seagate ST2000DM001 2TB
-*   OS: Fedora 23
-*   OS Drive: 2 x Samsung 850 Pro SSD (BTRFS RAID1)
+- CPU: Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+- RAM: 32GB DDR4 2133 MHz
+- OSDs: 5 x  Seagate ST2000DM001 2TB
+- OS: Fedora 23
+- OS Drive: 2 x Samsung 850 Pro SSD (BTRFS RAID1)
 
 The OSD Performance Test Rig\[/caption\] The test environment was my personal desktop system. The OSD hard drives are consumer grade Seagate drives. Block device/drive type has a huge impact on the performance of a Ceph storage cluster, these 7200 RPM SATA III drives were used for all tests in this article. To more on how to test the raw performance characteristics of a physical drive for use as a OSD journal, data or co-located journal/data device see this [github repo](https://github.com/bryanapperson/ceph-disk-test). This test cluster was a single monitor, single node "cluster". The SATA controller was on-board ASM1062 and nothing fancy like an LSI-2308. There was a PCIe "cache tier" present with 2 M2 form factor SSDs as OSDs, although those were unused in these tests. The test machine was running kernel 4.3.3-300.
 
@@ -73,7 +74,7 @@ The build-in rados bench command was used for all performance metrics in this a
 
 ### Ceph OSD Performance Test Results
 
-Note: Take the random read speeds with a grain of salt. Even with running echo 3 > /proc/sys/vm/drop\_caches in between benchmarks, randomly read objects may have already been stored in memory.
+Note: Take the random read speeds with a grain of salt. Even with running echo 3 > /proc/sys/vm/drop_caches in between benchmarks, randomly read objects may have already been stored in memory.
 
 ```bash
 *   XFS:
