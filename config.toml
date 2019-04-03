@@ -22,26 +22,12 @@ disqusShortname = "bryanapperson"
     info = "Site Reliability Engineer"
     avatarurl = "images/avatar.png"
     footercontent = "As of 4/2/2019 this blog is WIP (migrating from wordpress). All opinions expressed are my own."
-
-    hideCredits = false
-    hideCopyright = false
-
-    # Git Commit in Footer, uncomment the line below to enable it.
-    commit = "https://github.com/bryanapperson/blog/tree/"
-
+    hidecredits = false
+    hidecopyright = false
     rtl = false
 
-    # Use inverted colors
-    inverted = false
-
-    # Series see also post count
-    maxSeeAlsoItems = 5
-
-    # Custom CSS
-    custom_css = []
-
 [taxonomies]
-  series = "series"
+    series = "series"
 
 [[params.social]]
     name = "Bryan Apperson's Github"
