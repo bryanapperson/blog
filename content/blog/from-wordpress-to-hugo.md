@@ -13,6 +13,7 @@ categories = [
     "Development"
 ]
 series = ["Hugo"]
+
 +++
 
 {{< figure src="/images/hugo-logo-wide.svg" caption="Hugo static blogs are awesome" >}}
@@ -152,11 +153,15 @@ if __name__ == '__main__':
     convert_wp_xml(sys.argv[1])
 ```
 
-I still need to manually sift through and fix images and curate the older posts.
+I ~~still need to manually sift through and fix images and curate the older posts~~ have now updated all of the older posts.
 
 ## Github Pages
 
-I chose github pages because I already have a github account and the workflow seemed good. Plus there is an easy way I plan to automate publishing master using travis-ci in the near future. I followed the [Hugo docs](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch), using the gh-pages branch based workflow. The repo for this blog now lives [here](https://github.com/bryanapperson/blog).
+I chose github pages because I already have a github account and the workflow seemed good. Plus there is an easy way I ~~plan to automate publishing master using travis-ci in the near future~~ have automated publishing. I followed the [Hugo docs](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch), using the gh-pages branch based workflow. The repo for this blog now lives [here](https://github.com/bryanapperson/blog).
+
+## Travis CI
+
+I adapted this [guide on Travis CI and Hugo](https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/) to automate the build and publish of my blog to github pages. It is pretty straightforward and I highly recommend it.
 
 ## Conclusion
 
