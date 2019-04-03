@@ -1,7 +1,6 @@
 +++
 title = "				MariaDB 10.1 Setup for Ubuntu 14.04 - Make WordPress Fly		"
 date = "2014-09-02 04:17:29"
-type = "post"
 tags = ['configure', 'development', 'install', 'mariadb', 'secure', 'setup', 'ubuntu-14-04']
 +++
 

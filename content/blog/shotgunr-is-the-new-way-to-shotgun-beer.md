@@ -1,7 +1,6 @@
 +++
 title = "				ShotgunR is The New Way to Shotgun Beer		"
 date = "2014-10-17 15:30:44"
-type = "post"
 tags = ['travelling']
 +++
 

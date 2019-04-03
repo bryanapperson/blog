@@ -1,7 +1,6 @@
 +++
 title = "				ShotgunR is Now Live on Kickstarter		"
 date = "2014-11-07 15:45:47"
-type = "post"
 tags = ['kickstarter', 'shotgunr', 'technology', 'travelling']
 +++
 

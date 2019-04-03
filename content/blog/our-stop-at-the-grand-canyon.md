@@ -1,7 +1,6 @@
 +++
 title = "				Our Stop at The Grand Canyon		"
 date = "2013-11-01 23:07:44"
-type = "post"
 tags = ['travelling']
 +++
 

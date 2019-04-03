@@ -1,7 +1,6 @@
 +++
 title = "				A SimpleBiped with an RTOS on an Arduino Mini		"
 date = "2015-04-09 20:48:42"
-type = "post"
 tags = ['arduino', 'biped', 'c', 'development', 'object-detection', 'rtos', 'technology']
 +++
 

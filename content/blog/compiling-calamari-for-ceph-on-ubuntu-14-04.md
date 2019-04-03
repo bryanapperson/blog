@@ -1,7 +1,6 @@
 +++
 title = "				Compiling Calamari for Ceph on Ubuntu 14.04		"
 date = "2014-09-10 10:45:37"
-type = "post"
 tags = ['calamari', 'ceph', 'development', 'linux-tutorials', 'technology', 'ubuntu-14-04']
 +++
 

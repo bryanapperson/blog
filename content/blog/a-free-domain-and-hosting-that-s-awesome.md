@@ -1,7 +1,6 @@
 +++
 title = "				A Free Domain and Hosting That's Awesome		"
 date = "2015-01-18 01:17:29"
-type = "post"
 tags = ['bitronictech', 'coupon', 'development', 'free-domain', 'hosting']
 +++
 

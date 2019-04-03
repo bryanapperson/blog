@@ -1,7 +1,6 @@
 +++
 title = "				Installing WordPress with Nginx on Ubuntu 14.04		"
 date = "2014-09-10 00:16:31"
-type = "post"
 tags = ['install', 'linux-tutorials', 'nginx', 'ubuntu', 'ubuntu-14-04', 'wordpress']
 +++
 

@@ -1,7 +1,6 @@
 +++
 title = "				Ceph Raw Disk Performance Testing		"
 date = "2015-08-25 20:19:44"
-type = "post"
 tags = ['ceph', 'disk-testing', 'io', 'journal', 'linux-tutorials', 'osd']
 +++
 
