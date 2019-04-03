@@ -1,7 +1,6 @@
 +++
 title = "				Mounting RBD at Boot Under CentOS 7		"
 date = "2015-04-08 10:05:45"
-type = "post"
 tags = ['centos7', 'ceph', 'linux-tutorials', 'rbd', 'rhel', 'systemd']
 +++
 

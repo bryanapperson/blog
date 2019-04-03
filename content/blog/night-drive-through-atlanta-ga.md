@@ -1,7 +1,6 @@
 +++
 title = "				Night Drive Through Atlanta, GA		"
 date = "2015-03-20 00:14:33"
-type = "post"
 tags = ['atlanta', 'georgia', 'road-trip', 'travelling']
 +++
 

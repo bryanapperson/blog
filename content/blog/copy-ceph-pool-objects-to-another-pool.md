@@ -1,7 +1,6 @@
 +++
 title = "				Copy Ceph Pool Objects to Another Pool		"
 date = "2015-11-17 23:06:18"
-type = "post"
 tags = ['ceph', 'development', 'linux-tutorials', 'python', 'rados']
 +++
 

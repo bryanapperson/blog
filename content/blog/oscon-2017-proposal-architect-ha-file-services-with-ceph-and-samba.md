@@ -1,7 +1,6 @@
 +++
 title = "				OSCON 2017 Proposal: Architect HA File Services With Ceph and Samba		"
 date = "2016-10-26 00:43:53"
-type = "post"
 tags = ['ceph', 'development', 'file-services', 'high-availibility', 'linux-tutorials', 'oscon', 'samba']
 +++
 

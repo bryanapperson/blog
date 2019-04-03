@@ -1,7 +1,6 @@
 +++
 title = "				Ceph OSD Performance: Backends and Filesystems		"
 date = "2016-04-12 04:40:48"
-type = "post"
 tags = ['atlanta', 'bluestore', 'btrfs', 'ceph', 'meetup', 'osd', 'performance', 'technology', 'xfs']
 +++
 

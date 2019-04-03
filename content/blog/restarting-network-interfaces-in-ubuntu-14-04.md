@@ -1,7 +1,6 @@
 +++
 title = "				Restarting Network Interfaces In Ubuntu 14.04		"
 date = "2015-04-14 22:46:09"
-type = "post"
 tags = ['linux-tutorials', 'networking', 'ubuntu', 'ubuntu-14-04']
 +++
 

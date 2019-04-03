@@ -1,7 +1,6 @@
 +++
 title = "				Install HHVM, Nginx on Ubuntu 14.04 - Make WordPress Fly		"
 date = "2014-09-02 14:28:55"
-type = "post"
 tags = ['development', 'hhvm', 'install', 'nginx', 'setup', 'ubuntu']
 +++
 

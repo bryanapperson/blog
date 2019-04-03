@@ -1,7 +1,6 @@
 +++
 title = "				HHVM, MariaDB and Nginx Make WordPress Fly - Intro		"
 date = "2014-09-02 00:44:21"
-type = "post"
 tags = ['development', 'hhvm', 'mariadb', 'nginx', 'ubuntu', 'wordpress']
 +++
 

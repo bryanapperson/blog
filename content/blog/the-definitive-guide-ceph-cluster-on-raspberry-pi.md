@@ -1,7 +1,6 @@
 +++
 title = "				The Definitive Guide: Ceph Cluster on Raspberry Pi		"
 date = "2015-05-13 01:35:35"
-type = "post"
 tags = ['arm', 'ceph', 'development', 'ha', 'linux-tutorials', 'rados', 'raspberry-pi', 'technology', 'usb']
 +++
 
@@ -188,7 +187,6 @@ After the existing lines add:
 
 [osd]
   # Filesystem Optimizations
-  osd mkfs type = btrfs
   osd journal size = 1024
 
   # Performance tuning

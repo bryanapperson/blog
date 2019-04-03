@@ -1,7 +1,6 @@
 +++
 title = "				Configure Nginx/HHVM for WP - Making WordPress Fly		"
 date = "2014-09-27 08:02:29"
-type = "post"
 tags = ['development', 'linux-tutorials']
 +++
 

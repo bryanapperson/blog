@@ -1,7 +1,6 @@
 +++
 title = "				Getting Started with an Ubuntu VPS Running 14.04		"
 date = "2014-09-01 22:43:23"
-type = "post"
 tags = ['linux-tutorials']
 +++
 

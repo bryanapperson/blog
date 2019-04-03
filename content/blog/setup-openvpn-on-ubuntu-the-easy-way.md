@@ -1,7 +1,6 @@
 +++
 title = "				Setup OpenVPN on Ubuntu the Easy Way		"
 date = "2014-11-29 22:38:20"
-type = "post"
 tags = ['linux-tutorials', 'openvpn', 'security', 'ssl', 'tunnel', 'ubuntu']
 +++
 

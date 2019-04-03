@@ -1,7 +1,6 @@
 +++
 title = "				A Trip to Acoma Pueblo		"
 date = "2014-09-01 18:55:41"
-type = "post"
 tags = ['acoma', 'new-mexico', 'pueblo', 'travelling']
 +++
 

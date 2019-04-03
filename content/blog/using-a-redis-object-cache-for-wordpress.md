@@ -1,7 +1,6 @@
 +++
 title = "				Using a Redis Object Cache for WordPress		"
 date = "2015-02-27 06:05:41"
-type = "post"
 tags = ['hhvm', 'linux-tutorials', 'object-cache', 'redis', 'wordpress']
 +++
 
