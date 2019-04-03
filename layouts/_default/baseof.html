@@ -2,7 +2,10 @@
 <html lang="{{ .Site.LanguageCode }}">
 
   <head>
-    
+
+      <!-- @todo 30m/DEV Figure out how to make any page without
+          a front matter image use an image here. -->
+      // @todo #[issue#]<:[time]></[role]> <>
 {{- if eq .Kind "taxonomyTerm" }}
   {{- range $key, $value := .Data.Terms.ByCount }}
     {{- $.Scratch.Add "most_used" (slice $value.Name) }}
