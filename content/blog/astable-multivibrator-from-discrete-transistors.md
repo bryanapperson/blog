@@ -1,12 +1,12 @@
 +++
-title = "				Astable Multivibrator from Discrete Transistors		"
-date = "2016-01-24 23:34:29"
-type = "post"
+title = "Astable Multivibrator from Discrete Transistors"
+date = "2016-01-24"
+katex = "true"
+type = "blog"
 tags = ['astable-multivibrator', 'electronics', 'nand', 'transistor']
 +++
 
-
-				This blog post is about making an astable multivibrator from discrete transistors. This weekend I embarked on making a home-brew computer from discrete transistors. To test circuits like a JK flip-flop or SRAM, a clock is needed. In the spirit of keeping with an all discrete transistor computer, I used an astable multivibrator composed of two RTL NAND gates. I wanted to start with a very low frequency, so I targeted 10 seconds high, 10 low for the clock. Changing the size of the capacitor and resistor outside the NAND gates will adjust the frequency. The formula for the frequency of the clock works out to be something like this: [latex]f=\frac{1}{t}=\frac{1}{2RC}=\frac{1}{2 \times 4700\Omega \times 2200uF}=20.68s[/latex].
+This blog post is about making an astable multivibrator from discrete transistors. This weekend I embarked on making a home-brew computer from discrete transistors. To test circuits like a JK flip-flop or SRAM, a clock is needed. In the spirit of keeping with an all discrete transistor computer, I used an astable multivibrator composed of two RTL NAND gates. I wanted to start with a very low frequency, so I targeted 10 seconds high, 10 low for the clock. Changing the size of the capacitor and resistor outside the NAND gates will adjust the frequency. The formula for the frequency of the clock works out to be something like this: $:f=\frac{1}{t}=\frac{1}{2RC}=\frac{1}{2 \times 4700\Omega \times 2200uF}=20.68s$.
 <h2>Designing the Astable Multivibrator</h2>
 I am new to low-level electronics like this, but I had used Arduino in the past and the designers of that micro-controller advocate <a href="http://fritzing.org/home/">Fritzing</a>. I used Fritzing to design the schematic, breadboard and PCB. The first step was to design the schematic. I used and adaptation of a circuit I found here. The schematic looks like this:
 
