@@ -17,8 +17,6 @@ disqusShortname = "bryanapperson"
 
 [params]
     author = "Bryan Apperson"
-    description = "Bryan Apperson's personal blog"
-    keywords = "blog,developer,ceph"
     info = "Site Reliability Engineer"
     avatarurl = "images/avatar.png"
     footercontent = "As of 4/2/2019 this blog is WIP (migrating from wordpress). All opinions expressed are my own."
