@@ -1,0 +1,75 @@
+baseurl = "https://bryanapperson.com"
+title = "Bryan Apperson"
+
+theme = "hugo-coder"
+
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+canonifyurls = true
+
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disqusShortname = "bryanapperson"
+
+[params]
+    author = "Bryan Apperson"
+    description = "Bryan Apperson's personal website"
+    keywords = "blog,developer,personal"
+    info = "Site Reliability Engineer"
+    avatarurl = "images/avatar.jpg"
+    footercontent = "All opinions expressed are my own."
+
+    dateformat = "April 2, 2019"
+
+    hideCredits = false
+    hideCopyright = false
+
+    # Git Commit in Footer, uncomment the line below to enable it.
+    commit = "https://github.com/bryanapperson/blog/tree/"
+
+    rtl = false
+
+    # Use inverted colors
+    inverted = false
+
+    # Series see also post count
+    maxSeeAlsoItems = 5
+
+    # Custom CSS
+    custom_css = []
+
+[taxonomies]
+  series = "series"
+
+[[params.social]]
+    name = "Bryan Apperson's Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/bryanapperson"
+[[params.social]]
+    name = "Bryan Apperson's Twitter"
+    icon = "fab fa-twitter"
+    weight = 2
+    url = "https://twitter.com/bryapperson"
+[[params.social]]
+    name = "Bryan Apperson's LinkedIn"
+    icon = "fab fa-linkedin"
+    weight = 3
+    url = "https://www.linkedin.com/in/bryan-apperson-1471bb65/"
+[[params.social]]
+    name = "Sitemap"
+    icon = "fas fa-sitemap"
+    weight = 3
+    url = "sitemap.xml"
+
+
+
+# Menu links
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
