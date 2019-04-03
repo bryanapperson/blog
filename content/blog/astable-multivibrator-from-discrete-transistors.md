@@ -2,7 +2,7 @@
 title = "Astable Multivibrator from Discrete Transistors"
 date = "2016-01-24"
 katex = "true"
-type = "post"
+keywords = [ "astable-multivibrator, electronics, nand, transistor"  ]
 tags = ['astable-multivibrator', 'electronics', 'nand', 'transistor']
 +++
 
