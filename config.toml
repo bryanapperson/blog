@@ -20,10 +20,8 @@ disqusShortname = "bryanapperson"
     description = "Bryan Apperson's personal website"
     keywords = "blog,developer,personal"
     info = "Site Reliability Engineer"
-    avatarurl = "images/avatar.jpg"
+    avatarurl = "images/avatar.png"
     footercontent = "All opinions expressed are my own."
-
-    dateformat = "April 2, 2019"
 
     hideCredits = false
     hideCopyright = false
@@ -72,4 +70,4 @@ disqusShortname = "bryanapperson"
 [[menu.main]]
     name = "Blog"
     weight = 1
-    url  = "/posts/"
+    url  = "/blog/"
