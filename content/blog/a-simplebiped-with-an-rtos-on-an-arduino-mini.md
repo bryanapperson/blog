@@ -4,12 +4,12 @@ date = "2015-04-09 20:48:42"
 tags = ['arduino', 'biped', 'c', 'development', 'object-detection', 'rtos', 'technology']
 +++
 
-
-				About two years back I wrote up a program for and designed a bipedal robot (I coined it the SimpleBiped) based on the <a title="Arduino Micro" href="http://arduino.cc/en/Main/arduinoBoardMicro">Arduino Micro</a> board. This article is an outline of what I did, mainly for reference if I revisit this later, but hopefully its useful to you as well. I designed a bipedal robot which uses ultrasonic sensors for object detection, and some basic logic for navigation as well as some primitives for servo control. The robot had 5 servos as defined in the code below. Here is a <a title="SimpleBiped Hardware" href="https://drive.google.com/file/d/0B_jveeQ1rgGPcnZSUU5SeWJadjA/view?usp=sharing">hardware spreadsheet</a> on what I used for the build. The body parts were found on Thingiverse, modified in blender and printed with this:
+    			About two years back I wrote up a program for and designed a bipedal robot (I coined it the SimpleBiped) based on the <a title="Arduino Micro" href="http://arduino.cc/en/Main/arduinoBoardMicro">Arduino Micro</a> board. This article is an outline of what I did, mainly for reference if I revisit this later, but hopefully its useful to you as well. I designed a bipedal robot which uses ultrasonic sensors for object detection, and some basic logic for navigation as well as some primitives for servo control. The robot had 5 servos as defined in the code below. Here is a <a title="SimpleBiped Hardware" href="https://drive.google.com/file/d/0B_jveeQ1rgGPcnZSUU5SeWJadjA/view?usp=sharing">hardware spreadsheet</a> on what I used for the build. The body parts were found on Thingiverse, modified in blender and printed with this:
 
 [caption id="attachment_682" align="aligncenter" width="300"]<a href="http://bryanapperson.com/wp-content/uploads/2015/04/2013-01-29_17-37-19_928.jpg"><img class="wp-image-682 size-medium" src="http://bryanapperson.com/wp-content/uploads/2015/04/2013-01-29_17-37-19_928-300x169.jpg" alt="My Old Thing-o-Matic" width="300" height="169" /></a> My Old Thing-o-Matic[/caption]
 
 That printer was awesome at the time and definitely served it's purpose. It unfortunately no longer works (going to make some iteration of the Prusa eventually). I don't have pictures of the robot and my last iteration is in storage in NY right now (I am in Georgia). I will post the blender parts up some time on <a title="Thingiverse" href="http://www.thingiverse.com/bytedisorder/about">my Thingiverse</a> (all that is there now is the enclosure for the Arduino micro I integrated into the body) and link them here. Once (and if) I get started on this I'll post circuit diagrams as well. At first the robot would walk, stop, scan for objects - then make a choice and continue walking. That code looks something like this:
+
 <pre class="lang:c++ decode:true" title="Arduino Biped Code">#include &lt;Servo.h&gt; 
 
 #define Ultrasonic 12
@@ -448,7 +448,9 @@ void TurnRight(byte Stps, byte Speed){
   TiltRightDown(uAngle, Speed);
   digitalWrite(EnableServo,LOW);
 }</pre>
+
 This was all well and good, but I decided it would be nicer if the robot could scan for obstacles and walk at the same time. To this end, considering that Arduino natively runs programs as a loop, it was time to get into interrupts and get multiple threads running on that little ATmega32u4 with 28KB of usable Flash for programs, 2.5KB of SRAM, 1KB of EEPROM and a 16Mhz clock speed. So the question was, how? After some research I stumbled upon <a title="ChibiOS" href="http://www.chibios.org/dokuwiki/doku.php">ChibiOS</a> and the port for <a title="ChibiOS Arduino" href="https://github.com/greiman/ChibiOS-Arduino">ChibiOS Arduino</a>. ChibiOS is a great library for running multiple "threads" on Arduino. I modified the above code to this effect (see this <a href="http://forum.arduino.cc/index.php?topic=146980.msg1107595">forum thread</a>):
+
 <pre class="inline-margin:10 lang:c++ decode:true " title="Arduino Biped with 3 ">#include &lt;Servo.h&gt;
 #include &lt;ChibiOS_AVR.h&gt;
 
@@ -998,6 +1000,7 @@ void TurnRight(byte Stps, byte Speed){
   TiltRightDown(uAngle, Speed);
   digitalWrite(EnableServo,LOW);
 }</pre>
+
 Unfortunately I never got this working smoothly and the robot would jitter too much while walking due to the interrupts. Mutexs and Semaphores are tough to get right, I'd love to revisit this project at a later time (once I have a working 3D printer for body components again). Feel free to use this code (but not the name SimpleBiped) in your projects under a GNU/GPL liscence, or (and I would appreciate it), tell me where I went wrong with my mutexs!
 
-If and when I do revisit this project I will definitely post further updates here.		
+If and when I do revisit this project I will definitely post further updates here.

@@ -4,12 +4,14 @@ date = "2014-09-10 00:16:31"
 tags = ['install', 'linux-tutorials', 'nginx', 'ubuntu', 'ubuntu-14-04', 'wordpress']
 +++
 
-
-				Installing WordPress with Nginx on Ubuntu 14.04 is a fairly straightforward task. In this tutorial we will do over how to do it. This tutorial assumes you have completed the <a title="Getting Started with an Ubuntu VPS" href="http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/" target="_blank">Getting Started with an Ubuntu VPS</a>&nbsp;guide&nbsp;and have an Ubuntu 14.04 VPS (if not you can get one <a title="Ubuntu VPS Hosting" href="https://www.bitronictech.net/ubuntu-vps-hosting.php" target="_blank">here</a> for $5). It also assumes that you already have a LEMP stack setup (Linux, Nginx, MySQL, etcetera) or you are following the&nbsp;<a title="Making WordPress Fly" href="http://bryanapperson.com/blog/intro-hhvm-mariadb-nginx-wordpress/" target="_blank">Making WordPress Fly</a>&nbsp;guide. This tutorial assumes the use of Nginx as the web server, Fastcgi or <a title="HHVM" href="http://hhvm.com/" target="_blank">HHVM</a> for PHP and either MariaDB or MySQL &nbsp;for your MySQL server.
+    			Installing WordPress with Nginx on Ubuntu 14.04 is a fairly straightforward task. In this tutorial we will do over how to do it. This tutorial assumes you have completed the <a title="Getting Started with an Ubuntu VPS" href="http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/" target="_blank">Getting Started with an Ubuntu VPS</a>&nbsp;guide&nbsp;and have an Ubuntu 14.04 VPS (if not you can get one <a title="Ubuntu VPS Hosting" href="https://www.bitronictech.net/ubuntu-vps-hosting.php" target="_blank">here</a> for $5). It also assumes that you already have a LEMP stack setup (Linux, Nginx, MySQL, etcetera) or you are following the&nbsp;<a title="Making WordPress Fly" href="http://bryanapperson.com/blog/intro-hhvm-mariadb-nginx-wordpress/" target="_blank">Making WordPress Fly</a>&nbsp;guide. This tutorial assumes the use of Nginx as the web server, Fastcgi or <a title="HHVM" href="http://hhvm.com/" target="_blank">HHVM</a> for PHP and either MariaDB or MySQL &nbsp;for your MySQL server.
 
 The first step in this tutorial is to connect to your virtual machine via SSH. This tutorial assumes that you are using Linux as your operating system and have SSH installed. If you do not you can use a tool like <a title="Putty SSH" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">Putty</a> for SSH. In Linux you just need to run the following command:
+
 <pre class="lang:default decode:true " title="Connect to your VM using SSH">ssh -p port user@you.rip.add.res</pre>
+
 After connecting to your instance via SSH it is time to begin the process of installing WordPress to work with Nginx. All of our tutorials for Nginx assume a "web root" of&nbsp;<span class="lang:default decode:true  crayon-inline">/var/www/html</span>, make sure that your Nginx configuration points there and that the directory exists. If the directory does not exist create it using&nbsp;<span class="lang:default decode:true  crayon-inline ">mkdir</span>&nbsp;and <span class="lang:default decode:true  crayon-inline ">chown</span>&nbsp;&nbsp;it to <span class="lang:default decode:true  crayon-inline">www-data</span>&nbsp;.
+
 <pre class="lang:default decode:true " title="Setup Web Root">sudo mkdir /var/www/
 sudo mkdir /var/www/html/
 sudo chown -R www-data:www-data /var/www/html/</pre>
@@ -31,11 +33,16 @@ At this point you are back at the shell command prompt and ready to continue.
 The next step is to download the latest version of WordPress to the server. It is available on their website. We are going to use the&nbsp;<span class="lang:default decode:true  crayon-inline ">wget</span>&nbsp;&nbsp;command to copy it to our home directory.
 
 WordPress always keeps the latest stable version at the place we will use in this command.
+
 <pre class="lang:default decode:true " title="Use wget to Download WordPress">cd ~
 wget http://wordpress.org/latest.tar.gz</pre>
+
 The&nbsp;files which compose WordPress were downloaded&nbsp;as a compressed archive stored in a file called <code>latest.tar.gz</code>. We can extract the contents by typing:
+
 <pre><code>tar xzvf latest.tar.gz</code></pre>
+
 This will extract a directory called <span class="lang:default decode:true  crayon-inline ">wordpress</span>&nbsp;&nbsp;containing all the files we need to set up WordPress. First however make sure that&nbsp;<span class="lang:default decode:true  crayon-inline ">php5-gd</span>&nbsp;&nbsp;and <span class="lang:default decode:true  crayon-inline ">libssh2-php </span>&nbsp;are installed. If they are not, run the command below. This will make sure you can work with images and install modules/plugins over SSH.
+
 <pre><code>sudo apt-get update
 sudo apt-get install php5-gd libssh2-php</code></pre>
 <h2>Configuring WordPress with Nginx on Ubuntu 14.04</h2>
@@ -48,6 +55,7 @@ Next we need to make 3 small changes to <span class="lang:default decode:true  c
 The file is suitable for launching WordPress; it is just lacking the information to connect to the database we created a few minutes ago. The parameters we need to set are <span class="lang:default decode:true  crayon-inline ">DB_NAME</span>&nbsp;, <span class="lang:default decode:true  crayon-inline ">DB_USER</span>&nbsp;, and&nbsp;<span class="lang:default decode:true  crayon-inline ">DB_PASSWORD</span>&nbsp;.
 
 After you make the changes to that section of the file it should look something like this:
+
 <pre class="lang:default decode:true ">.....
 
 // ** MySQL settings - You can get this info from your web host ** //
@@ -61,20 +69,33 @@ define('DB_USER', 'wordpressuser');
 define('DB_PASSWORD', 'password');
 
 .....</pre>
+
 For now you can ignore the rest of the site. If you are planning on deploying a multisite network add this line:
+
 <pre class="lang:default decode:true ">/* Multisite */
 define( 'WP_ALLOW_MULTISITE', true );</pre>
+
 Once you have made these changes you can save and close the file. Now it is time to copy the files to our web root (<span class="lang:default decode:true  crayon-inline ">/var/www/html/</span>&nbsp; in this example). We can copy the files to this place by typing:
+
 <pre><code>sudo rsync -avP ~/wordpress/ /var/www/html/</code></pre>
+
 Now we need to move over to that folder to assign some permissions.
+
 <pre><code>cd /var/www/html/</code></pre>
+
 Then we are going to make sure that Nginx owns these files so that it can manipulate them.
+
 <pre class="lang:default decode:true ">sudo chown -R www-data:www-data /var/www/html/*</pre>
+
 Before we move on, we should create a new directory for user uploads:
+
 <pre class=""><code>mkdir wp-content/uploads</code>
 </pre>
+
 The new directory should have group writing set already, but the new directory isn't assigned with <code>www-data</code> group ownership yet. Let's fix that:
+
 <pre><code>sudo chown -R :www-data /var/www/html/wp-content/uploads</code></pre>
+
 Now just make sure that your web server is configured to use /var/www/html/ as the webroot and you can visit yourdomain.com to set your site name and get started. You are also going to want to install Postfix so that WordPress can send emails. We will be writing a tutorial for that in the near future.
 
-Thanks for reading and leave your thoughts in the comments below.		
+Thanks for reading and leave your thoughts in the comments below.

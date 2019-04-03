@@ -23,6 +23,7 @@ disqusShortname = "bryanapperson"
     hidecredits = false
     hidecopyright = false
     rtl = false
+    commit = "https://github.com/bryanapperson/blog/tree/"
 
 [taxonomies]
     series = "series"

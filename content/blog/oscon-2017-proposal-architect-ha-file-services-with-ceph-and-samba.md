@@ -4,8 +4,7 @@ date = "2016-10-26 00:43:53"
 tags = ['ceph', 'development', 'file-services', 'high-availibility', 'linux-tutorials', 'oscon', 'samba']
 +++
 
-
-				Would you like to learn how industry leaders architect highly available file services solutions using open source software such as Ceph, Samba and CTDB? This proposed&nbsp;presentation at <a href="http://conferences.oreilly.com/oscon/oscon-tx">OSCON 2017</a> will offer practical architecture and how to knowledge for participants. From load balancing to fail-over, this proposed session&nbsp;will outline how to deploy and scale high performance Samba shares backed by <a href="http://ceph.com/ceph-storage/">Ceph</a> RBD and the <a href="https://en.wikipedia.org/wiki/GFS2">GFS2</a> clustered filesystem. Attendees will gain insight on best practices, common pitfalls and deployment methods. The source code used in this presentation will be&nbsp;available to everyone&nbsp;on&nbsp;<a href="https://github.com/bryanapperson">Github</a> in the spirit of open source.
+    			Would you like to learn how industry leaders architect highly available file services solutions using open source software such as Ceph, Samba and CTDB? This proposed&nbsp;presentation at <a href="http://conferences.oreilly.com/oscon/oscon-tx">OSCON 2017</a> will offer practical architecture and how to knowledge for participants. From load balancing to fail-over, this proposed session&nbsp;will outline how to deploy and scale high performance Samba shares backed by <a href="http://ceph.com/ceph-storage/">Ceph</a> RBD and the <a href="https://en.wikipedia.org/wiki/GFS2">GFS2</a> clustered filesystem. Attendees will gain insight on best practices, common pitfalls and deployment methods. The source code used in this presentation will be&nbsp;available to everyone&nbsp;on&nbsp;<a href="https://github.com/bryanapperson">Github</a> in the spirit of open source.
 
 [embed]https://youtu.be/POhnALKhycU[/embed]
 
@@ -28,9 +27,9 @@ The attendees will gain an understanding of the following presentation topics in
 - Samba
 - GFS2
 - Pacemaker
-<h2>What skills are prerequisite to best enjoy the presentation?</h2>
-Attendees' knowledge of Linux command line is essential. Familiarity with Vagrant and Samba, while optional will enrich participation in the "how-to".
-<h2>What will attendees For The&nbsp;tutorial part of the presentation?</h2>
-Attendees need a&nbsp;Github&nbsp;account to clone the source code. A computer with Linux, Mac or Windows will also be valuable&nbsp;to actively participate in the tutorial.
-<h2>See you in Austin (Possibly)!</h2>
-Leave your thoughts in the comments below and I look forward to speaking on this topic in Austin at OSCON 2017!		
+  <h2>What skills are prerequisite to best enjoy the presentation?</h2>
+  Attendees' knowledge of Linux command line is essential. Familiarity with Vagrant and Samba, while optional will enrich participation in the "how-to".
+  <h2>What will attendees For The&nbsp;tutorial part of the presentation?</h2>
+  Attendees need a&nbsp;Github&nbsp;account to clone the source code. A computer with Linux, Mac or Windows will also be valuable&nbsp;to actively participate in the tutorial.
+  <h2>See you in Austin (Possibly)!</h2>
+  Leave your thoughts in the comments below and I look forward to speaking on this topic in Austin at OSCON 2017!

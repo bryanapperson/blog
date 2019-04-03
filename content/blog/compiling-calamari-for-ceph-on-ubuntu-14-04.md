@@ -4,8 +4,8 @@ date = "2014-09-10 10:45:37"
 tags = ['calamari', 'ceph', 'development', 'linux-tutorials', 'technology', 'ubuntu-14-04']
 +++
 
+    			Compiling Calamari for Ceph on Ubuntu 14.04 is a bit involved. Calamari is the enterprise GUI for Ceph storage by Inktank. They recently made it open source and you can find the github <a title="Calamari Github" href="https://github.com/ceph/calamari">here</a>. Prior to the release as open source a few weeks ago, Calamari was an enterprise only product. It really adds enterprise ease of management to Ceph storage and makes a valuable asset to any Ceph deployment.
 
-				Compiling Calamari for Ceph on Ubuntu 14.04 is a bit involved. Calamari is the enterprise GUI for Ceph storage by Inktank. They recently made it open source and you can find the github <a title="Calamari Github" href="https://github.com/ceph/calamari">here</a>. Prior to the release as open source a few weeks ago, Calamari was an enterprise only product. It really adds enterprise ease of management to Ceph storage and makes a valuable asset to any Ceph deployment.
 <h2>Preparing Dependencies</h2>
 The first step in the process is to install all the dependencies. I find it easier to do builds on a fresh VM. You can get an Ubuntu 14.04 VM <a title="Ubuntu VPS Hosting" href="https://www.bitronictech.net/ubuntu-vps-hosting.php">here</a> if you need one. Otherwise lets move on to installing the dependencies. First we need to add the saltstack PPA.
 <pre class="lang:default decode:true">echo deb http://ppa.launchpad.net/saltstack/salt/ubuntu lsb_release -sc main | sudo tee /etc/apt/sources.list.d/saltstack.list</pre>
@@ -79,4 +79,4 @@ git checkout calamari
 dpkg-buildpackage</pre>
 Now you'll have a .deb of diamond in the parent directory (~/).
 <h2>Conclusion</h2>
-Now you have all the software you need to deploy Calamari on Ubuntu 14.04 to manage your Ceph cluster in a fancy GUI. In the next section I will give sources if you weren't able to compile successfully. I will update a link here when the next article is complete. Thanks for reading, leave your thoughts in the comments below.		
+Now you have all the software you need to deploy Calamari on Ubuntu 14.04 to manage your Ceph cluster in a fancy GUI. In the next section I will give sources if you weren't able to compile successfully. I will update a link here when the next article is complete. Thanks for reading, leave your thoughts in the comments below.
