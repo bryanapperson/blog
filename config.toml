@@ -17,7 +17,7 @@ disqusShortname = "bryanapperson"
 
 [params]
     author = "Bryan Apperson"
-    description = "Bryan Apperson's personal website"
+    description = "Bryan Apperson's personal blog"
     keywords = "blog,developer,personal"
     info = "Site Reliability Engineer"
     avatarurl = "images/avatar.png"
