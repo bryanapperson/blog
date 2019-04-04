@@ -13,8 +13,7 @@ pygmentsstyle = "bw"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-disqusShortname = "bryanapperson"
-
+# @todo #1:60m/DEV Replace discuss which has now been removed with staticman
 [params]
     author = "Bryan Apperson"
     info = "Site Reliability Engineer"
