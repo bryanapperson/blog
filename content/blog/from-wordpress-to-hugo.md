@@ -165,4 +165,4 @@ I adapted this [guide on Travis CI and Hugo](https://axdlog.com/2018/using-hugo-
 
 ## Conclusion
 
-Overall the initial learning curve, setup, custimization and migration too about 8 hours. I would say that is pretty good. There will definitely be more posts to follow on my journey with blogging using Hugo.
+Overall the initial learning curve, setup, customization and migration took about 8 hours. I would say that is pretty good. There will definitely be more posts to follow on my journey with blogging using Hugo.
