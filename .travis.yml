@@ -5,15 +5,26 @@
 # https://docs.travis-ci.com/user/languages/go/
 # https://docs.travis-ci.com/user/customizing-the-build/
 
+cache:
+  directories:
+    - $HOME/.cache/go-build
+    - $HOME/gopath/pkg/mod
+
 dist: xenial
+
 language: go
+
 go:
-    - master
+    - 1.12.x
+
+# Only clone the most recent commit.
+git:
+  depth: 1
 
 # before_install
 # install - install any dependencies required
 install:
-    - go get github.com/gohugoio/hugo    # consume time 70.85s
+    - go get github.com/gohugoio/hugo   # @todo #2:30m/DEV pin the version
 
 before_script:
     - rm -rf public 2> /dev/null
