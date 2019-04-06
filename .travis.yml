@@ -18,7 +18,7 @@ go:
 # before_install
 # install - install any dependencies required
 install:
-    - go get github.com/gohugoio/hugo    # consume time 70.85s
+    - go get https://github.com/gohugoio/hugo/tree/v0.54.0    # pin the version
 
 before_script:
     - rm -rf public 2> /dev/null
