@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div>
 <div id="comment-submitted" class="dialog">
   <h3>Thank you</h3>
@@ -147,3 +148,155 @@
 {{ end }}
 {{ end }}
 </div>
+||||||| merged common ancestors
+=======
+<div>
+<div id="comment-submitted" class="dialog">
+  <h3>Thank you</h3>
+  <p>Your comment has been submitted and will be published once it has been approved.</p>
+  {{ if (.Site.Params.githubPullURL) }}
+    <p><a href="https://github.com/{{ .Site.Params.staticman.username }}/{{ .Site.Params.staticman.repository }}/pulls">Click here</a> to see the pull request you generated.</p>
+  {{ end }}
+</div>
+
+<div id="comment-error" class="dialog">
+  <h3>OOPS!</h3>
+  <p>Your comment has not been submitted. Please <a href="{{ .Permalink }}">go back</a> and try again. Thank You!</p>
+  <p>If this error persists, please open an issue by <a href="https://github.com/{{ .Site.Params.staticman.username }}/{{ .Site.Params.staticman.repository }}/issues"> clicking here</a>.</p>
+</div>
+
+<div id="comment-form">
+  <h2 id="comment-form-header">Say something</h2>
+  <form method="POST" action="https://dev.staticman.net/v3/entry/github/{{ .Site.Params.staticman.username }}/{{ .Site.Params.staticman.repository }}/{{ .Site.Params.staticman.branch }}/comments">
+    <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#comment-submitted">
+    <input type="hidden" name="options[redirectError]" value="{{ .Permalink }}#comment-error">
+    <input type="hidden" name="options[slug]" value="{{ .File.ContentBaseName  }}">
+    <input type="hidden" name="options[section]" value="{{ .Section }}">
+    <input type="hidden" name="options[origin]" value="{{ .Permalink }}">
+    <input type="hidden" name="options[parent]" value="{{ .File.ContentBaseName }}">
+    <input type="hidden" name="fields[reply_to]" value="">
+    <input type="address" name="fields[botpot]" placeholder="botpot (do not fill!)" style="display:none">
+    {{ if isset .Site.Params.staticman "recaptcha" }}
+    <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ .Site.Params.recaptcha.siteKey }}">
+    <input type="hidden" name="options[reCaptcha][secret]" value="{{ .Site.Params.recaptcha.secret }}">
+    {{ end }}
+
+    <fieldset>
+      <input name="fields[name]" type="text" placeholder="Your name">
+    </fieldset>
+
+    <fieldset>
+      <input name="fields[email]" type="email" placeholder="Your email address">
+    </fieldset>
+
+    <fieldset>
+      <textarea name="fields[body]" placeholder="You can use Markdown syntax" rows="10"></textarea>
+    </fieldset>
+
+    {{ if .Site.Params.staticman.notifications }}
+    <fieldset>
+      <div>
+        <input type="checkbox" name="options[subscribe]" value="email">
+        Send me an email when someone comments on this post.
+      </div>
+    </fieldset>
+    {{ end }}
+
+    <fieldset>
+      {{ if isset .Site.Params.staticman "recaptcha" }}
+      <div class="g-recaptcha" data-sitekey="{{ .Site.Params.recaptcha.siteKey }}" data-callback="enableBtn"></div>
+      {{ end }}
+
+      <input type="submit" value="Submit" id="submit-button" class="right">
+      <input type="reset" value="Reset" class="right">
+    </fieldset>
+
+  </form>
+</div>
+
+{{ if isset $.Site.Data.comments .Section }}
+  {{ $comments := index $.Site.Data.comments (.Section) (.File.ContentBaseName) }}
+
+  {{ if $comments }}
+    <h2>Comments ({{ len $comments  }})</h2>
+  {{ end }}
+
+  {{ $hasComments := 0 }}
+  {{ range $comments }}
+    {{ $hasComments = add $hasComments 1 }}
+    {{ if not .reply_to }}
+      {{ $parentId := ._id }}
+      {{ $parentName := .name }}
+      {{ $hasReplies := 0 }}
+      <div class="comment-header">
+        <figure class="frame comment-avatar">
+          <img src="https://www.gravatar.com/avatar/{{ .email }}?s=70">
+        </figure>
+        <p class="comment-info"><strong>{{ .name }}</strong><br><small>{{ dateFormat "Monday, Jan 2, 2006" .date }}</small></p>
+      </div>
+
+      {{ range $comments }}
+        {{ if eq .reply_to $parentId }}
+          {{ $hasReplies = add $hasReplies 1 }}
+        {{ end }}
+      {{ end }}
+
+      <div id="{{ ._id }}" class="comment-thread">
+        <blockquote class="comment">
+          {{ .body | markdownify }}
+        </blockquote>
+
+        {{ if eq $hasReplies 0 }}
+          <div class="comment-reply-button">
+            <input id="{{ ._id }}" type="button" class="right" value="Reply to {{ .name }}" onclick="replyTo('{{ ._id }}', '{{ .name }}')" />
+          </div>
+        {{ end }}
+
+        <div style="clear: both;"></div>
+
+        {{ range $comments }}
+          {{ if eq .reply_to $parentId }}
+              <div class="comment-reply">
+                <div class="comment-header">
+                  <figure class="frame comment-avatar">
+                    <img class="comment-avatar" src="https://www.gravatar.com/avatar/{{ .email }}?s=70">
+                  </figure>
+                  <p class="comment-info"><strong>{{ .name }}</strong><br><i><small>In reply to {{ $parentName }}</i><br>{{ dateFormat "Monday, Jan 2, 2006" .date }}</small></p>
+                </div>
+                <blockquote class="comment">
+                  {{ .body | markdownify }}
+                </blockquote>
+              </div>
+          {{ end }}
+        {{ end }}
+
+        {{ if gt $hasReplies 0 }}
+          <div class="comment-reply-button-reply">
+            <input type="button" class="right" value="Reply to Thread" onclick="replyTo('{{ ._id }}', '{{ .name }}')" />
+          </div>
+          <div style="clear: both;"></div>
+        {{ end }}
+      </div>
+
+    {{ end }}
+  {{ end }}
+<!-- @todo #1:30m/DEV implement recaptcha -->
+<!-- @todo #1:30m/DEV implement akismet -->
+ <!-- @todo #1:30m/DEV improve styling -->
+<script async src='/js/staticman.js' ></script>
+{{ if isset .Site.Params.staticman "recaptcha" }}
+<script async src='https://www.google.com/recaptcha/api.js' ></script>
+
+<script type="text/javascript">
+  document.getElementById("submit-button").disabled = true;
+</script>
+
+<script type="text/javascript">
+  function enableBtn(){
+    document.getElementById("submit-button").disabled = false;
+  }
+</script>
+{{ end }}
+{{ end }}
+</div>
+>>>>>>> master
