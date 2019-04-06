@@ -13,7 +13,6 @@ pygmentsstyle = "bw"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-# @todo #1:60m/DEV Replace discuss which has now been removed with staticman
 [params]
     author = "Bryan Apperson"
     info = "Site Reliability Engineer"
@@ -23,6 +22,7 @@ pygmentscodefencesguesssyntax = true
     hidecopyright = false
     rtl = false
     commit = "https://github.com/bryanapperson/blog/tree/"
+    custom_css = ["/css/custom.css"]
 
 [taxonomies]
     series = "series"
