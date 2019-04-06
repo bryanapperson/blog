@@ -1,0 +1,68 @@
+{{ if isset $.Site.Data.comments .Section }}
+  {{ $comments := index $.Site.Data.comments (.Section) (.File.ContentBaseName) }}
+
+  {{ if $comments }}
+    <h2>Comments ({{ len $comments  }})</h2>
+  {{ end }}
+
+  {{ $hasComments := 0 }}
+  {{ range $comments }}
+    {{ $hasComments = add $hasComments 1 }}
+    {{ if not .reply_to }}
+      {{ $parentId := ._id }}
+      {{ $parentName := .name }}
+      {{ $hasReplies := 0 }}
+      <div class="comment-header">
+        <figure class="frame comment-avatar">
+          <img src="https://www.gravatar.com/avatar/{{ .email }}?s=70">
+        </figure>
+        <p class="comment-info"><strong>{{ .name }}</strong><br><small>{{ dateFormat "Monday, Jan 2, 2006" .date }}</small></p>
+      </div>
+
+      {{ range $comments }}
+        {{ if eq .reply_to $parentId }}
+          {{ $hasReplies = add $hasReplies 1 }}
+        {{ end }}
+      {{ end }}
+
+      <div id="{{ ._id }}" class="comment-thread">
+        <blockquote class="comment">
+          {{ .body | markdownify }}
+        </blockquote>
+
+        {{ if eq $hasReplies 0 }}
+          <div class="comment-reply-button">
+            <input id="{{ ._id }}" type="button" class="right" value="Reply to {{ .name }}" onclick="replyTo('{{ ._id }}', '{{ .name }}')" />
+          </div>
+        {{ end }}
+
+        <div style="clear: both;"></div>
+
+        {{ range $comments }}
+          {{ if eq .reply_to $parentId }}
+              <div class="comment-reply">
+                <div class="comment-header">
+                  <figure class="frame comment-avatar">
+                    <img class="comment-avatar" src="https://www.gravatar.com/avatar/{{ .email }}?s=70">
+                  </figure>
+                  <p class="comment-info"><strong>{{ .name }}</strong><br><i><small>In reply to {{ $parentName }}</i><br>{{ dateFormat "Monday, Jan 2, 2006" .date }}</small></p>
+                </div>
+                <blockquote class="comment">
+                  {{ .body | markdownify }}
+                </blockquote>
+              </div>
+          {{ end }}
+        {{ end }}
+
+        {{ if gt $hasReplies 0 }}
+          <div class="comment-reply-button-reply">
+            <input type="button" class="right" value="Reply to Thread" onclick="replyTo('{{ ._id }}', '{{ .name }}')" />
+          </div>
+          <div style="clear: both;"></div>
+        {{ end }}
+      </div>
+
+    {{ end }}
+  {{ end }}
+<script async src='/js/staticman.js' ></script>
+{{ end }}
