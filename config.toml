@@ -29,6 +29,12 @@ pygmentscodefencesguesssyntax = true
     tags = "tags"
     categories = "categories"
 
+[params.staticman]
+  username = "bryanapperson"
+  repository = "blog"
+  branch = "master"
+  notifications = false
+
 [[params.social]]
     name = "Bryan Apperson's Github"
     icon = "fab fa-github"
