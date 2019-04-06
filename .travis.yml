@@ -24,7 +24,7 @@ git:
 # before_install
 # install - install any dependencies required
 install:
-    - go get github.com/gohugoio/hugo.git   # @todo #2:30m/DEV pin the version
+    - go get github.com/gohugoio/hugo   # @todo #2:30m/DEV pin the version
 
 before_script:
     - rm -rf public 2> /dev/null
