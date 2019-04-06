@@ -22,6 +22,7 @@ pygmentscodefencesguesssyntax = true
     hidecopyright = false
     rtl = false
     commit = "https://github.com/bryanapperson/blog/tree/"
+    githubpullurl = true
     custom_css = ["/css/custom.css"]
 
 [taxonomies]

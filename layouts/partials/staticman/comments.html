@@ -1,8 +1,7 @@
-<div>
 <div id="comment-submitted" class="dialog">
   <h3>Thank you</h3>
-  <p>Your comment has been submitted and will be published once it has been approved.</p>
-  {{ if (.Site.Params.githubPullURL) }}
+  <p>Your comment has been submitted and will be published once it has been approved. You can <a href="{{ .Permalink  }}">go back</a> now. Thank You!</p>
+  {{ if (.Site.Params.githubpullurl) }}
     <p><a href="https://github.com/{{ .Site.Params.staticman.username }}/{{ .Site.Params.staticman.repository }}/pulls">Click here</a> to see the pull request you generated.</p>
   {{ end }}
 </div>
@@ -126,8 +125,10 @@
         {{ end }}
       </div>
 
-    {{ end }}
-  {{ end }}
+
+    {{ end  }}
+  {{ end  }}
+{{ end  }}
 <!-- @todo #1:30m/DEV implement recaptcha -->
 <!-- @todo #1:30m/DEV implement akismet -->
  <!-- @todo #1:30m/DEV improve styling -->
@@ -145,5 +146,3 @@
   }
 </script>
 {{ end }}
-{{ end }}
-</div>
