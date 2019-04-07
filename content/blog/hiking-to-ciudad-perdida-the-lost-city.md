@@ -16,6 +16,16 @@ On a Saturday evening last August my other half and I and left the Upper East Si
 
 {{< figure src="/images/ciudad-perdida/our-journey.jpg" caption="Our Journey to the Lost City" >}}
 
+## Table of Contents
+* [Arrival](#arrival)
+* [Day 1](#day-1)
+* [Day 2](#day-2)
+* [Day 3](#day-3)
+* [Day 4](#day-4)
+* [Day 5](#day-5)
+* [Departure](#departure)
+
+
 ## Arrival
 
 Having gathered a little bit of sleep on the plane, we were in Santa Marta, and it was a glorious radiant morning. Into a taxi bound for Hotel Tayromar we went.  After a drive through this unfamiliar country and a conversation utilizing my rusty Spanish, we arrived. With the day free and our bags stowed at the hotel, fighting the need for sleep, we took to the streets. Cafe Ikaro was adjacent, thus it was the next logical stop for coffee and a bite to eat. We snapped some excellent photos following an afternoon rainstorm.
@@ -32,7 +42,7 @@ Once breakfast had settled drove a bit further, lurching to a halt at the trail-
 
 {{< figure src="/images/ciudad-perdida/big-spider.jpg" caption="Say cheese" >}}
 
-Our path continued, traversing a few more miles in the sweltering heat of the exposed pasture. The relief was palpable when we reached the border of Wiwa and Kogi lands. This zone was under permacultural cultivation and the forest canopy was in tact. The perceived and effective temperature of the August sun in Colombia was much reduced. We started to pass creeks, rivers and springs unused for intensive agriculture. Our indigenous guide drank directly from the springs. Though our minds still felt a need to pass the water through chemical and mechanical purification, perhaps out of fear of the unknown.
+Our path continued, traversing a few more miles in the sweltering heat of the exposed pasture. The relief was palpable when we reached the border of Wiwa and Kogi lands. This zone was under permacultural cultivation and the forest canopy was in tact. The perceived and effective temperature of the August sun in Colombia was much reduced. We started to pass creeks, rivers and springs unused for intensive agriculture. Our indigenous guide drank directly from the springs. Though our minds still felt a need to pass the water through chemical and mechanical purification, perhaps out of fear of the unknown. We had a few stops along the way to eat succulent fruits, which helped me immensely.
 
 Towards the waning of the day, we began passing by Kogi settlements. Most of the tribe still lives in the traditional fashion. It was explained to us that the elect and the Mamos are the solitary ones burdened by interacting with the external world. Utilizing unnatural or composite materials to deliver opportunity to the community and export their ideas. We got a glimpse into a reflection what life in precolonial Colombia might have been like. At this point there were no more motorcycles or cars, all transit was powered by human or mule.
 
@@ -46,9 +56,17 @@ The morning arrived with stiffness present. We had mistakenly packed more then n
 
 {{< figure src="/images/ciudad-perdida/waterfall.jpg" caption="A spectacular waterfall about 60ft high" >}}
 
-There was an optional trip to a nearby waterfall, a subset of the group, us included partook of.  We all swam, which at least for me helped soothe the ache of my neophyte trail legs. Then our guide suggested standing under the waterfall, which I withstood the full fury of, a backcountry massage. After some relaxation we left to reunite with the remnant who had remained at camp and resume our journey. On the way out we had the privilege of observing a traditional greeting ritual.
+There was an optional trip to a nearby waterfall which a subset of the group, us included, partook of.  We all swam, which at least for me helped soothe the ache of my neophyte trail legs. Then our guide suggested standing under the waterfall, which I withstood the full fury of, a backcountry massage. After some relaxation we left to reunite with the remnant who had remained at camp and resume our journey. On the way out we had the privilege of observing a traditional greeting ritual.
 
-{{< figure src="/images/ciudad-perdida/greeting-ceremony.jpg" caption="Traditional Wiwa greeting ritual" >}}
+{{< figure src="/images/ciudad-perdida/greeting-ceremony.jpg" caption="Traditional Wiwa greeting ceremony" >}}
+
+After that we hit the trail for a shorter day by mileage, but harder in terms of elevation change and terrain. After some time following the river, we had an opportunity to take a swim. The next leg of the journey was described to the group as two hours up, one hour down and two hours up. Given that, we all decided to stop and swim. Afterwards we resumed our journey and went uphill. Then we kept going uphill.
+
+{{< figure src="/images/ciudad-perdida/the-buritaca-river.jpg" caption="The Buritaca River, our stalwart guide" >}}
+
+Once we got to the top of the first hill
+
+
 
 ## Day 3
 
