@@ -2,7 +2,6 @@
 <html lang="{{ .Site.LanguageCode }}">
 
   <head>
-
       <!-- @todo #1:30m/DEV defer JS and CSS loading until after first paint -->
       <!-- @todo #1:30m/DEV Figure out how to make any page without
           a front matter image use an image here. -->
@@ -30,60 +29,21 @@
   {{- $.Scratch.Set "Description" ( .Description | default .Params.subtitle | default .Summary ) }}
   {{- $.Scratch.Set "Title" ( .Title | default .Site.Title ) }}
 {{- end }}
-
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<!-- Site Title, Description, Author, and Favicon -->
+  <!-- Site Title, Description, Author, and Favicon -->
 {{- with ($.Scratch.Get "Title") }}
   <title>{{ . }} - {{ $.Site.Title }}</title>
-  <meta property="og:title" content="{{ . }}" />
-  <meta name="twitter:title" content="{{ . | truncate 70 }}" />
 {{- end }}
 {{- with ($.Scratch.Get "Description") }}
   <meta name="description" content="{{ . }}">
-  <meta property="og:description" content="{{ . }}">
-  <meta name="twitter:description" content="{{ . | truncate 200 }}">
-{{- end }}
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<!-- Site Title, Description, Author, and Favicon -->
-{{- with ($.Scratch.Get "Title") }}
-  <title>{{ . }} - {{ $.Site.Title }}</title>
-  <meta property="og:title" content="{{ . }}" />
-  <meta name="twitter:title" content="{{ . | truncate 70 }}" />
-{{- end }}
-{{- with ($.Scratch.Get "Description") }}
-  <meta name="description" content="{{ . }}">
-  <meta property="og:description" content="{{ . }}">
-  <meta name="twitter:description" content="{{ . | truncate 200 }}">
 {{- end }}
 {{- with .Site.Author.name }}
   <meta name="author" content="{{ . }}"/>
 {{- end }}
+  <meta content="{{ delimit .Keywords ", " }}" name="keywords">
 {{- partial "seo/main.html" . }}  
-{{- with .Site.Params.favicon }}
-  <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
-{{- end -}}
-<!-- Social Media Tags -->
-{{- with .Params.share_img | default .Params.image | default .Site.Params.logo }}
-  <meta property="og:image" content="{{ . | absURL }}" />
-  <meta name="twitter:image" content="{{ . | absURL }}" />
-{{- end }}
-  <meta name="twitter:card" content="summary" />
-{{- with .Site.Author.twitter }}
-  <meta name="twitter:site" content="@{{ . }}" />
-  <meta name="twitter:creator" content="@{{ . }}" />
-{{- end }}
-{{- with .Site.Params.fb_app_id }}
-  <meta property="fb:app_id" content="{{ . }}" />
-{{- end }}
-  <meta property="og:url" content="{{ .URL | absLangURL }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta content="{{ delimit .Keywords ", " }}" name="keywords">
 <!-- Hugo Version number -->
   {{ .Hugo.Generator -}}
 

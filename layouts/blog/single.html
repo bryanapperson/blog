@@ -19,10 +19,9 @@
             <span class="reading-time">
               <i class="fas fa-clock"></i>
               {{ i18n "reading_time" .ReadingTime }}
+              <!-- @todo #1:30m/DEV add a link to the comment section here with a call to action -->
             </span>
           </div>
-          {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories" . }}{{ end }}
-          {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags" . }}{{ end }}
         </div>
       </header>
 
@@ -31,6 +30,8 @@
       </div>
 
       <footer>
+        {{ with .Page.Params.Categories  }}{{ partial "taxonomy/categories" .  }}{{ end }}                                                                                       
+        {{ with .Page.Params.Tags  }}{{ partial "taxonomy/tags" .  }}{{ end  }}
         {{ partial "posts/series" . }}
         {{ partial "posts/disqus" . }}
         {{ partial "staticman/comments" .  }}
