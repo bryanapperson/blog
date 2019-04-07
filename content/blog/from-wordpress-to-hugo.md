@@ -167,7 +167,7 @@ Here is the .travis.yml that I ended up with after optimizing a bit for faster b
 
 ```yaml
 # Credit to:
-#https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/                                                                     
+#https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/
 # https://docs.travis-ci.com/user/deployment/pages/
 # https://docs.travis-ci.com/user/reference/xenial/
 # https://docs.travis-ci.com/user/languages/go/
@@ -183,7 +183,7 @@ dist: xenial
 language: go
 
 go:
-    - 1.12.x
+  - 1.12.x
 
 # Only clone the most recent commit.
 git:
@@ -192,27 +192,28 @@ git:
 # before_install
 # install - install any dependencies required
 install:
-    - go get github.com/gohugoio/hugo
+  - go get github.com/gohugoio/hugo
 
 before_script:
-    - rm -rf public 2> /dev/null
+  - rm -rf public 2> /dev/null
 
 # script - run the build script
 script:
-    - hugo
+  - hugo
 
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  github-token: $GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secure
   email: $GITHUB_EMAIL
   name: $GITHUB_USERNAME
   verbose: true
   local-dir: public
   fqdn: bryanapperson.com
   on:
-    branch: master  # branch contains Hugo generator code
+    branch: master # branch contains Hugo generator code
 ```
+
 ## Conclusion
 
 Overall the initial learning curve, setup, customization and migration took about 8 hours. I would say that is pretty good. There will definitely be more posts to follow on my journey with blogging using Hugo.
