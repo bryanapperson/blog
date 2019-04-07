@@ -59,4 +59,3 @@ There was an optional trip to a nearby waterfall, a subset of the group, us incl
 ## Departure
 
 ## Conclusion
-
