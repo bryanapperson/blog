@@ -7,7 +7,6 @@ tags = ["hiking"]
 categories = [
     "Traveling"
 ]
-draft = true
 share_img = "/images/ciudad-perdida/kogi-village.jpg"
 images = ["/images/ciudad-perdida/our-journey.jpg",  "/images/ciudad-perdida/santa-marta.jpg",  "/images/ciudad-perdida/big-spider.jpg", "/images/ciudad-perdida/kogi-village.jpg" ]
 
