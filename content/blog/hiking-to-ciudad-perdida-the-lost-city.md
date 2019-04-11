@@ -1,8 +1,8 @@
 +++
 date = "2019-04-10 19:40:00"
 title = "Hiking to Ciudad Perdida"
-description = "Hiking Ciudad Perdida, the Lost City. Photos and reflections on the journey to Teyuna."
-keywords = ["ciudad perdida", "lost city", "teyuna", "adventure travel", "responsible travel"]
+description = "Hiking to Ciudad Perdida, the Lost City in Colombia. A trip report, photos and reflections on the journey to Teyuna from Santa Marta."
+keywords = ["ciudad perdida", "lost city", "teyuna", "adventure travel", "responsible travel, "santa marta"]
 tags = ["hiking"]
 categories = [
     "Traveling"
