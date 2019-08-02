@@ -1,0 +1,20 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container list">
+    <h1 class="title">{{ .Title }}</h1>
+    <div>
+      {{ .Content }}
+    </div> 
+ 
+
+    <ul>
+      {{- range .Paginator.Pages.ByParam "year" -}}
+        {{- .Render "li" -}}
+      {{- end -}}
+    </ul>
+
+    {{ partial "pagination.html" . }}
+  </section>
+{{ end }}
