@@ -17,7 +17,7 @@ tags = ['resume']
 
 - - - -
 
-Being an asset to my team and providing value are my primary motivators. Automation, continous delivery and cloud native design are at the forefront of my skillset. My interests like in distributed systems reliability, storage and compute technologies. I am a self educated engineer, a self-starter and a go-getter. I am seeking a vibrant team of ruckus makers where I can learn from, as well as mentor others, while building awesome infrastructure.
+Being an asset to my team and providing value are my primary motivators. Automation, continuous delivery and cloud native design are at the forefront of my skill set. My interests are in distributed systems reliability, storage and compute technologies. I am a self educated engineer, a self-starter and a go-getter. I enjoy being part of a vibrant team of ruckus makers where I can learn from, as well as mentor others, while building reliable infrastructure.
 
 - - - -
 
@@ -39,21 +39,20 @@ Being an asset to my team and providing value are my primary motivators. Automat
 **Concurrent Technology Inc**, Atlanta, GA        Mar 2015-Dec 2017
 
 * Building enterprise management APIs and UI around ceph storage.
-* Writing ansible automation to deploy ceph cluster
-* Second engineer on POC that resuled in sucessful sale of business unit.
+* Writing ansible automation to deploy ceph clusters.
+* Second engineer on POC that resulted in sucessful sale of business unit.
 * On site and offsite level 3 support and project engineering.
 
 **Founder and Public Cloud Architect**
 **Bitronic Technologies** Southold, NY            Oct 2007-Oct 2015
 
-* Founding a web honting company and building it from the ground up.
+* Founding a web hosting company and building it from the ground up.
 * Architecting public cloud, shared hosting and bare metal server product offerings.
 * Providing support to 2000+ customers.
 * Sucessful exit and sale of the company in October of 2015.
+* Working with frontend development, full stack development, network architecture, cloud architecture, ceph, kvm, QEMU, libvirt, xen, cpanel, openstack, marketing, sales, billing and more.
 
 ## Scripting and Programming Languages
-
-
 
 - - - -
 
@@ -75,6 +74,6 @@ Being an asset to my team and providing value are my primary motivators. Automat
 
 **Seth Godin's AltMBA**                                July 2019 
 
-* Shipped 14 projects in 4 weeks with 4 teams in the rapid fire leadership, business and marketing workshop.
+* Shipping 14 projects in 4 weeks with 4 teams in the rapid fire leadership, business and marketing workshop.
 
 - - - -
