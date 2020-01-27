@@ -5,10 +5,10 @@ description = "Hiking to Ciudad Perdida, the Lost City in Colombia. A trip repor
 keywords = ["ciudad perdida", "lost city", "teyuna", "adventure travel", "responsible travel", "santa marta"]
 tags = ["hiking"]
 categories = [
-    "Traveling"
+"Traveling"
 ]
 share_img = "/images/ciudad-perdida/kogi-village.jpg"
-images = ["/images/ciudad-perdida/our-journey.jpg",  "/images/ciudad-perdida/santa-marta.jpg",  "/images/ciudad-perdida/big-spider.jpg", "/images/ciudad-perdida/kogi-village.jpg" ]
+images = ["/images/ciudad-perdida/our-journey.jpg", "/images/ciudad-perdida/santa-marta.jpg", "/images/ciudad-perdida/big-spider.jpg", "/images/ciudad-perdida/kogi-village.jpg" ]
 
 +++On a Saturday evening last August my other half and I and left the Upper East Side of Manhattan in a taxi bound for JFK. Excitement and apprehension were in the air as we were eager to leave, but about to commend our kids to my mother in law for a week. We had, and have not since, been away for so long from our children. After arriving, we were informed that we were _extremely_ early. Stuck in the purgatory of the waiting area outside the terminal, we polished off of dinner in a nondescript diner, eagerly biding our time. After a period of time, we passed through security and boarded our red-eye to **Santa Marta** by way of Bogota.
 
