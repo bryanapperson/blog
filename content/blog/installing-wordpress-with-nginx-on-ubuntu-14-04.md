@@ -3,9 +3,7 @@ title = "Installing WordPress with Nginx on Ubuntu 14.04"
 date = "2014-09-10 00:16:31"
 tags = ['install', 'linux-tutorials', 'nginx', 'ubuntu', 'ubuntu-14-04', 'wordpress']
 
-+++
-
-Installing WordPress with Nginx on Ubuntu 14.04 is a fairly straightforward task. In this tutorial we will do over how to do it. This tutorial assumes you have completed the [Getting Started with an Ubuntu VPS](http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/ "Getting Started with an Ubuntu VPS") guide and have an Ubuntu 14.04 VPS (if not you can get one [here](https://www.bitronictech.net/ubuntu-vps-hosting.php "Ubuntu VPS Hosting") for \$5). It also assumes that you already have a LEMP stack setup (Linux, Nginx, MySQL, etcetera) or you are following the [Making WordPress Fly](http://bryanapperson.com/blog/intro-hhvm-mariadb-nginx-wordpress/ "Making WordPress Fly") guide. This tutorial assumes the use of Nginx as the web server, Fastcgi or [HHVM](http://hhvm.com/ "HHVM") for PHP and either MariaDB or MySQL  for your MySQL server. The first step in this tutorial is to connect to your virtual machine via SSH. This tutorial assumes that you are using Linux as your operating system and have SSH installed. If you do not you can use a tool like [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/ "Putty SSH") for SSH. In Linux you just need to run the following command:
++++Installing WordPress with Nginx on Ubuntu 14.04 is a fairly straightforward task. In this tutorial we will do over how to do it. This tutorial assumes you have completed the [Getting Started with an Ubuntu VPS](http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/ 'Getting Started with an Ubuntu VPS') guide and have an Ubuntu 14.04 VPS (if not you can get one [here](https://www.bitronictech.net/ubuntu-vps-hosting.php 'Ubuntu VPS Hosting') for \$5). It also assumes that you already have a LEMP stack setup (Linux, Nginx, MySQL, etcetera) or you are following the [Making WordPress Fly](http://bryanapperson.com/blog/intro-hhvm-mariadb-nginx-wordpress/ 'Making WordPress Fly') guide. This tutorial assumes the use of Nginx as the web server, Fastcgi or [HHVM](http://hhvm.com/ 'HHVM') for PHP and either MariaDB or MySQL  for your MySQL server. The first step in this tutorial is to connect to your virtual machine via SSH. This tutorial assumes that you are using Linux as your operating system and have SSH installed. If you do not you can use a tool like [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/ 'Putty SSH') for SSH. In Linux you just need to run the following command:
 
 ```
 ssh -p port user@you.rip.add.res
@@ -21,7 +19,7 @@ sudo chown -R www-data:www-data /var/www/html/
 
 ## Creating a Database and User
 
-After you have confirmed that Nginx is using /var/www/html/ as your web root or setup another of your choice, it's time to create a database for WordPress. Please make sure you have already setup MySQL or [MariaDB](http://bryanapperson.com/blog/make-wordpress-fly-mariadb-setup-ubuntu-14/ "Setup MariaDB") prior to this step. Setting up the database is easy. Start by logging into an interactive session with the MySQL administrative account.
+After you have confirmed that Nginx is using /var/www/html/ as your web root or setup another of your choice, it's time to create a database for WordPress. Please make sure you have already setup MySQL or [MariaDB](http://bryanapperson.com/blog/make-wordpress-fly-mariadb-setup-ubuntu-14/ 'Setup MariaDB') prior to this step. Setting up the database is easy. Start by logging into an interactive session with the MySQL administrative account.
 
 ```
 mysql -u root -p

@@ -4,19 +4,17 @@ title = "From WordPress to Hugo"
 description = "Why and how this blog is moving from WordPress to hugo and github pages."
 keywords = "hugo, wordpress, migrate"
 tags = [
-    "hugo",
-    "static blog",
-    "go",
-    "wordpress",
+"hugo",
+"static blog",
+"go",
+"wordpress",
 ]
 categories = [
-    "Development"
+"Development"
 ]
 series = ["Hugo"]
 
-+++
-
-{{< figure src="/images/hugo-logo-wide.svg" caption="Hugo static blogs are awesome" >}}
++++{{< figure src="/images/hugo-logo-wide.svg" caption="Hugo static blogs are awesome" >}}
 
 ## Migrating to Hugo
 

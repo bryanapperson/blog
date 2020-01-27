@@ -4,7 +4,7 @@ date = "2014-09-01 22:43:23"
 tags = ['linux-tutorials']
 +++
 
-When you get a new Ubuntu VPS or server there are a few things you want to make sure are taken care of right off the bat. This will optimize the security and usability of your server, providing a reliable foundation for subsequent alterations. If you need an Ubuntu VPS you can get one for \$5 [here](https://www.bitronictech.net/ubuntu-vps-hosting.php "Ubuntu VPS for ​$5").
+When you get a new Ubuntu VPS or server there are a few things you want to make sure are taken care of right off the bat. This will optimize the security and usability of your server, providing a reliable foundation for subsequent alterations. If you need an Ubuntu VPS you can get one for \$5 [here](https://www.bitronictech.net/ubuntu-vps-hosting.php 'Ubuntu VPS for ​$5').
 
 ### Step One
 

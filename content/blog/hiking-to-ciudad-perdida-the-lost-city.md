@@ -5,26 +5,24 @@ description = "Hiking to Ciudad Perdida, the Lost City in Colombia. A trip repor
 keywords = ["ciudad perdida", "lost city", "teyuna", "adventure travel", "responsible travel", "santa marta"]
 tags = ["hiking"]
 categories = [
-    "Traveling"
+"Traveling"
 ]
 share_img = "/images/ciudad-perdida/kogi-village.jpg"
-images = ["/images/ciudad-perdida/our-journey.jpg",  "/images/ciudad-perdida/santa-marta.jpg",  "/images/ciudad-perdida/big-spider.jpg", "/images/ciudad-perdida/kogi-village.jpg" ]
+images = ["/images/ciudad-perdida/our-journey.jpg", "/images/ciudad-perdida/santa-marta.jpg", "/images/ciudad-perdida/big-spider.jpg", "/images/ciudad-perdida/kogi-village.jpg" ]
 
-+++
-
-On a Saturday evening last August my other half and I and left the Upper East Side of Manhattan in a taxi bound for JFK. Excitement and apprehension were in the air as we were eager to leave, but about to commend our kids to my mother in law for a week. We had, and have not since, been away for so long from our children. After arriving, we were informed that we were *extremely* early. Stuck in the purgatory of the waiting area outside the terminal, we polished off of dinner in a nondescript diner, eagerly biding our time. After a period of time, we passed through security and boarded our red-eye to **Santa Marta** by way of Bogota.
++++On a Saturday evening last August my other half and I and left the Upper East Side of Manhattan in a taxi bound for JFK. Excitement and apprehension were in the air as we were eager to leave, but about to commend our kids to my mother in law for a week. We had, and have not since, been away for so long from our children. After arriving, we were informed that we were _extremely_ early. Stuck in the purgatory of the waiting area outside the terminal, we polished off of dinner in a nondescript diner, eagerly biding our time. After a period of time, we passed through security and boarded our red-eye to **Santa Marta** by way of Bogota.
 
 {{< figure src="/images/ciudad-perdida/our-journey.jpg" caption="Our Journey to the Lost City" >}}
 
 ## Table of Contents
-* [Arrival](#arrival)
-* [Day 1](#day-1-santa-marta-to-wiwa-camp)
-* [Day 2](#day-2-wiwa-camp-to-paraiso)
-* [Day 3](#day-3-the-lost-city)
-* [Day 4](#day-4-wiwa-camp-to-vista-hermosa)
-* [Day 5](#day-5-vista-hermosa-to-gotsezhi-village)
-* [Departure](#departure)
 
+- [Arrival](#arrival)
+- [Day 1](#day-1-santa-marta-to-wiwa-camp)
+- [Day 2](#day-2-wiwa-camp-to-paraiso)
+- [Day 3](#day-3-the-lost-city)
+- [Day 4](#day-4-wiwa-camp-to-vista-hermosa)
+- [Day 5](#day-5-vista-hermosa-to-gotsezhi-village)
+- [Departure](#departure)
 
 ## Arrival
 
@@ -36,7 +34,7 @@ When we roused from an early evening nap, a steak and _ceviche_ dinner followed.
 
 ## Day 1 - Santa Marta to Wiwa Camp
 
-At dawn our group hopped into two all wheel drive vehicles. The beginning of a one and a half hour winding ride up into the foothills of *la Sierra Nevada de Santa Marta*. Breakfast was served in a village by the name of Machete Pelao. One of our guides explained the namesake, people there invariably had to maintain a machete at the ready. The substantial food and better hospitality after the Colombian fashion set us up for a good day of walking.
+At dawn our group hopped into two all wheel drive vehicles. The beginning of a one and a half hour winding ride up into the foothills of _la Sierra Nevada de Santa Marta_. Breakfast was served in a village by the name of Machete Pelao. One of our guides explained the namesake, people there invariably had to maintain a machete at the ready. The substantial food and better hospitality after the Colombian fashion set us up for a good day of walking.
 
 Once breakfast had settled drove a bit further, lurching to a halt at the trail-head. **The pavement ended.** The dust from our rides driving away cemented the finality of the fact that we would devote the next five days to being afoot. The beginning of the day was invested walking on a dirt road that was mixed use, though the lone vehicles we observed were motorcycles. The road wound up farther into the mountains, through cattle pasture and coffee fields that had until perhaps a decade ago been under cultivation for cocaine and cannabis. The conversion to coffee, cattle and tourism represented a turn for the better. During the midday heat we stopped to have a break at a roadside refreshment stand and I observed the first local arachnid of the trip.
 
@@ -48,7 +46,7 @@ Towards the waning of the day, we began passing by Kogi settlements. Most of the
 
 {{< figure src="/images/ciudad-perdida/kogi-village.jpg" caption="Kogi Village on the 1st day" >}}
 
-Some time later once the hinterlands of dusk were playing upon the sky, we struck Wiwa camp, our home for the night. There was a natural pool in the Buritaca River nearby, and we all experienced a much needed dip in the cool mountain waters. Once we had devoured a hearty dinner prepared by our trail chef discovered stories and myths regaled by our Wiwa guide and translated to us in English by our jovial Colombian guide. After listening to the tales and enjoying a cold beer, it was time to retire. At *Wiwa Camp* beds and hammocks were provided. However, my wife and had brought our own two person hammock, that would prove a sensible choice. We suspended it and slept like the dead.
+Some time later once the hinterlands of dusk were playing upon the sky, we struck Wiwa camp, our home for the night. There was a natural pool in the Buritaca River nearby, and we all experienced a much needed dip in the cool mountain waters. Once we had devoured a hearty dinner prepared by our trail chef discovered stories and myths regaled by our Wiwa guide and translated to us in English by our jovial Colombian guide. After listening to the tales and enjoying a cold beer, it was time to retire. At _Wiwa Camp_ beds and hammocks were provided. However, my wife and had brought our own two person hammock, that would prove a sensible choice. We suspended it and slept like the dead.
 
 ## Day 2 - Wiwa Camp to Paraiso
 
@@ -56,19 +54,19 @@ The morning arrived with stiffness present. We had mistakenly packed more then n
 
 {{< figure src="/images/ciudad-perdida/waterfall.jpg" caption="A spectacular waterfall about 60ft high" >}}
 
-There was an optional trip to a nearby waterfall which a subset of the group, us included, partook of.  We all swam, which at least for me helped soothe the ache of my neophyte trail legs. Then our guide suggested standing under the waterfall, which I withstood the fury of, a backcountry massage. After some relaxation we left to reunite with the remnant who had remained at camp and resume our journey. On the way out we had the privilege of observing a traditional greeting ritual.
+There was an optional trip to a nearby waterfall which a subset of the group, us included, partook of. We all swam, which at least for me helped soothe the ache of my neophyte trail legs. Then our guide suggested standing under the waterfall, which I withstood the fury of, a backcountry massage. After some relaxation we left to reunite with the remnant who had remained at camp and resume our journey. On the way out we had the privilege of observing a traditional greeting ritual.
 
 {{< figure src="/images/ciudad-perdida/greeting-ceremony.jpg" caption="Traditional Wiwa greeting ceremony" >}}
 
 After that we hit the trail for a shorter day by mileage, but a harder one in terms of elevation change and terrain. After some time following the river, we had an opportunity to take a swim. The next leg of the journey was described to the group as two hours up, one hour down and two hours up. Given that, we all decided to stop and swim. Afterwards we resumed our journey and went uphill. Then we kept going uphill.
 
-Once we got to the top of the first mountain, a few hours later, we stopped for some delicious Colombian green oranges and a rest. Once we were all sufficiently recovered our traversal of the Sierra resumed in earnest. Passing, and almost being run over by mules was constant enjoyment. We pushed to *Teyuna Paraiso* Camp and arrived in early afternoon, beating a rainstorm by a few minutes. After this small blessing we ate lunch, some of us swam again or soaked sore feet in the ever-colder Buritaca.
+Once we got to the top of the first mountain, a few hours later, we stopped for some delicious Colombian green oranges and a rest. Once we were all sufficiently recovered our traversal of the Sierra resumed in earnest. Passing, and almost being run over by mules was constant enjoyment. We pushed to _Teyuna Paraiso_ Camp and arrived in early afternoon, beating a rainstorm by a few minutes. After this small blessing we ate lunch, some of us swam again or soaked sore feet in the ever-colder Buritaca.
 
 {{< figure src="/images/ciudad-perdida/the-buritaca-river.jpg" caption="The Buritaca River, our stalwart guide" >}}
 
 I had lugged a deck of cards against humanity all the way through the jungle. It was a boon as it kept us busy when we were under the roof, dodging the foul weather. Playing with the locals and people from all around the world was extremely interesting, if a strain for our bilingual guide, who translated it all. After the game we had a scrumptious dinner prepared by our awesome camp chefs, once again.
 
-Our Wiwa guide explained more about his culture and the ritual items such as the *porporo*, bag and coca leaves. He told us various stories of the Wiwa verbal tradition. Then our Colombian guide told us more about the contemporary history and rediscovery of *Teyuna* by looters in the nineteen seventies. Apparently the looters had seen the error of their ways and some of them are now involved in running the treks. After enjoying some peaceful time, we all turned in - ready to see the Lost City.
+Our Wiwa guide explained more about his culture and the ritual items such as the _porporo_, bag and coca leaves. He told us various stories of the Wiwa verbal tradition. Then our Colombian guide told us more about the contemporary history and rediscovery of _Teyuna_ by looters in the nineteen seventies. Apparently the looters had seen the error of their ways and some of them are now involved in running the treks. After enjoying some peaceful time, we all turned in - ready to see the Lost City.
 
 ## Day 3 - The Lost City
 
@@ -102,7 +100,7 @@ On the way back to Wiwa Camp there was a torrential downpour. The mountains turn
 
 We left Wiwa Camp after a hearty breakfast and retraced our path back along the way we had come in day prior. Although the day was balmy, it is amazing how much I, at least, had adapted to the heat. The vistas were as stunning as they were on the way out. I enjoyed the way back more as I had my trail legs and was able to expend that surplus energy in admiration of the scenery. The trail was shepherding us back towards the outside world.
 
-We stopped for a fruit break at Adán Camp. There were artifacts there that had been looted from the Lost City when it was initially discovered. This was fascinating to see, but definitely highlighted the exploitation which had occurred there. After eating and catching our wind, some of us stopped to swim. The rest of us continued uphill to Ricardito Camp. 
+We stopped for a fruit break at Adán Camp. There were artifacts there that had been looted from the Lost City when it was initially discovered. This was fascinating to see, but definitely highlighted the exploitation which had occurred there. After eating and catching our wind, some of us stopped to swim. The rest of us continued uphill to Ricardito Camp.
 
 On the trip up the hill, we encountered the first motorcycles and telephone signal in days. We were coming back to the world, and I was not completely certain that was something I desired. When we arrived, we enjoyed another fantastic lunch. Then we enjoyed an afternoon of sitting around and relaxing. That was something I was certainly ready for.
 
@@ -116,7 +114,7 @@ Once we had decompressed and bathed in the views, yet another extraordinary dinn
 
 From Ricardito Camp we had a unique opportunity to visit Gotsezhi Village, which in an indigenous Wiwa community. Walking through the pastures on our way there we were out in the open under the tropical sun. Luckily we had an early start and reached our destination before the heat of the day. When we arrived at Gotsezhi Village we had the opportunity to enjoy more traditional cuisine prepared by the Wiwa people and shop for goods produced locally by the Wiwa.
 
-Once we took that in and took another swim in another gorgeous swimming hole, it was time to return to Santa Marta. We all boarded our 4x4 livery for a two hour ride. The roads were some of the roughest I have ever been on. Unexpectedly the air conditioning in the vehicles felt unbearably cold. It is amazing how the body changes after adjusting to sleeping under the stars in the tropical heat for a week. 
+Once we took that in and took another swim in another gorgeous swimming hole, it was time to return to Santa Marta. We all boarded our 4x4 livery for a two hour ride. The roads were some of the roughest I have ever been on. Unexpectedly the air conditioning in the vehicles felt unbearably cold. It is amazing how the body changes after adjusting to sleeping under the stars in the tropical heat for a week.
 
 On return to Santa Marta, we all had some time to settle in, then went out on the town for a final dinner. The dinner was at a local restaurant and we were treated to the famous Colombian hospitality. Afterwards, a subset of the group went out dancing to experience the Santa Marta nightlife, us included. This was our last night in Colombia, and so there was reason to resist the strong urge to sleep.
 
