@@ -6,6 +6,8 @@ year = -768
 keywords = ['iliad', 'war', 'poetry', 'greek', 'epic']
 tags = ['poetry', 'epic']
 series = ['Great Books']
+share_img = "/images/reviews/the-iliad-book.jpg"
+images = ["/images/reviews/the-iliad-book.jpg"] 
 +++
 
 _The Iliad_ is a brutal war epic, perhaps _the_ war epic. I started reading it back in August 2019. During the reading, I attended two seminars to discuss the book, and completed it in November. It was a hard read for me. That may have been because of the constant, grinding, unreal level of violence portrayed. Though this was my first reading of _The Iliad_, I will hazard a summary to crystalize my understanding. _The Iliad_, in my reading, is a book about pride, rage, humility, the nature of men, and the horror of war, at least. The work illustrates amply the folly of rage and pride, as embodied in the characters it portrays.
