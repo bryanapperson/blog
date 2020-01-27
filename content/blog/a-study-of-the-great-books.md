@@ -13,5 +13,6 @@ In August of 2019 I became interested in reading the great books of Western Civi
 
 This started me on a journey of reading deeply into the western canon as outlined in How to Read a Book by Mortimer Adler. This series contains my musings on the works as I read them and my eventualy contain important resources and study methods.
 
+[My Musings on the Great Books](/series/great-books/)
 
 
