@@ -1,6 +1,6 @@
 +++
 title = "The Iliad"
-description = "The Iliad is the story of the rage of Achilles."
+description = "The Iliad is a brutal war epic, perhaps the war epic. The work evokes images of Apocalypse now, or the landing at normandy."
 date = "2020-01-26 21:45:00"
 year = -768
 keywords = ['iliad', 'war', 'poetry', 'greek', 'epic']
