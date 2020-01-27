@@ -3,9 +3,7 @@ title = "HHVM, MariaDB and Nginx Make WordPress Fly - Intro"
 date = "2014-09-02 00:44:21"
 tags = ['development', 'hhvm', 'mariadb', 'nginx', 'ubuntu', 'wordpress']
 
-+++
-
-HHVM, MariaDB and Nginx Make WordPress fly (seriously). This site is running on what may the fastest possible software stack for WordPress. That stack is HHVM, MariaDB 10.1, Nginx and Ubuntu 14.04. As you are browsing this site you may notice that it is graphically intensive. It also leverages many CPU hungry plugins that would make it take 6-10 seconds to load on even good shared hosting. With this aforementioned software stack pages up to 5MB on this site still load in under a second, end-user pipe permitting. This is all happening on a VPS with 2 x 2.26Ghz cores and 2GB of RAM. Not only that but this stack can serve over 1000 2MB WordPress pages per second without losing stability:
++++HHVM, MariaDB and Nginx Make WordPress fly (seriously). This site is running on what may the fastest possible software stack for WordPress. That stack is HHVM, MariaDB 10.1, Nginx and Ubuntu 14.04. As you are browsing this site you may notice that it is graphically intensive. It also leverages many CPU hungry plugins that would make it take 6-10 seconds to load on even good shared hosting. With this aforementioned software stack pages up to 5MB on this site still load in under a second, end-user pipe permitting. This is all happening on a VPS with 2 x 2.26Ghz cores and 2GB of RAM. Not only that but this stack can serve over 1000 2MB WordPress pages per second without losing stability:
 
 ## AB BenchMark
 

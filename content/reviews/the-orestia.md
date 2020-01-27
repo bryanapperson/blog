@@ -8,14 +8,14 @@ tags = ['drama']
 series = ['Great Books']
 +++
 
-The Orestia is a trilogy of greek tradgedies. I have plans to read the actual 
+The Orestia is a trilogy of greek tradgedies. I have plans to read the actual
 plays in the future, but as of now have only watched them.
 
 ## Watching The Orestia
 
-The 1983 rendition of The Orestia by Peter Hall for the BBC National Theatre 
-is just about the best version I could find. A kind soul had cleaned up the 
-audio, video and added subtitles. We all sat down and watched these high 
+The 1983 rendition of The Orestia by Peter Hall for the BBC National Theatre
+is just about the best version I could find. A kind soul had cleaned up the
+audio, video and added subtitles. We all sat down and watched these high
 energy reenactments over 3 nights.
 
 ### Agamemnon
@@ -35,5 +35,3 @@ energy reenactments over 3 nights.
 ### The Eumenides
 
 {{< youtube xagHZoNS6DQ >}}
-
-

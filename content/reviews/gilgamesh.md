@@ -6,7 +6,4 @@ year = -2000
 keywords = ['gilgamesh']
 tags = ['poetry']
 
-+++
-
-As I read The Epic of Gilgamesh my notes and thoughts will live here.
-
++++As I read The Epic of Gilgamesh my notes and thoughts will live here.

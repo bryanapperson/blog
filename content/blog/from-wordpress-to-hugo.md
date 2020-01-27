@@ -14,9 +14,7 @@ categories = [
 ]
 series = ["Hugo"]
 
-+++
-
-{{< figure src="/images/hugo-logo-wide.svg" caption="Hugo static blogs are awesome" >}}
++++{{< figure src="/images/hugo-logo-wide.svg" caption="Hugo static blogs are awesome" >}}
 
 ## Migrating to Hugo
 
