@@ -6,13 +6,15 @@ year = 1911
 keywords = ['mathematics', 'introduction']
 tags = ['mathematics', 'practical', 'introductory']
 series = ['Great Books']
-share_img = "/images/reviews/the-iliad-book.jpg"
-images = ["/images/reviews/the-iliad-book.jpg"] 
+share_img = "/images/musings/an-introduction-to-mathematics.jpg"
+images = ["/images/reviews/an-introduction-to-mathematics.jpg"] 
 +++
 
 Alfred North Whitehead's _An Introduction to Mathematics_ takes us on a journey of broad strokes, one that traverses the history, notation, and application of mathematical fields. _An Introduction to Mathematics_ is a practical book on theory, great for enticing the study of math at the university level. While covering introductory material, it introduces elegant mathematical insights that will intrigue the reader. It illustrates the principles of generality, form, variable, and abstraction as the elements of mathematics.
 
 After touching on the abstract nature of math, we take a look at variables. The work explores essential concepts of any and some. They are the ideas introduced in algebra which allow for concepts like infinity. Applications of variables, such as Boyle's law, are brought to light. Illuminations of how variables work in diverse fields present their usefulness. From Archimedes to Newton, this concept proves itself intrinsic.
+
+{{< figure src="/images/musings/an-introduction-to-mathematics.jpg" caption="Generality, form, variable and abstraction in action.">}}
 
 From there, we approach vectors and their use in mechanics. All along, talking about the originators of these ideas. The pattern of history, application, and theory continues. The history of mechanics, under the title of dynamics tours from the greeks to Kopernicus and beyond. We learn the concept of vector operations and thereby adding velocities together using the parallelogram law. The explanations are simple yet powerful.
 
