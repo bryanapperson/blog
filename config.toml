@@ -1,4 +1,4 @@
-baseurl = "https://zettelkasten.bryanapperson.com" # Controls base URL sitewide
+baseurl = "https://bryanapperson.com" # Controls base URL sitewide
 languageCode = "en-US" # Controls site language
 title = "Bryan Apperson" # Homepage title and page title suffix
 paginate = 11 # Number of posts to show before paginating
