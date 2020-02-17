@@ -88,3 +88,27 @@ sectionPagesMenu = "main" # Enable menu system for lazy bloggers
     weight = 3
     url = "sitemap.xml"
 
+[params.layout.home]
+  hide_blog = true
+
+[[params.layout.home.section]]
+  type = "musings"
+  limit = 3
+  weight = 3
+
+[[params.layout.home.section]]
+  type = "blog"
+  limit = 3
+  weight = 4
+
+[[menu.main]]
+  name = "Home"
+  weight = 1
+  identifier = "home"
+  url = "/"
+
+[[menu.main]]
+  name = "Resume"
+  weight = 2
+  identifier = "resume"
+        url = "/resume/"
