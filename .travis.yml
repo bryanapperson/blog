@@ -19,7 +19,12 @@ go:
 
 # Only clone the most recent commit.
 git:
+  submodules: false
   depth: 1
+
+# This is a workaround to trim out my private submodule
+before_install:
+        - git -c submodule."content/zettelkasten".update=none submodule update --init --recursive
 
 # before_install
 # install - install any dependencies required
