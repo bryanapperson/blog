@@ -26,9 +26,7 @@ sectionPagesMenu = "main" # Enable menu system for lazy bloggers
 [params]
   description = "" # Suggested, controls default description meta
   author = "Bryan Apperson" # Optional, controls author name display on posts
-  commit = "https://github.com/bryanapperson/blog/tree/"
   githubpullurl = true
-  custom_css = ["/css/custom.css"]
   avatarurl = "images/avatar.png"
   info = "Site Reliability Engineer"
   hide_author = false # Optional, set true to hide author name on posts
