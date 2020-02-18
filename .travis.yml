@@ -26,6 +26,7 @@ git:
 before_install:
         - head -n -3 .gitmodules > .gitmodules
         - rm -rf content/zettelkasten
+        - cat .gitmodules
         - git submodule update --init --recursive
 
 # before_install
