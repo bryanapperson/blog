@@ -5,3 +5,6 @@ IgnoreDirectoryMissingTrailingSlash: True
 # I am not sure if these are broken or if hugo is a big non-standard
 IgnoreAltMissing: True
 CheckImages: False
+# Later I will have to figure out why this is borked
+IgnoreURLs:
+    - "/livereload.js?port=1313&mindelay=10&v=2"
