@@ -24,9 +24,8 @@ git:
 
 # This is a workaround to trim out my private submodule
 before_install:
-        - head -n -3 .gitmodules > .gitmodules
+        - git submodule deinit content/zettelkasten
         - rm -rf content/zettelkasten
-        - cat .gitmodules
         - git submodule update --init --recursive
 
 # before_install
