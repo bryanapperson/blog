@@ -1,9 +1,16 @@
-+++
-title = "HHVM, MariaDB and Nginx Make WordPress Fly - Intro"
-date = "2014-09-02 00:44:21"
-tags = ['development', 'hhvm', 'mariadb', 'nginx', 'ubuntu', 'wordpress']
++++ title = "HHVM, MariaDB and Nginx Make WordPress Fly - Intro" date =
+"2014-09-02 00:44:21" tags = ['development', 'hhvm', 'mariadb', 'nginx',
+'ubuntu', 'wordpress']
 
-+++HHVM, MariaDB and Nginx Make WordPress fly (seriously). This site is running on what may the fastest possible software stack for WordPress. That stack is HHVM, MariaDB 10.1, Nginx and Ubuntu 14.04. As you are browsing this site you may notice that it is graphically intensive. It also leverages many CPU hungry plugins that would make it take 6-10 seconds to load on even good shared hosting. With this aforementioned software stack pages up to 5MB on this site still load in under a second, end-user pipe permitting. This is all happening on a VPS with 2 x 2.26Ghz cores and 2GB of RAM. Not only that but this stack can serve over 1000 2MB WordPress pages per second without losing stability:
++++HHVM, MariaDB and Nginx Make WordPress fly (seriously). This site is running
+on what may the fastest possible software stack for WordPress. That stack is
+HHVM, MariaDB 10.1, Nginx and Ubuntu 14.04. As you are browsing this site you
+may notice that it is graphically intensive. It also leverages many CPU hungry
+plugins that would make it take 6-10 seconds to load on even good shared
+hosting. With this aforementioned software stack pages up to 5MB on this site
+still load in under a second, end-user pipe permitting. This is all happening on
+a VPS with 2 x 2.26Ghz cores and 2GB of RAM. Not only that but this stack can
+serve over 1000 2MB WordPress pages per second without losing stability:
 
 ## AB BenchMark
 
@@ -66,31 +73,77 @@ Percentage of the requests served within a certain time (ms)
 
 ## Pingdom Test
 
-\[stag_image style="no-filter" src="http://bryanapperson.com/wp-content/uploads/2014/09/pingdom.png" alignment="none" url=""\]
+\[stag_image style="no-filter"
+src="http://bryanapperson.com/wp-content/uploads/2014/09/pingdom.png"
+alignment="none" url=""\]
 
 ## Why HHVM for WordPress?
 
-So you may be asking yourself, is that really possible? Yes, HHVM and WordPress work very well together. If you asked me a few days ago I might have said no. But after playing around with [HHVM](http://hhvm.com/ 'HHVM'), also known as "Hip Hop for PHP", it is. HHVM is Facebook's production PHP server which has now gone open source. At this point it still has a few compatibility issues. Especially with the usual culprits like [Ioncube](http://forum.ioncube.com/viewtopic.php?p=10357&sid=45481ca609255e7435f1f4a938e5a786 'Ioncube'). However it works very well with WordPress 3.9+. When combined with Nginx, MariaDB and Ubuntu "Trust Tahr" you get a pretty unbeatable platform for WordPress. Serving 200 request per second even on un-cached and heavy pages where PHP-FPM can only achieve 18 requests per second on a VM with the same resources (rendering the same un-cached pages).
+So you may be asking yourself, is that really possible? Yes, HHVM and WordPress
+work very well together. If you asked me a few days ago I might have said no.
+But after playing around with [HHVM](http://hhvm.com/ 'HHVM'), also known as
+"Hip Hop for PHP", it is. HHVM is Facebook's production PHP server which has now
+gone open source. At this point it still has a few compatibility issues.
+Especially with the usual culprits like
+[Ioncube](http://forum.ioncube.com/viewtopic.php?p=10357&sid=45481ca609255e7435f1f4a938e5a786 'Ioncube').
+However it works very well with WordPress 3.9+. When combined with Nginx,
+MariaDB and Ubuntu "Trust Tahr" you get a pretty unbeatable platform for
+WordPress. Serving 200 request per second even on un-cached and heavy pages
+where PHP-FPM can only achieve 18 requests per second on a VM with the same
+resources (rendering the same un-cached pages).
 
 ## MariaDB 10.1
 
-[MariaDB](https://mariadb.org/ 'MariaDB') provides a solid database back-end and can easily be scaled out into a Galera Cluster for larger deployments. MariaDB 10.1 outperforms MySQL 5.7.4 by a [significant margin](https://blog.mariadb.org/performance-evaluation-of-mariadb-10-1-and-mysql-5-7-4-labs-tplc/ 'MariaDB 10.1 vs MySQL 5.7.4'), that is why it was chosen for this stack and it proved itself in implementation. MariaDB would perform better on SSD if available, but the above results were achieved on RAID10 7200RPM SATAIII with an LSI Megaraid BBU controller (512MB Cache).
+[MariaDB](https://mariadb.org/ 'MariaDB') provides a solid database back-end and
+can easily be scaled out into a Galera Cluster for larger deployments. MariaDB
+10.1 outperforms MySQL 5.7.4 by a
+[significant margin](https://blog.mariadb.org/performance-evaluation-of-mariadb-10-1-and-mysql-5-7-4-labs-tplc/ 'MariaDB 10.1 vs MySQL 5.7.4'),
+that is why it was chosen for this stack and it proved itself in implementation.
+MariaDB would perform better on SSD if available, but the above results were
+achieved on RAID10 7200RPM SATAIII with an LSI Megaraid BBU controller (512MB
+Cache).
 
 ## Nginx
 
-[Nginx](http://nginx.com/ 'Nginx') can be somewhat less intuitive to configure then Apache. However it is a beast for serving static files especially [per resource usage](http://raspberrywebserver.com/raspberrypicluster/comparing-the-performance-of-nginx-and-apache-web-servers.html 'Apache Vs. Nginx on Rasberry Pi') when configured correctly. Which is mostly what it does in this stack as all PHP processing is done by HHVM. Nginx really shines in serving static files to many user concurrently with the configuration we'll outline in the coming articles.
+[Nginx](http://nginx.com/ 'Nginx') can be somewhat less intuitive to configure
+then Apache. However it is a beast for serving static files especially
+[per resource usage](http://raspberrywebserver.com/raspberrypicluster/comparing-the-performance-of-nginx-and-apache-web-servers.html 'Apache Vs. Nginx on Rasberry Pi')
+when configured correctly. Which is mostly what it does in this stack as all PHP
+processing is done by HHVM. Nginx really shines in serving static files to many
+user concurrently with the configuration we'll outline in the coming articles.
 
 ## Ubuntu 14.04 "Trusty Tahr"
 
-Choosing Ubuntu 14.04 for this deployment made sense, because it is LTS (5 years of support) and apt-get makes it almost trivial to get all of this setup. Not to mention that Ubuntu is a stable OS (although I usually prefer CentOS/RHEL). Nginx is built into the native repos for Ubuntu 14.04 and having maintained repos for both HHVM and MariaDB with Ubuntu 14.04 makes this stack easy to update later on. If you need an Ubuntu VPS you can get one for $5 [here](https://www.bitronictech.net/ubuntu-vps-hosting.php "Ubuntu VM for $5"). Before you get started with this you will probably want to [secure your Ubuntu VPS](http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/ 'Secure Your Ubuntu VPS').
+Choosing Ubuntu 14.04 for this deployment made sense, because it is LTS (5 years
+of support) and apt-get makes it almost trivial to get all of this setup. Not to
+mention that Ubuntu is a stable OS (although I usually prefer CentOS/RHEL).
+Nginx is built into the native repos for Ubuntu 14.04 and having maintained
+repos for both HHVM and MariaDB with Ubuntu 14.04 makes this stack easy to
+update later on. If you need an Ubuntu VPS you can get one for
+$5 [here](https://www.bitronictech.net/ubuntu-vps-hosting.php "Ubuntu VM for $5").
+Before you get started with this you will probably want to
+[secure your Ubuntu VPS](http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/ 'Secure Your Ubuntu VPS').
 
 ## WordPRess 3.9.2
 
-This series of articles will show you how to set all of this up and make it work with both a WordPress multi-site network, and a single WordPress site. I used the multi-site network with WP MU Domain Mapper and Nginx helper for ease of moving my multiple blogs and family/friends WordPress sites on to one platform. We will also be leveraging [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/ 'W3 Total Cache') and APC (which is built in to HHVM) for Opcode caching.
+This series of articles will show you how to set all of this up and make it work
+with both a WordPress multi-site network, and a single WordPress site. I used
+the multi-site network with WP MU Domain Mapper and Nginx helper for ease of
+moving my multiple blogs and family/friends WordPress sites on to one platform.
+We will also be leveraging
+[W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/ 'W3 Total Cache')
+and APC (which is built in to HHVM) for Opcode caching.
 
 ## Concluding the Introduction
 
-This setup is so efficient you wouldn't need to scale out past a single VM instance unless you were in the Alexa top 10000, so we won't handle that in this series. In articles to follow I will layout how to build this stack and use it for Lightning fast WordPress hosting on a shoestring budget. You'll be able to handle 50,000 page loads an hour or more on a 2GB RAM Xen VM (Check the [Ubuntu VPS](https://www.bitronictech.net/ubuntu-vps-hosting.php 'Ubuntu VPS Hosting') from Bitronic Technologies for best compatibility). I will update this article with links to the upcoming tutorials.
+This setup is so efficient you wouldn't need to scale out past a single VM
+instance unless you were in the Alexa top 10000, so we won't handle that in this
+series. In articles to follow I will layout how to build this stack and use it
+for Lightning fast WordPress hosting on a shoestring budget. You'll be able to
+handle 50,000 page loads an hour or more on a 2GB RAM Xen VM (Check
+the [Ubuntu VPS](https://www.bitronictech.net/ubuntu-vps-hosting.php 'Ubuntu VPS Hosting') from
+Bitronic Technologies for best compatibility). I will update this article with
+links to the upcoming tutorials.
 
 ### Github Repository for This Tutorial
 
@@ -98,4 +151,9 @@ This setup is so efficient you wouldn't need to scale out past a single VM insta
 
 ### UPDATED: Links to the Continued Guide "Make WordPress Fly":
 
-[Preliminary - Getting Started with an Ubuntu VPS Running 14.04](http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/ 'Getting Started with an Ubuntu VPS Running 14.04') Part 1 - HHVM, MariaDB and Nginx Make WordPress Fly - Intro [Part 2 - MariaDB Setup for Ubuntu 14.04 - Make WordPress Fly](http://bryanapperson.com/blog/make-wordpress-fly-mariadb-setup-ubuntu-14/ 'MariaDB 10.1 Setup for Ubuntu 14.04 – Make WordPress Fly') [Part 3 - Install HHVM, Nginx on Ubuntu 14.04 - Make WordPress Fly](http://bryanapperson.com/blog/install-hhvm-nginx-ubuntu-14-04-make-wordpress-fly/ 'Install HHVM, Nginx on Ubuntu 14.04 – Make WordPress Fly') The other parts are still in the works. In the meantime, thanks for reading - leave your thoughts in the comments below.
+[Preliminary - Getting Started with an Ubuntu VPS Running 14.04](http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/ 'Getting Started with an Ubuntu VPS Running 14.04')
+Part 1 - HHVM, MariaDB and Nginx Make WordPress Fly - Intro
+[Part 2 - MariaDB Setup for Ubuntu 14.04 - Make WordPress Fly](http://bryanapperson.com/blog/make-wordpress-fly-mariadb-setup-ubuntu-14/ 'MariaDB 10.1 Setup for Ubuntu 14.04 – Make WordPress Fly')
+[Part 3 - Install HHVM, Nginx on Ubuntu 14.04 - Make WordPress Fly](http://bryanapperson.com/blog/install-hhvm-nginx-ubuntu-14-04-make-wordpress-fly/ 'Install HHVM, Nginx on Ubuntu 14.04 – Make WordPress Fly')
+The other parts are still in the works. In the meantime, thanks for reading
+- leave your thoughts in the comments below.

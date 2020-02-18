@@ -1,34 +1,35 @@
-+++
-date = "2019-04-03"
-title = "From WordPress to Hugo"
-description = "Why and how this blog is moving from WordPress to hugo and github pages."
-keywords = "hugo, wordpress, migrate"
-tags = [
-"hugo",
-"static blog",
-"go",
-"wordpress",
-]
-categories = [
-"Development"
-]
-series = ["Hugo"]
++++ date = "2019-04-03" title = "From WordPress to Hugo" description = "Why and
+how this blog is moving from WordPress to hugo and github pages." keywords =
+"hugo, wordpress, migrate" tags = [ "hugo", "static blog", "go", "wordpress", ]
+categories = [ "Development" ] series = ["Hugo"]
 
 +++{{< figure src="/images/hugo-logo-wide.svg" caption="Hugo static blogs are awesome" >}}
 
 ## Migrating to Hugo
 
-It is 2019, enter the brave new world of serverless computing and static blogging. After years of using WordPress, and a few years without any updates this blog is in need of a refresh. When I originally created this blog I had servers (a whole web hosting company in fact). Now I just want to be able to create content and have a lightning fast website that is easy to maintain.
+It is 2019, enter the brave new world of serverless computing and static
+blogging. After years of using WordPress, and a few years without any updates
+this blog is in need of a refresh. When I originally created this blog I had
+servers (a whole web hosting company in fact). Now I just want to be able to
+create content and have a lightning fast website that is easy to maintain.
 
-Earlier today I was doing some research, came across Hugo and decided to rebuild this blog using it and host it using github pages, at least initially. This site will likely be a work in progress for some time, however at least the text of the old content is migrated now. As I do this migration I will put out a series of articles on the how and the why of the migration.
+Earlier today I was doing some research, came across Hugo and decided to rebuild
+this blog using it and host it using github pages, at least initially. This site
+will likely be a work in progress for some time, however at least the text of
+the old content is migrated now. As I do this migration I will put out a series
+of articles on the how and the why of the migration.
 
 ## Why Hugo and the Coder theme?
 
-Hugo is lightning fast at rendering pages and simple to use, plus the workflow with github pages is straightforward. The coder theme was chosed for now because I like the aesthetics.
+Hugo is lightning fast at rendering pages and simple to use, plus the workflow
+with github pages is straightforward. The coder theme was chosed for now because
+I like the aesthetics.
 
 ## Migrating from Wordpress
 
-I wanted a pretty fresh start, so I just used WordPress to export XML and then found a script [here](https://gist.github.com/mtik00/75c8f555b49365395e32). Then I modified it for python 3 as follows:
+I wanted a pretty fresh start, so I just used WordPress to export XML and then
+found a script [here](https://gist.github.com/mtik00/75c8f555b49365395e32). Then
+I modified it for python 3 as follows:
 
 ```python
 #!/usr/bin/env python3
@@ -151,17 +152,27 @@ if __name__ == '__main__':
     convert_wp_xml(sys.argv[1])
 ```
 
-I ~~still need to manually sift through and fix images and curate the older posts~~ have now updated all of the older posts.
+I ~~still need to manually sift through and fix images and curate the older
+posts~~ have now updated all of the older posts.
 
 ## Github Pages
 
-I chose github pages because I already have a github account and the workflow seemed good. Plus there is an easy way I ~~plan to automate publishing master using travis-ci in the near future~~ have automated publishing. I followed the [Hugo docs](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch), using the gh-pages branch based workflow. The repo for this blog now lives [here](https://github.com/bryanapperson/blog).
+I chose github pages because I already have a github account and the workflow
+seemed good. Plus there is an easy way I ~~plan to automate publishing master
+using travis-ci in the near future~~ have automated publishing. I followed the
+[Hugo docs](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch),
+using the gh-pages branch based workflow. The repo for this blog now lives
+[here](https://github.com/bryanapperson/blog).
 
 ## Travis CI
 
-I adapted this [guide on Travis CI and Hugo](https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/) to automate the build and publish of my blog to github pages. It is pretty straightforward and I highly recommend it.
+I adapted this
+[guide on Travis CI and Hugo](https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/)
+to automate the build and publish of my blog to github pages. It is pretty
+straightforward and I highly recommend it.
 
-Here is the .travis.yml that I ended up with after optimizing a bit for faster builds of Hugo:
+Here is the .travis.yml that I ended up with after optimizing a bit for faster
+builds of Hugo:
 
 ```yaml
 # Credit to:
@@ -214,4 +225,6 @@ deploy:
 
 ## Conclusion
 
-Overall the initial learning curve, setup, customization and migration took about 8 hours. I would say that is pretty good. There will definitely be more posts to follow on my journey with blogging using Hugo.
+Overall the initial learning curve, setup, customization and migration took
+about 8 hours. I would say that is pretty good. There will definitely be more
+posts to follow on my journey with blogging using Hugo.

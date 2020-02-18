@@ -4,11 +4,17 @@ date = "2015-04-08 10:05:45"
 tags = ['centos7', 'ceph', 'linux-tutorials', 'rbd', 'rhel', 'systemd']
 +++
 
-This tutorial covers mounting an RBD image at boot under CentOS 7. Make sure to unmount the RBD you want to have mount at boot before following this tutorial. This tutorial requires a CentOS 7 client with a client or admin keyring from Ceph, and a working Ceph cluster. This tutorial also assumes you have already created the RBD image you want to be mounted at boot. Let's begin!
+This tutorial covers mounting an RBD image at boot under CentOS 7. Make sure to
+unmount the RBD you want to have mount at boot before following this tutorial.
+This tutorial requires a CentOS 7 client with a client or admin keyring from
+Ceph, and a working Ceph cluster. This tutorial also assumes you have already
+created the RBD image you want to be mounted at boot. Let's begin!
 
 ## Assumptions
 
-This tutorial assumes the node you are implementing this on has connectivity to a working ceph cluster and also assumes that kernel module RBD is enabled. For the purposes of this tutorial I will place variables, the values specified here:
+This tutorial assumes the node you are implementing this on has connectivity to
+a working ceph cluster and also assumes that kernel module RBD is enabled. For
+the purposes of this tutorial I will place variables, the values specified here:
 
 ```bash
 export poolname = your_pools_name
@@ -18,7 +24,10 @@ export mountpoint = place_to_mount_the rbd
 
 ## Create A systemd service to map and mount automatically on boot / demand
 
-You will want to automatically load the kernel module, map the appropriate rbd storage to a local device and mount the ceph image. Here is a simple script for mounting and un-mounting RBD images create one at /usr/bin/mount-rbd-$poolname-$rbdimage for each of your RBD images:
+You will want to automatically load the kernel module, map the appropriate rbd
+storage to a local device and mount the ceph image. Here is a simple script for
+mounting and un-mounting RBD images create one at
+/usr/bin/mount-rbd-$poolname-$rbdimage for each of your RBD images:
 
 ```bash
 #!/bin/bash
@@ -36,7 +45,9 @@ if [ "$1" == "u" ]; then
 fi
 ```
 
-Create a new systemd service unit (/etc/systemd/system/mount-rbd-$poolname-$rbdimage.service) for each of your remote rbd images:
+Create a new systemd service unit
+(/etc/systemd/system/mount-rbd-$poolname-$rbdimage.service) for each of your
+remote rbd images:
 
 ```ini
 [Unit]
@@ -53,7 +64,8 @@ ExecStop=/usr/bin/mount-rbd-$poolname-$rbdimage u
 WantedBy=multi-user.target
 ```
 
-Make sure your target RBD is unmounted. Start the service and check whether /dev/rbd0 is created or not:
+Make sure your target RBD is unmounted. Start the service and check whether
+/dev/rbd0 is created or not:
 
 `systemctl start mount-rbd-$poolname-$rbdimage`
 
@@ -63,4 +75,6 @@ If everything seems to be fine, enable the service to start on boot:
 
 `systemctl enable mount-rbd-$poolname-$rbdimage`
 
-You now have a working RBD mount at boot time! I wil be following this up with a complete tutorial on the entire process of creating an RBD at some point in the future. Leave your thoughts in the comments below.
+You now have a working RBD mount at boot time! I wil be following this up with a
+complete tutorial on the entire process of creating an RBD at some point in the
+future. Leave your thoughts in the comments below.
