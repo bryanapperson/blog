@@ -1,8 +1,13 @@
-+++ title = "Installing WordPress with Nginx on Ubuntu 14.04" date = "2014-09-10
-00:16:31" tags = ['install', 'linux-tutorials', 'nginx', 'ubuntu',
-'ubuntu-14-04', 'wordpress']
++++
+title = "Installing WordPress with Nginx on Ubuntu 14.04"
+publishdate = "2014-09-10 00:16:31"
+tags = [
+  'install', 'linux-tutorials', 'nginx', 'ubuntu', 'ubuntu-14-04', 'wordpress'
+  ]
+series = ['WordPress HHVM']
++++
 
-+++Installing WordPress with Nginx on Ubuntu 14.04 is a fairly straightforward
+Installing WordPress with Nginx on Ubuntu 14.04 is a fairly straightforward
 task. In this tutorial we will do over how to do it. This tutorial assumes you
 have completed the
 [Getting Started with an Ubuntu VPS](http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/ 'Getting Started with an Ubuntu VPS') guide and

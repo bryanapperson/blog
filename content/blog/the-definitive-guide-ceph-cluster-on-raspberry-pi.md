@@ -1,6 +1,6 @@
 +++
 title = "The Definitive Guide: Ceph Cluster on Raspberry Pi"
-date = "2015-05-13 01:35:35"
+publishdate = "2015-05-13 01:35:35"
 keywords = ['arm', 'ceph', 'development', 'ha', 'linux-tutorials', 'rados', 'raspberry-pi', 'technology', 'usb']
 tags = ['arm', 'ceph', 'development', 'ha', 'linux-tutorials', 'rados', 'raspberry-pi', 'technology', 'usb']
 +++

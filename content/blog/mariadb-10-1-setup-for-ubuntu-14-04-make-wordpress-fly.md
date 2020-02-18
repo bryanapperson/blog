@@ -1,7 +1,13 @@
 +++
 title = "MariaDB 10.1 Setup for Ubuntu 14.04 - Make WordPress Fly"
-date = "2014-09-02 04:17:29"
-tags = ['configure', 'development', 'install', 'mariadb', 'secure', 'setup', 'ubuntu-14-04']
+date = "2020-02-26 20:35:53"
+publishdate = "2014-09-02 04:17:29"
+tags = [
+'configure', 'development', 'install', 'mariadb', 'secure', 'setup', 'ubuntu-14-04'
+]
+series = ['WordPress HHVM']
+prev = '/blog/hhvm-mariadb-and-nginx-make-wordpress-fly-intro/'
+next = '/blog/configure-nginx-hhvm-for-wp-making-wordpress-fly/'
 +++
 
 In this tutorial we will cover optimal MariaDB 10.1 setup for Ubuntu 14.04 on a

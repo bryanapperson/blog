@@ -1,15 +1,18 @@
-+++ date = "2019-04-10 19:40:00" title = "Hiking to Ciudad Perdida" description
-= "Hiking to Ciudad Perdida, the Lost City in Colombia. A trip report, photos
-and reflections on the journey to Teyuna from Santa Marta." keywords = ["ciudad
-perdida", "lost city", "teyuna", "adventure travel", "responsible travel",
-"santa marta"] tags = ["hiking"] categories = [ "Traveling" ] share_img =
-"/images/ciudad-perdida/kogi-village.jpg" images =
-["/images/ciudad-perdida/our-journey.jpg",
-"/images/ciudad-perdida/santa-marta.jpg",
-"/images/ciudad-perdida/big-spider.jpg",
-"/images/ciudad-perdida/kogi-village.jpg" ]
-
-+++On a Saturday evening last August my other half and I and left the Upper East
++++
+datepublished = "2019-04-10 19:40:00"
+title = "Hiking to Ciudad Perdida"
+description = "Hiking to Ciudad Perdida, the Lost City in Colombia. A trip report, photos and reflections on the journey to Teyuna from Santa Marta."
+keywords = ["ciudad perdida", "lost city", "teyuna", "adventure travel", "responsible travel", "santa marta"]
+tags = ["hiking"]
+share_img = "/images/ciudad-perdida/kogi-village.jpg"
+images = [
+  "/images/ciudad-perdida/our-journey.jpg",
+  "/images/ciudad-perdida/santa-marta.jpg",
+  "/images/ciudad-perdida/big-spider.jpg",
+  "/images/ciudad-perdida/kogi-village.jpg"
+]
++++
+On a Saturday evening last August my other half and I and left the Upper East
 Side of Manhattan in a taxi bound for JFK. Excitement and apprehension were in
 the air as we were eager to leave, but about to commend our kids to my mother in
 law for a week. We had, and have not since, been away for so long from our

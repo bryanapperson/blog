@@ -1,9 +1,14 @@
-+++ date = "2019-04-03" title = "From WordPress to Hugo" description = "Why and
-how this blog is moving from WordPress to hugo and github pages." keywords =
-"hugo, wordpress, migrate" tags = [ "hugo", "static blog", "go", "wordpress", ]
-categories = [ "Development" ] series = ["Hugo"]
++++
+datepublished = "2019-04-03"
+title = "From WordPress to Hugo"
+description = "Why and how this blog is moving from WordPress to hugo and github pages."
+keywords = "hugo, wordpress, migrate"
+tags = ["hugo", "static blog", "go", "wordpress"]
+categories = [ "Development" ]
+series = ["Blog Meta"]
++++
 
-+++{{< figure src="/images/hugo-logo-wide.svg" caption="Hugo static blogs are awesome" >}}
+{{< figure src="/images/hugo-logo-wide.svg" caption="Hugo static blogs are awesome" >}}
 
 ## Migrating to Hugo
 

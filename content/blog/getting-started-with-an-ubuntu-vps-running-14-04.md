@@ -2,14 +2,14 @@
 title = "Getting Started with an Ubuntu VPS Running 14.04"
 date = "2020-02-17 19:27:00"
 publishdate = "2014-09-01 22:43:23"
-tags = ['linux-tutorials']
+tags = ['linux', 'tutorial']
+next = '/blog/mariadb-10-1-setup-for-ubuntu-14-04-make-wordpress-fly'
 +++
 
 When you get a new Ubuntu VPS or server there are a few things you want to make
 sure are taken care of right off the bat. This will optimize the security and
 usability of your server, providing a reliable foundation for subsequent
-alterations. If you need an Ubuntu VPS you can get one for
-[here](https://www.vultr.com).
+alterations. If you need an Ubuntu VPS you can get one for ![here](https://www.vultr.com).
 
 ### Step One
 

@@ -1,8 +1,10 @@
 +++
 title = "Configure Nginx/HHVM for WP - Making WordPress Fly"
-date = "2014-09-27 08:02:29"
-keywords = ['nginx', 'wordpress', 'hhvm']
-tags = ['development', 'linux-tutorials']
+date = "2020-02-17 20:40:54"
+publishdate = "2014-09-27 08:02:29"
+tags = ['nginx', 'wordpress', 'hhvm']
+series = ['WordPress HHVM']
+prev = '/blog/mariadb-10-1-setup-for-ubuntu-14-04-make-wordpress-fly/'
 +++
 
 The next step in the tutorial "Making WordPress Fly" is to configure Nginx/HHVM

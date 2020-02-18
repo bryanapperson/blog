@@ -1,6 +1,6 @@
 +++
 title = "Setup OpenVPN on Ubuntu the Easy Way"
-date = "2014-11-29 22:38:20"
+publishdate = "2014-11-29 22:38:20"
 description = "How to setup OpenVPN on an Ubuntu box the easy way."
 keywords = ['linux-tutorials', 'openvpn', 'security', 'ssl', 'tunnel', 'ubuntu']
 tags = ['linux-tutorials', 'openvpn', 'security', 'ssl', 'tunnel', 'ubuntu']
