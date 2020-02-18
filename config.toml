@@ -104,9 +104,3 @@ sectionPagesMenu = "main" # Enable menu system for lazy bloggers
   weight = 1
   identifier = "home"
   url = "/"
-
-[[menu.main]]
-  name = "Resume"
-  weight = 2
-  identifier = "resume"
-        url = "/resume/"

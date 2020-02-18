@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/themes/after-dark" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/themes/after-dark/docs/themes/after-dark" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/themes/fractal-forest" vcs="Git" />
+  </component>
+</project>
