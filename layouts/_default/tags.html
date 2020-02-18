@@ -1,0 +1,14 @@
+  <div class="footer-tags">
+    {{ $tags := $.Site.Taxonomies.tags.Alphabetical }}
+    {{ $tags := where $tags "Count" ">=" 3 }}
+    {{ $tags := where $tags "Term" "not in" (slice "hugo" "tags" "rss" "old") }}
+    {{ $count := 0 }}
+    {{ range $key, $tag := $tags }}
+      {{ if $tag.Term }}
+        {{ $tagURL := printf "tags/%s" $tag.Term | relURL }}
+        {{ if ne $key 0}}&middot;{{ end }}
+        <a style="font-size: {{ add 100 (mul (sub $tag.Count 8) 5) }}%;"
+          href="{{ $tagURL }}/">{{ $tag.Term }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
