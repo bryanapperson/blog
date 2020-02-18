@@ -4,7 +4,22 @@ date = "2014-09-02 04:17:29"
 tags = ['configure', 'development', 'install', 'mariadb', 'secure', 'setup', 'ubuntu-14-04']
 +++
 
-In this tutorial we will cover optimal MariaDB 10.1 setup for Ubuntu 14.04 on a VM with 2-4GB of RAM. This is part 2 of the "Make WordPress Fly" tutorial. You can find part 1 [here](http://bryanapperson.com/blog/intro-hhvm-mariadb-nginx-wordpress/ 'Intro - Make WordPress Fly'). Part 1 covered the benefits of using HHVM, MariaDB, Nginx and Ubuntu 14.04 to run a WordPress website. In this section we'll be digging in to MariaDB and the optimal configurations for it. This tutorial assumes you have a VM with at least 512MB of RAM, 1 Xeon Core, 10 GB HDD and Vanilla Ubuntu 14.04 installed and ideally [secured](http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/ 'Getting Started with an Ubuntu VPS Running 14.04'). If you need a VM check out the [Ubuntu VPS](https://www.bitronictech.net/ubuntu-vps-hosting.php 'Ubuntu VPS') from Bitronic Technologies which meet the requirements for this tutorial (only \$5). So, assuming you have your Ubuntu VPS all setup, we will proceed with the fairly straightforward process of installing MariaDB on Ubuntu 14.04. We are specifically going to be deploying MariaDB 10.1 which as discussed in part 1 has significant performance benefits over even the newest versions on MySQL. First, connect to your VM via SSH.
+In this tutorial we will cover optimal MariaDB 10.1 setup for Ubuntu 14.04 on a
+VM with 2-4GB of RAM. This is part 2 of the "Make WordPress Fly" tutorial. You
+can find part 1 [here](/blog/hhvm-mariadb-and-nginx-make-wordpress-fly-intro).
+Part 1 covered the benefits of using HHVM, MariaDB, Nginx and Ubuntu 14.04 to
+run a WordPress website. In this section we'll be digging in to MariaDB and the
+optimal configurations for it. This tutorial assumes you have a VM with at least
+512MB of RAM, 1 Xeon Core, 10 GB HDD and Vanilla Ubuntu 14.04 installed and
+ideally [secured](/blog/getting-started-with-an-ubuntu-vps-running-14-04/
+'Getting Started with an Ubuntu VPS Running 14.04'). If you need a VM check out
+the [Ubuntu VPS](https://www.bitronictech.net/ubuntu-vps-hosting.php 'Ubuntu
+VPS') from Bitronic Technologies which meet the requirements for this tutorial
+(only \$5). So, assuming you have your Ubuntu VPS all setup, we will proceed
+with the fairly straightforward process of installing MariaDB on Ubuntu 14.04.
+We are specifically going to be deploying MariaDB 10.1 which as discussed in
+part 1 has significant performance benefits over even the newest versions on
+MySQL. First, connect to your VM via SSH.
 
 `ssh -p port user@you.rip.add.res`
 
@@ -192,11 +207,3 @@ Performance can be tweaked a bit once we've had the WordPress site up and runnin
 sudo service mysql restart
 
 This concludes part 2 of the guide "MariaDB Setup for Ubuntu 14.04 - Make WordPress Fly". As the rest of the guide is released links will be posted here and on all of the articles in the tutorial.
-
-### GITHUB REPOSITORY FOR THIS TUTORIAL
-
-[https://github.com/bitronictech/HHVM-Nginx-WordPress](https://github.com/bitronictech/HHVM-Nginx-WordPress 'Deploying HHVM, MariaDB, Nginx and WordPress on Ubuntu 14.04')
-
-### LINKS TO THE CONTINUED GUIDE "MAKE WORDPRESS FLY":
-
-[Preliminary - Getting Started with an Ubuntu VPS Running 14.04](http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/ 'Getting Started with an Ubuntu VPS Running 14.04') [Part 1 - HHVM, MariaDB and Nginx Make WordPress Fly - Intro](http://bryanapperson.com/blog/intro-hhvm-mariadb-nginx-wordpress/ 'HHVM, MariaDB and Nginx Make WordPress Fly – Intro') Part 2 - MariaDB Setup for Ubuntu 14.04 - Make WordPress Fly [Part 3 - Install HHVM, Nginx on Ubuntu 14.04 - Make WordPress Fly](http://bryanapperson.com/blog/install-hhvm-nginx-ubuntu-14-04-make-wordpress-fly/ 'Install HHVM, Nginx on Ubuntu 14.04 – Make WordPress Fly') Leave your thoughts and comments below and thanks for reading!

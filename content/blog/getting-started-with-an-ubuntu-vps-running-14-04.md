@@ -5,7 +5,7 @@ publishdate = "2014-09-01 22:43:23"
 tags = ['linux-tutorials']
 +++
 
-When you get a new Ubuntu VPS or server there are a few things you want to make sure are taken care of right off the bat. This will optimize the security and usability of your server, providing a reliable foundation for subsequent alterations. If you need an Ubuntu VPS you can get one for \$5 [here](https://www.vultr.com).
+When you get a new Ubuntu VPS or server there are a few things you want to make sure are taken care of right off the bat. This will optimize the security and usability of your server, providing a reliable foundation for subsequent alterations. If you need an Ubuntu VPS you can get one for [here](https://www.vultr.com).
 
 ### Step One
 
@@ -142,4 +142,4 @@ You can now close both connections by typing exit in each window.
 
 ### What's Next?
 
-You now have a fairly secure server, however you can continue further securing you server by installing fail2ban or a similar utility to help prevent brute force and port scanning attacks. Outside of that you are ready to install LAMP, LEMP or whatever other programs you want to run on your VPS! Leave us your thoughts in the comments below and check out our other Ubuntu VPS articles.
+You now have a fairly secure server, however you can continue further securing you server by installing fail2ban or a similar utility to help prevent brute force and port scanning attacks. Outside of that you are ready to install LAMP, LEMP or whatever other programs you want to run on your VPS! Leave me your thoughts in the comments below and check out my other Ubuntu VPS articles.
