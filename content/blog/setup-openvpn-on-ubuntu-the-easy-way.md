@@ -1,9 +1,9 @@
 +++
 title = "Setup OpenVPN on Ubuntu the Easy Way"
+date = "2020-02-17 21:03:31"
 publishdate = "2014-11-29 22:38:20"
 description = "How to setup OpenVPN on an Ubuntu box the easy way."
-keywords = ['linux-tutorials', 'openvpn', 'security', 'ssl', 'tunnel', 'ubuntu']
-tags = ['linux-tutorials', 'openvpn', 'security', 'ssl', 'tunnel', 'ubuntu']
+tags = ['linux', 'openvpn', 'security', 'ssl', 'tunnel', 'ubuntu']
 +++
 
 The best way to setup OpenVPN on Ubuntu, like many other things, is to script
