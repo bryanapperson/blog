@@ -1,8 +1,9 @@
 +++
 title = "The Definitive Guide: Ceph Cluster on Raspberry Pi"
+date = "2020-02-17 20:58:50"
 publishdate = "2015-05-13 01:35:35"
-keywords = ['arm', 'ceph', 'development', 'ha', 'linux-tutorials', 'rados', 'raspberry-pi', 'technology', 'usb']
-tags = ['arm', 'ceph', 'development', 'ha', 'linux-tutorials', 'rados', 'raspberry-pi', 'technology', 'usb']
+description = "Learn how to deploy a ceph cluster on a Raspberry Pi. Commodity off the shelf hardware meets a budget."
+tags = ['arm', 'ceph', 'rados', 'raspberry-pi', 'storage']
 +++
 
 A Ceph cluster on Raspberry Pi is an awesome way to create a RADOS home storage
@@ -195,14 +196,14 @@ node number starting from 1.
 
 ```
 Host pi1
-   Hostname pi1
-   User ceph
+Hostname pi1
+User ceph
 Host pi2
-   Hostname pi2
-   User ceph
+Hostname pi2
+User ceph
 Host pi3
-   Hostname pi3
-   User ceph
+Hostname pi3
+User ceph
 ```
 
 Save the file and exit. As far as hostnames, you can use whatever you want of
@@ -230,18 +231,18 @@ the default behavior of ceph-deploy:
 Change
 
 ```
- def install(distro, version_kind, version, adjust_repos):
-   codename = distro.codename
-   machine = distro.machine_type
+def install(distro, version_kind, version, adjust_repos):
+codename = distro.codename
+machine = distro.machine_type
 ```
 
 To
 
 ```
- def install(distro, version_kind, version, adjust_repos):
-   adjust_repos = False
-   codename = distro.codename
-   machine = distro.machine_type
+def install(distro, version_kind, version, adjust_repos):
+adjust_repos = False
+codename = distro.codename
+machine = distro.machine_type
 ```
 
 This will prevent ceph-deploy from altering repos as the Ceph armhf (Rasberry
@@ -374,36 +375,36 @@ After the existing lines add:
 
 ```ini
 # Disable in-memory logs
-  debug_lockdep = 0/0
-  debug_context = 0/0
-  debug_crush = 0/0
-  debug_buffer = 0/0
-  debug_timer = 0/0
-  debug_filer = 0/0
-  debug_objecter = 0/0
-  debug_rados = 0/0
-  debug_rbd = 0/0
-  debug_journaler = 0/0
-  debug_objectcatcher = 0/0
-  debug_client = 0/0
-  debug_osd = 0/0
-  debug_optracker = 0/0
-  debug_objclass = 0/0
-  debug_filestore = 0/0
-  debug_journal = 0/0
-  debug_ms = 0/0
-  debug_monc = 0/0
-  debug_tp = 0/0
-  debug_auth = 0/0
-  debug_finisher = 0/0
-  debug_heartbeatmap = 0/0
-  debug_perfcounter = 0/0
-  debug_asok = 0/0
-  debug_throttle = 0/0
-  debug_mon = 0/0
-  debug_paxos = 0/0
-  debug_rgw = 0/0
-  osd heartbeat grace = 8
+debug_lockdep = 0/0
+debug_context = 0/0
+debug_crush = 0/0
+debug_buffer = 0/0
+debug_timer = 0/0
+debug_filer = 0/0
+debug_objecter = 0/0
+debug_rados = 0/0
+debug_rbd = 0/0
+debug_journaler = 0/0
+debug_objectcatcher = 0/0
+debug_client = 0/0
+debug_osd = 0/0
+debug_optracker = 0/0
+debug_objclass = 0/0
+debug_filestore = 0/0
+debug_journal = 0/0
+debug_ms = 0/0
+debug_monc = 0/0
+debug_tp = 0/0
+debug_auth = 0/0
+debug_finisher = 0/0
+debug_heartbeatmap = 0/0
+debug_perfcounter = 0/0
+debug_asok = 0/0
+debug_throttle = 0/0
+debug_mon = 0/0
+debug_paxos = 0/0
+debug_rgw = 0/0
+osd heartbeat grace = 8
 
 [mon]
 mon compact on start = true
@@ -492,8 +493,3 @@ and for a less verbose output
 Use your storage cluster! Create an RBD, mount it - export NFS or CIFS. There is
 a lot of reading out there. Now you know how to deploy a Ceph cluster on
 Raspberry Pi.
-
-### References
-
-http://millibit.blogspot.com/2014/12/ceph-pi-installing-ceph-on-raspberry-pi.html
-http://ceph.com/docs/v0.80.5/start/ https://www.raspberrypi.org/

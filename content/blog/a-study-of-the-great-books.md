@@ -1,9 +1,9 @@
 +++
-date = "2019-08-01 19:40:00"
+date = "2020-02-17 21:21:18"
+publishdate = "2019-08-01 19:40:00"
 title = "A Study of the Great Books"
 description = "About studying the great books, and why I am doing it."
-keywords = ["reading", "study", "great books"]
-tags = ["books"]
+tags = ["literature", "great books"]
 series = [
 "Great Books"
 ]

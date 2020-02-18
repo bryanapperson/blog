@@ -1,16 +1,13 @@
 +++ 
 title = "A SimpleBiped with an RTOS on an Arduino Mini"
-description = "How I once built a bipedal robot using C, arduino and an RTOS"
-datepublished = "2015-04-09 20:48:42"
-keywords = [
-  'arduino', 'biped', 'c', 'development', 'object-detection', 'rtos', 'technology'
-]
-tags = ['arduino', 'biped', 'c', 'development', 'object-detection', 'rtos', 'technology'
-]
+description = "A tale of how I once built a bipedal robot using C, arduino and an RTOS."
+date = "2020-02-17 21:08:08"
+publishdate = "2015-04-09 20:48:42"
+tags = ['arduino', 'robot', 'c', 'object detection', 'rtos']
 
 +++
 
-About two years back, I wrote up a program for and designed a bipedal robot (I
+About eight years back, I wrote up a program for and designed a bipedal robot (I
 coined it the SimpleBiped) based on the
 [Arduino Micro](http://arduino.cc/en/Main/arduinoBoardMicro) board. This article
 is an outline of what I did, mainly for reference if I revisit this later, but
