@@ -1,9 +1,9 @@
 +++
 title = "Ceph OSD Performance: Backends and Filesystems"
-date = "2016-04-12 04:40:48"
-description = "Ceph OSD performance on various filesystems and backends including btrfs."
-keywords = ['atlanta', 'bluestore', 'btrfs', 'ceph', 'meetup', 'osd', 'performance', 'technology', 'xfs']
-tags = ['atlanta', 'bluestore', 'btrfs', 'ceph', 'meetup', 'osd', 'performance', 'technology', 'xfs']
+date = "2020-02-17 21:24:48"
+publishdate = "2016-04-12 04:40:48"
+description = "Ceph OSD performance on various filesystems and backends including btrfs, for the Atlanta ceph meetup."
+tags = ['atlanta', 'bluestore', 'btrfs', 'ceph', 'storage', 'xfs']
 +++
 
 Ceph OSD performance characteristics are one of the most important
