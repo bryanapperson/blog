@@ -8,9 +8,9 @@ Installing HHVM and Nginx on Ubuntu 14.04 is the next step in the "Make
 WordPress Fly" series. This tutorial assumes you have completed the
 [prerequisites](/blog/getting-started-with-an-ubuntu-vps-running-14-04/),
 read
-[Part 1](http://bryanapperson.com/blog/intro-hhvm-mariadb-nginx-wordpress/ 'HHVM, MariaDB and Nginx Make WordPress Fly – Intro')
+[Part 1](/blog/hhvm-mariadb-and-nginx-make-wordpress-fly-intro/)
 and completed
-[Part 2](http://bryanapperson.com/blog/make-wordpress-fly-mariadb-setup-ubuntu-14/ 'MariaDB 10.1 Setup for Ubuntu 14.04 – Make WordPress Fly')
+[Part 2](/blog/mariadb-10-1-setup-for-ubuntu-14-04-make-wordpress-fly/)
 of this guide. At this point you have a reasonably secure box with MariaDB installed and
 configured. In this (Part 3) of the "Make WordPress Fly" guide we will start out
 by preparing our system for Nginx. The first step is to reconnect to your VM via
@@ -125,15 +125,3 @@ sudo update-rc.d hhvm defaults
 ```
 
 You are ready to move on to the next part of this tutorial.
-
-### GITHUB REPOSITORY FOR THIS TUTORIAL
-
-[https://github.com/bitronictech/HHVM-Nginx-WordPress](https://github.com/bitronictech/HHVM-Nginx-WordPress 'Deploying HHVM, MariaDB, Nginx and WordPress on Ubuntu 14.04')
-
-### Links to the Continued Guide "Make WordPress Fly":
-
-[Preliminary - Getting Started with an Ubuntu VPS Running 14.04](http://bryanapperson.com/blog/getting-started-ubuntu-vps-running-14-04/ 'Getting Started with an Ubuntu VPS Running 14.04')
-[Part 1 - HHVM, MariaDB and Nginx Make WordPress Fly - Intro](http://bryanapperson.com/blog/intro-hhvm-mariadb-nginx-wordpress/ 'HHVM, MariaDB and Nginx Make WordPress Fly – Intro')
-[Part 2 - MariaDB Setup for Ubuntu 14.04 - Make WordPress Fly](http://bryanapperson.com/blog/make-wordpress-fly-mariadb-setup-ubuntu-14/ 'MariaDB 10.1 Setup for Ubuntu 14.04 – Make WordPress Fly')
-Part 3 - Install HHVM, Nginx on Ubuntu 14.04 - Make WordPress Fly Leave your
-thoughts in the comments below. Thanks for reading!

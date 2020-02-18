@@ -5,3 +5,7 @@ IgnoreDirectoryMissingTrailingSlash: True
 # I am not sure if these are broken or if hugo is a big non-standard
 IgnoreAltMissing: True
 CheckImages: False
+# Later I will have to figure out why this is borked
+# A workaround for tags always using the canonical base url
+IgnoreURLs:
+    - tags
