@@ -1,7 +1,9 @@
 +++
 title = "Mounting RBD at Boot Under CentOS 7"
-date = "2015-04-08 10:05:45"
-tags = ['centos7', 'ceph', 'linux-tutorials', 'rbd', 'rhel', 'systemd']
+description = "A quick and dirty guide on how to mount a ceph RBD at boot under CentOS 7"
+date = "2020-02-18 00:17:32"
+publishdate = "2015-04-08 10:05:45"
+tags = ['centos', 'ceph', 'rbd', 'rhel', 'systemd']
 +++
 
 This tutorial covers mounting an RBD image at boot under CentOS 7. Make sure to

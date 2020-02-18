@@ -1,5 +1,6 @@
 +++
 title = "Configure Nginx/HHVM for WP - Making WordPress Fly"
+description = "How to configure nginx and HHVM for use with wordpress on Ubuntu 14.04 LTS."
 date = "2020-02-17 20:40:54"
 publishdate = "2014-09-27 08:02:29"
 tags = ['nginx', 'wordpress', 'hhvm']

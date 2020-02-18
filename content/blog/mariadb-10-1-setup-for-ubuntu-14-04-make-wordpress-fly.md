@@ -2,8 +2,9 @@
 title = "MariaDB 10.1 Setup for Ubuntu 14.04 - Make WordPress Fly"
 date = "2020-02-26 20:35:53"
 publishdate = "2014-09-02 04:17:29"
+description = "How to setup MariaDB 10.1 on Ubuntu 14.04, optimized for use with WordPress"
 tags = [
-'configure', 'development', 'install', 'mariadb', 'secure', 'setup', 'ubuntu-14-04'
+'mariadb', 'ubuntu', 'wordpress'
 ]
 series = ['WordPress HHVM']
 prev = '/blog/hhvm-mariadb-and-nginx-make-wordpress-fly-intro/'

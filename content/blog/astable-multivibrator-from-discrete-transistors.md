@@ -2,6 +2,7 @@
 title = "Astable Multivibrator from Discrete Transistors"
 date = "2020-02-17 21:12"
 publishdate = "2016-01-24"
+description = "The one time I decided to delve into electrical engineering and built an astable multivibrator in Fritzing."
 katex = "true"
 tags = ['astable', 'multivibrator', 'electronics', 'nand', 'transistor']
 +++

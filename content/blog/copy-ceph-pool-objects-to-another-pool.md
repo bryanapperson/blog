@@ -1,5 +1,6 @@
 +++
 title = "Copy Ceph Pool Objects to Another Pool"
+description = "Code and explainantion for copying objects between ceph pools using librados."
 date = "2015-11-17 23:06:18"
 keywords = ['ceph', 'development', 'linux-tutorials', 'python', 'rados']
 tags = ['ceph', 'development', 'linux-tutorials', 'python', 'rados']

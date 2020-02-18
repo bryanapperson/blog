@@ -1,7 +1,9 @@
 +++
 title = "Install HHVM, Nginx on Ubuntu 14.04 - Make WordPress Fly"
-date = "2014-09-02 14:28:55"
-tags = ['development', 'hhvm', 'install', 'nginx', 'setup', 'ubuntu']
+description = "A guide to installing nginx and HHVM on Ubuntu 14.04"
+date = "2020-02-18 00:12:01"
+publishdate = "2014-09-02 14:28:55"
+tags = ['hhvm', 'nginx', 'ubuntu']
 +++
 
 Installing HHVM and Nginx on Ubuntu 14.04 is the next step in the "Make
