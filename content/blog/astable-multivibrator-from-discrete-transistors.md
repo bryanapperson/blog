@@ -1,9 +1,9 @@
 +++
 title = "Astable Multivibrator from Discrete Transistors"
-date = "2016-01-24"
+date = "2020-02-17 21:12"
+publishdate = "2016-01-24"
 katex = "true"
-keywords = [ "astable-multivibrator, electronics, nand, transistor"  ]
-tags = ['astable-multivibrator', 'electronics', 'nand', 'transistor']
+tags = ['astable', 'multivibrator', 'electronics', 'nand', 'transistor']
 +++
 
 This blog post is about making an astable multivibrator from discrete
@@ -41,7 +41,7 @@ from <a href="http://fab.fritzing.org/fritzing-fab">Fritzing Fab</a>.
 
 In about two weeks the PCB will be here from Germany and the parts will go
 on the board. The Fritzing file for this circuit can be downloaded
-<a href="http://bryanapperson.com/wp-content/uploads/2016/01/point5hzastablemultivibrator.fzz">here</a>. Hopefully
+<a href="/files/astable.tar.xz">here</a>. Hopefully
 this article is helpful to anybody looking to make a clock circuit from discrete
 transistors using resistor-transistor logic NAND gates. Let me know your
 thoughts in the comments.
