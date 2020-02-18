@@ -10,7 +10,7 @@ theme = [
   "after-dark" # AGPL-3.0-or-later
 ]
 
-disableLiveReload = true # Optional, set true to disable live reload
+disableLiveReload = false # Optional, set true to disable live reload
 enableRobotsTXT = true # Suggested, enable robots.txt file
 sectionPagesMenu = "main" # Enable menu system for lazy bloggers
 

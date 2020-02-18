@@ -19,6 +19,8 @@ toc = true
     keywords = ["filing cabinet", "index cards"]
 +++
 
+An idea that grew out of {{<external href="https://luhmann.surge.sh/communicating-with-slip-boxes" text="communicating with slip boxes"/>}}.
+
 # The Text
 
 It'll come.
