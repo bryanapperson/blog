@@ -1,10 +1,11 @@
 +++
+date = "2020-02-17 21:39:44"
 datepublished = "2019-04-10 19:40:00"
 title = "Hiking to Ciudad Perdida"
 description = "Hiking to Ciudad Perdida, the Lost City in Colombia. A trip report, photos and reflections on the journey to Teyuna from Santa Marta."
-keywords = ["ciudad perdida", "lost city", "teyuna", "adventure travel", "responsible travel", "santa marta"]
-tags = ["hiking"]
+tags = ["ciudad perdida", "lost city", "teyuna", "adventure travel", "responsible travel", "santa marta"]
 share_img = "/images/ciudad-perdida/kogi-village.jpg"
+toc = true
 images = [
   "/images/ciudad-perdida/our-journey.jpg",
   "/images/ciudad-perdida/santa-marta.jpg",
@@ -12,27 +13,19 @@ images = [
   "/images/ciudad-perdida/kogi-village.jpg"
 ]
 +++
-On a Saturday evening last August my other half and I and left the Upper East
-Side of Manhattan in a taxi bound for JFK. Excitement and apprehension were in
-the air as we were eager to leave, but about to commend our kids to my mother in
-law for a week. We had, and have not since, been away for so long from our
-children. After arriving, we were informed that we were _extremely_ early. Stuck
-in the purgatory of the waiting area outside the terminal, we polished off of
-dinner in a nondescript diner, eagerly biding our time. After a period of time,
+
+## The Trip
+
+On a Saturday evening in August of 2018 my other half and I and left the 
+Upper East Side of Manhattan in a taxi bound for JFK. Excitement and apprehension were in the air as we were eager to leave, but about to commend our kids to my
+mother in law for a week. We had, and have not since, been away for so long from
+our children. After arriving, we were informed that we were _extremely_ early.
+Stuck in the purgatory of the waiting area outside the terminal, we polished off
+of dinner in a nondescript diner, eagerly biding our time. After a period of time,
 we passed through security and boarded our red-eye to **Santa Marta** by way of
 Bogota.
 
 {{< figure src="/images/ciudad-perdida/our-journey.jpg" caption="Our Journey to the Lost City" >}}
-
-## Table of Contents
-
-- [Arrival](#arrival)
-- [Day 1](#day-1-santa-marta-to-wiwa-camp)
-- [Day 2](#day-2-wiwa-camp-to-paraiso)
-- [Day 3](#day-3-the-lost-city)
-- [Day 4](#day-4-wiwa-camp-to-vista-hermosa)
-- [Day 5](#day-5-vista-hermosa-to-gotsezhi-village)
-- [Departure](#departure)
 
 ## Arrival
 

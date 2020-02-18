@@ -1,4 +1,7 @@
 ---
 
-# For now this is just noise
+# For now these are just noise
 IgnoreDirectoryMissingTrailingSlash: True
+# I am not sure if these are broken or if hugo is a big non-standard
+IgnoreAltMissing: True
+CheckImages: False

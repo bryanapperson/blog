@@ -1,10 +1,10 @@
 +++
 title = "The Orestia"
 description = "A trilogy of tradgedies around the family of Agamemnon."
-date = "2019-08-14 23:04:42"
+publishdate = "2019-08-14 23:04:42"
 year = -458
 keywords = ['the orestia','agamemnon','the libation bearers']
-tags = ['drama']
+tags = ['art', 'greek', 'justice', 'honor', 'punishment']
 series = ['Great Books']
 +++
 
