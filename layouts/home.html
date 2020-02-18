@@ -27,6 +27,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <header>
     <h1 itemprop="name">{{ .Title }}</h1>
   </header>
+  <p>I am an entrepeneur, self educated engineer and all around ruckus maker. This is the outflow of my Zettelkasten; here you'll find my <a href='/blog/'>blog posts</a>, <a href='/musings/'>musings</a>, <a href='/resume/'>resume</a>, and more. You can also find me on <a href='https://github.com/bryanapperson' rel='external'>Github</a> and <a href='https://www.linkedin.com/in/bryan-apperson-1471bb65/' rel='external'>LinkedIn</a>.
+  </p>
   {{ with .Site.Params.layout.home.section }}
     {{ if ne $.Site.Params.hackcss.disabled true }}
       {{ with resources.Get "css/conditional/layouts/partials/page-thumbs.css" | minify }}
