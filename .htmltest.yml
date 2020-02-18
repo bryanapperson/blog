@@ -6,5 +6,6 @@ IgnoreDirectoryMissingTrailingSlash: True
 IgnoreAltMissing: True
 CheckImages: False
 # Later I will have to figure out why this is borked
+# A workaround for tags always using the canonical base url
 IgnoreURLs:
-    - "/livereload.js?port=1313&mindelay=10&v=2"
+    - tags
