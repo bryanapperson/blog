@@ -1,10 +1,10 @@
 +++
-datepublished = "2019-04-03"
+date = "2020-02-17"
+publishdate = "2019-04-03"
 title = "From WordPress to Hugo"
 description = "Why and how this blog is moving from WordPress to hugo and github pages."
-keywords = "hugo, wordpress, migrate"
-tags = ["hugo", "static blog", "go", "wordpress"]
-categories = [ "Development" ]
+keywords = ['hugo', 'wordpress', 'migrate']
+tags = ["hugo", "blog", "go", "wordpress"]
 series = ["Blog Meta"]
 +++
 
