@@ -1,9 +1,8 @@
 +++
 title = "A Trip to Acoma Pueblo"
-date = "2014-09-01 18:55:41"
+publishdate = "2014-09-01 18:55:41"
 description = "A visit to the Acoma Pueblo in New Mexico."
-keywords = ['acoma', 'new-mexico', 'pueblo', 'travelling']
-tags = ['acoma', 'new-mexico', 'pueblo', 'travelling']
+tags = ['acoma', 'new mexico', 'pueblo']
 +++
 
 Back in November of 2013 I had the opportunity to visit the Navajo nation and
