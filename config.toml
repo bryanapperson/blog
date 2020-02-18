@@ -2,7 +2,7 @@ baseurl = "https://bryanapperson.com" # Controls base URL sitewide
 languageCode = "en-US" # Controls site language
 title = "Bryan Apperson" # Homepage title and page title suffix
 paginate = 11 # Number of posts to show before paginating
-copyright = "Copyright &copy; Bryan Apperson. Licensed under <a target=\"_blank\" rel=\"external noopener license\" href=\"https://creativecommons.org/licenses/by-nd/4.0/\">CC-BY-ND-4.0</a>." # Optional, remove to suppress copyright notices
+copyright = "Copyright &copy; Bryan Apperson. Licensed under <a target=\"_blank\" rel=\"external noopener license\" href=\"https://creativecommons.org/licenses/by-nd/4.0/\">CC-BY-ND-4.0</a>. Hosted on <a href=\"https://github.com/bryanapperson/blog\" rel=\"external\" target=\"_blank\">Github</a>."
 
 # Controls default theme and theme components
 theme = [
