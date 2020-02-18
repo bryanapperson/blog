@@ -1,6 +1,7 @@
 +++
 title = "Installing WordPress with Nginx on Ubuntu 14.04"
 date = "2020-02-17 23:10:08"
+description = "How to install WordPress on Ubuntu 14.04 with an nginx webserever."
 publishdate = "2014-09-10 00:16:31"
 tags = [
   'nginx', 'ubuntu', 'wordpress'

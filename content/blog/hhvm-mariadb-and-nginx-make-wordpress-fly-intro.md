@@ -1,6 +1,7 @@
 +++
 title = "HHVM, MariaDB and Nginx Make WordPress Fly - Intro"
 date = "2020-02-17 20:17:30"
+description = "Introduction to a series on how to deploy a seriously fast server stack for WordPress."
 publishdate = "2014-09-02 00:44:21"
 tags = ['development', 'hhvm', 'mariadb', 'nginx', 'ubuntu', 'wordpress']
 series = ['WordPress HHVM']

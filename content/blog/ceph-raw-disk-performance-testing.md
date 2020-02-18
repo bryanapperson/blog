@@ -1,5 +1,6 @@
 +++
 title = "Ceph Raw Disk Performance Testing"
+description = "Tooling and methodology for testing the performance of disk devices with ceph osd."
 date = "2020-02-17 23:27:54"
 publishdate = "2015-08-25 20:19:44"
 tags = ['ceph', 'storage', 'performance', 'osd', 'fio']

@@ -3,6 +3,7 @@ title = "The Definitive Guide: Ceph Cluster on Raspberry Pi"
 date = "2020-02-17 20:58:50"
 publishdate = "2015-05-13 01:35:35"
 description = "Learn how to deploy a ceph cluster on a Raspberry Pi. Commodity off the shelf hardware meets a budget."
+toc = true
 tags = ['arm', 'ceph', 'rados', 'raspberry-pi', 'storage']
 +++
 

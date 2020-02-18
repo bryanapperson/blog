@@ -1,6 +1,7 @@
 +++
 title = "Getting Started with an Ubuntu VPS Running 14.04"
 date = "2020-02-17 19:27:00"
+description = "A basic guide on how to setup an Ubuntu 14.04 machine."
 publishdate = "2014-09-01 22:43:23"
 tags = ['linux', 'tutorial']
 series = ['WordPress HHVM']

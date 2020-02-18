@@ -1,6 +1,6 @@
 +++
 title = "An Introduction to Mathematics"
-description = "Alfred North Whitehead's An Introduction to Mathematics takes us on a journey of broad strokes, one that traverses the history, notation, and application of mathematical fields."
+description = "Analysis of An Introduction to Mathematics, a 1911 treatise on the discipline."
 date = "2020-02-16 02:20:00"
 year = 1911
 tags = ['mathematics', 'quantity', 'space', 'time', 'mechanics']
