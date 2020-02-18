@@ -1,7 +1,8 @@
 +++
 title = "Ceph Raw Disk Performance Testing"
-date = "2015-08-25 20:19:44"
-tags = ['ceph', 'disk-testing', 'io', 'journal', 'linux-tutorials', 'osd']
+date = "2020-02-17 23:27:54"
+publishdate = "2015-08-25 20:19:44"
+tags = ['ceph', 'storage', 'performance', 'osd', 'fio']
 +++
 
 Ceph raw disk performance testing is something you should not overlook when
@@ -14,10 +15,9 @@ deviation caused by ceph between RAW IOs from disk and ceph IOs.
 
 ## TESTING & GRAPHING WITH FIO
 
-For this article I assume you are aware of [FIO](https://github.com/axboe/fio).
-You will need FIO and GNUPlot installed to run these tests. I have developed an
+For this article I assume you are aware of {{< external href="https://github.com/axboe/fio" text="fio" />}} and feel some degree of comfort uing it. You will need FIO and GNUPlot installed to run these tests. I have developed an
 automation tool in my spare time for writing these tests. You can find it
-here: [Ceph-Disk-Test](https://github.com/bitronictech/ceph-disk-test) RBD can
+here: {{< external href="https://github.com/bryanapperson/ceph-disk-test" text="ceph-disk-test" />}} RBD can
 best be simulated by using a block size of 4M in your testing. However it is
 pertinent to test with smaller IOs like 64k or 4k for worst case. Below is an
 example test run with a Samsung Extreme USB stick to demonstrate how the results
@@ -115,11 +115,7 @@ write_iolog=/tmp/tmp.IF0gdpokNE/150825-1218-rand-read-osd-4m-intel-dc3700
 ### References
 
 Research material used to structure these ceph raw disk performance tests:
-Journal Testing:
-[http://www.sebastien-han.fr/blog/2014/10/10/ceph-how-to-test-if-your-ssd-is-suitable-as-a-journal-device/](http://www.sebastien-han.fr/blog/2014/10/10/ceph-how-to-test-if-your-ssd-is-suitable-as-a-journal-device/)
-OSD Testing:
-[http://ceph.com/planet/quick-analysis-of-the-ceph-io-layer/](http://ceph.com/planet/quick-analysis-of-the-ceph-io-layer/)
-FIO Howto:
-[http://www.bluestop.org/fio/HOWTO.txt](http://www.bluestop.org/fio/HOWTO.txt)
-Ceph IO, The Bad:
-[http://www.sebastien-han.fr/blog/2014/02/17/ceph-io-patterns-the-bad/](http://www.sebastien-han.fr/blog/2014/02/17/ceph-io-patterns-the-bad/)
+
+{{< external href="http://www.sebastien-han.fr/blog/2014/10/10/ceph-how-to-test-if-your-ssd-is-suitable-as-a-journal-device/" text="Journal Testing" />}}
+{{< external href="http://ceph.com/planet/quick-analysis-of-the-ceph-io-layer/" text="OSD Testing" />}}
+{{< external href="http://www.sebastien-han.fr/blog/2014/02/17/ceph-io-patterns-the-bad/" text="Ceph IO, The Bad" />}}

@@ -8,18 +8,16 @@ tags = ['atlanta', 'bluestore', 'btrfs', 'ceph', 'storage', 'xfs']
 
 Ceph OSD performance characteristics are one of the most important
 considerations when deploying a RADOS (Replicated Asynchronous Distributed
-Object Storage) cluster. [Ceph](http://docs.ceph.com/docs/master/start/intro/)is
+Object Storage) cluster. Ceph is
 an open source project for scale out storage based on the
-[CRUSH](http://ceph.com/papers/weil-crush-sc06.pdf) algorithm. An OSD is an
+{{<external href="https://ceph.com/wp-content/uploads/2016/08/weil-thesis.pdf" text="CRUSH"/>}} algorithm. An OSD is an
 "Object Storage Daemon", which represents a journaling partition and a data
 storage partition in the Filestore backend implementation. An OSD is, in a
-broader sense where Ceph stores objects which hash to a specific
-[placement group](http://docs.ceph.com/docs/master/rados/operations/placement-groups/)
+broader sense where Ceph stores objects which hash to a specific placement group
 (PG). A placement group is a hash bucket in a general computer science sense.
  This article explores the performance characteristics and features of various
 Ceph OSD backends and filesystems. The content of this article was prepared for
-and presented at the April 12th, 2016
-[Ceph ATL meetup](http://www.meetup.com/Ceph-ATL/).
+and presented at the April 12th, 2016 Ceph ATL meetup.
 
 ## Ceph OSD Performance
 
@@ -30,7 +28,7 @@ can enhance performance and stability. Many of those, such as kernel
 optimizations, network stack optimizations, choice of hardware and Ceph tuning
 parameters are outside the scope of this article. For those interested in other
 performance enhancement vectors for Ceph deployments, some were covered at the
-[Ceph ATL Kick-Off Meetup](http://www.meetup.com/Ceph-ATL/events/225907717/),
+Ceph ATL Kick-Off Meetup,
 and many can be found in the
 [Red Hat/Supermicro Ceph reference architecture document](https://www.redhat.com/en/files/resources/en-rhst-cephstorage-supermicro-INC0270868_v2_0715.pdf). However,
 perhaps obviously, the interface to backing storage block devices is integral in
@@ -48,9 +46,7 @@ for Ceph OSDs. This article covers filestore, bluestore and memstore.
 At present filestore is the de-facto backend for production Ceph clusters. With
 the filestore backend, Ceph writes objects as files on top of a POSIX filesystem
 such as XFS, BTRFS or EXT4. With the filestore backend a OSD is composed of an
-un-formatted
-<a href="http://docs.ceph.com/docs/hammer/rados/configuration/journal-ref/">journal</a>
-partition and an OSD data partition.
+un-formatted journal partition and an OSD data partition.
 
 One of the largest drawbacks with the OSD filestore backend is the fact that all
 data is written twice, through the journal and then to the backing data
@@ -107,10 +103,7 @@ It is production ready for use as a Ceph filestore filesystem.
 
 ### Bluestore
 
-\[caption id="attachment_834" align="alignleft"
-width="427"\][![Ceph OSD Bluestore](http://bryanapperson.com/wp-content/uploads/2016/04/ceph-osd-bluestore.png)](http://bryanapperson.com/wp-content/uploads/2016/04/ceph-osd-bluestore.png)
-Ceph OSD Bluestore Architecture\[/caption\] Bluestore is set to release for
-experimental use in Jewel. The benefits of Bluestore are a direct to block OSD,
+Bluestore is set to release for experimental use in Jewel. The benefits of Bluestore are a direct to block OSD,
 without filesystem overhead or the need for a "double-write" penalty (associated
 with the filestore journal). Bluestore utilizes RocksDB, which stores object
 metadata, a write ahead log, Ceph omap data and allocator metadata. Bluestore

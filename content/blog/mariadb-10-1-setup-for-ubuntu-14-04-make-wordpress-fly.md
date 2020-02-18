@@ -18,12 +18,7 @@ run a WordPress website. In this section we'll be digging in to MariaDB and the
 optimal configurations for it. This tutorial assumes you have a VM with at least
 512MB of RAM, 1 Xeon Core, 10 GB HDD and Vanilla Ubuntu 14.04 installed and
 ideally
-[secured](/blog/getting-started-with-an-ubuntu-vps-running-14-04/ 'Getting Started with an Ubuntu VPS Running 14.04').
-If you need a VM check out the
-[Ubuntu VPS](https://www.bitronictech.net/ubuntu-vps-hosting.php 'Ubuntu
-VPS')
-from Bitronic Technologies which meet the requirements for this tutorial (only
-\$5). So, assuming you have your Ubuntu VPS all setup, we will proceed with the
+[secured](/blog/getting-started-with-an-ubuntu-vps-running-14-04/ 'Getting Started with an Ubuntu VPS Running 14.04'). So, assuming you have your Ubuntu VPS all setup, we will proceed with the
 fairly straightforward process of installing MariaDB on Ubuntu 14.04. We are
 specifically going to be deploying MariaDB 10.1 which as discussed in part 1 has
 significant performance benefits over even the newest versions on MySQL. First,

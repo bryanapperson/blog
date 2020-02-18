@@ -5,7 +5,7 @@ publishdate = "2014-09-02 00:44:21"
 tags = ['development', 'hhvm', 'mariadb', 'nginx', 'ubuntu', 'wordpress']
 series = ['WordPress HHVM']
 prev = '/blog/getting-started-with-an-ubuntu-vps-running-14-04/'
-next = 'blog/mariadb-10-1-setup-for-ubuntu-14-04-make-wordpress-fly/'
+next = '/blog/mariadb-10-1-setup-for-ubuntu-14-04-make-wordpress-fly/'
 +++
 
 HHVM, MariaDB and Nginx Make WordPress fly (seriously). This site is running
