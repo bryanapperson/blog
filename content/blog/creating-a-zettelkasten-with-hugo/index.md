@@ -56,7 +56,7 @@ preeminent description of the internet and search engines. There is, however,
 {{< blockquote
   citelink="https://luhmann.surge.sh/communicating-with-slip-boxes" cite="Niklas Luhmann, Communicating With Slip Boxes" text="Without variation in the given material of ideas, there are no possibilities of examining and selecting novelties. The real problem thus becomes therefore one of producing accidents with sufficiently enhanced probabilities for selection."/>}}
 
-The distillation of broader research on the into notes with  metadata allows
+The distillation of broader research into notes with metadata allows
 for your own personal internet, with a less hierarchical structure than say,
 a wiki. The balance between order and chaos is essential, Luhmann purports, 
 to the extract synthesis of new ideas from a body of notes.
@@ -135,18 +135,18 @@ considering tweaking the implementation or switching it out for
 {{<external href="https://lunrjs.com/" text="Lunr" />}}, but those are future
 problems.
 
-When the CI pipeline runs to build the blog, it is not permissioned to pull
+When the CI pipeline runs to build the blog, does not have permissions to pull
 the _Zettelkasten_, which is secured by private key. But when I run a local
 development server, I have both my _Zettelkasten_ and my blog, an outflow,
 searchable at my fingertips.
 
 #### What about portability?
 
-Here is the cool part, hugo can run on android. So with git, I can just
-clone my blog on my phone and run a local webserver. More to follow on that
+Here is the cool part, Hugo can run on android. So with git, I can just
+clone my blog on my phone and run a local web server. More to follow on that
 in another blog post.
 
 ### What's Next?
 
-I still have to approch getting all of my notes into _zettels_.
-Maybe I'll have more to say after that. Leave your thoughts in the comments below.
+I still have to approach getting all of my notes into _zettels_.
+Maybe I'll have more to say after that. I'll also likely add a technical step by step for setting up a _Zettelkasten_ using Hugo and the After Dark theme, as time permits. Leave your thoughts in the comments below.
