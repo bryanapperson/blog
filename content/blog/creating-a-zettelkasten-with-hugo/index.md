@@ -112,7 +112,7 @@ _Zettelkasten_.
 
 ### Enter: A Hugo Based Zettelkasten
 
-In [From WordPress to Hugo]('/blog/from-wordpress-to-hugo/'), I migrated my 
+In [From WordPress to Hugo](/blog/from-wordpress-to-hugo/), I migrated my 
 blog to Hugo. This proved to be the extant solution I was looking for. 
 I thought about an optimal design for a Zettelkasten; one that would 
 be portable, open source, and stand the test of time. A solution that 
