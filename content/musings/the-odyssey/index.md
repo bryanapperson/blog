@@ -12,7 +12,7 @@ tags = ['homer', 'justice', 'family', 'law', 'love', 'virtue and vice']
     description = "Odysseus and Penelope, 1802"
     creator = "Johann Heinrich Wilhelm Tischbein"
     keywords = ["odysseus", "penelope"]
-images = ["**our-journey.jpg"]
+images = ["**odysseus_and_penelope_by_tischbein.jpg"]
 +++
 
 The Odyssey is the story of family, love, justice, virtue, and vice. The tale of
