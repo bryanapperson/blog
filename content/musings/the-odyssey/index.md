@@ -4,7 +4,15 @@ description = "The Odyssey focuses us on common decency, family and justice suff
 date = "2020-02-26 23:32:00"
 keywords = ['Homer',  'justice', 'family', 'law', 'love', 'virtue and vice']
 tags = ['homer', 'justice', 'family', 'law', 'love', 'virtue and vice']
-toc = true
+[[resources]]
+  src = "**odysseus_and_penelope_by_tischbein.jpg"
+  name = "header"
+  title = "Odysseus and Penelope"
+  [resources.params.meta]
+    description = "Odysseus and Penelope, 1802"
+    creator = "Johann Heinrich Wilhelm Tischbein"
+    keywords = ["odysseus", "penelope"]
+images = ["**our-journey.jpg"]
 +++
 
 The Odyssey is the story of family, love, justice, virtue, and vice. The tale of
