@@ -22,7 +22,7 @@ about the unlawfulness of swaggering masculinity; it's about the forbearance of
 a faithful wife. An epic of many tales about a man of many twists and turns.
 
 Odysseus, like all, is a flawed man. The man of strife is the inverse of hot
-Achilles, in his serene, calculated wisdom. He leaves his family to fight a war.
+[Achilles](/musings/the-iliad), in his serene, calculated wisdom. He leaves his family to fight a war.
 Ten years on, with the war won and plunder shared, he doesn't exactly rush home.
 Depending on which of the two stories the man of convolutions tells is true, he
 was either sold into slavery or had ten years of supernatural journeys. The
