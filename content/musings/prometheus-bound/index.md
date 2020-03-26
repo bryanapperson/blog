@@ -44,8 +44,9 @@ tells her how to end her torture at the hands of Zeus, for his own long term
 benefit.
 
 Can Might exist without Violence? Does Zeus need to act the tyrant to maintain
-power? Does Might exist without Force behind it in our world today? I think not.
-Might must be backed by threat of Force, tyrannical or just.
+power? Does Might exist without Force behind it in our world today? Was what
+Prometheus did a Sin? In some ways we are left with more questions then answers,
+a lot to chew on.
 
 Prometheus Bound is the central play and remainder of a trilogy written by
 Aeschylus about the being who created mankind. Although the other plays are
@@ -54,8 +55,7 @@ surviving fragments of _The Firecarrier_. We also know that he was later freed
 by Heracles in _Prometheus Unbound_. Zeus allows this in exchange for Prometheus
 revealing the prophecy of Zeus' possible downfall in lying with Thetis, whereby
 a son stronger than the father would be born. The redirection of this threat
-leads to the birth of [Achilles](/musings/the-iliad/). In some ways we are left
-with more questions than answers, due to incomplete unity.
+leads to the birth of [Achilles](/musings/the-iliad/).
 
 Reading the play and thinking about how you would direct it, or seeing it live
 is likely best. In lieu of that, here is the best online production of the play
