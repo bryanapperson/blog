@@ -26,7 +26,7 @@ fire bringer, one who illuminates. He claims to have liberated man from
 ignorance. Is man really better off with reason, conciousness and knowledge?
 
 Whether or not man is better off for what Prometheus has done, Prometheus is
-blessed with the gift of foresight. He know beforehand the volume of his
+blessed with the gift of foresight. He knew beforehand the volume of his
 suffering and how it would come to an end. He still made the choice to ease the
 suffering of mankind, at his own expense. Prometheus has no fear of death, and
 has taken the foresight of death away from mankind, freeing them to explore
