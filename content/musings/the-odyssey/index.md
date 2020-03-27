@@ -67,8 +67,9 @@ love.
 
 ### Thoughts on the Robert Fagles Translation
 
-I read through the {{< external href="https://amzn.to/3anJBhW" text="Robert
-Fagles translation"/>}} and found it enjoyable, more so than his
+I read through the 
+{{< external href="https://amzn.to/3anJBhW" text="Robert Fagles translation" />}}
+and found it enjoyable, more so than his
 [Iliad](/musings/the-iliad).  The reading was rich in imagery and, although I
 don't know ancient Greek yet to judge against Homer, it definitely had beautiful
 poetry. This read almost like a modern novel. There were few or no awkwardly
