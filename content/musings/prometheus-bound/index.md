@@ -57,8 +57,11 @@ revealing the prophecy of Zeus' possible downfall in lying with Thetis, whereby
 a son stronger than the father would be born. The redirection of this threat
 leads to the birth of [Achilles](/musings/the-iliad/).
 
+### Where to Read or Watch Prometheus Bound
+
 I read through the {{< external href="https://amzn.to/2JknOM1" text="University of Chicago Press edition" />}},
-however it is also available for free on {{< external href="https://www.gutenberg.org/files/27458/27458-h/27458-h.htm" text="Project Gutenberg" />}}.
+which I did not find to be a supremely readable edition,
+ it is also available for free on {{< external href="https://www.gutenberg.org/files/27458/27458-h/27458-h.htm" text="Project Gutenberg" />}}.
 Reading the play and thinking about how you would direct it, or seeing it live
 is likely the best way to grasp it fully. In lieu of that, here is the best online production of the play I could find:
 
