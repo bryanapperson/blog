@@ -29,11 +29,11 @@ Whether or not man is better off for what Prometheus has done, Prometheus is
 blessed with the gift of foresight. He knew beforehand the volume of his
 suffering and how it would come to an end. He still made the choice to ease the
 suffering of mankind, at his own expense. Prometheus has no fear of death, and
-has taken the foresight of death away from mankind, freeing them to explore
+has taken the foresight of death away from mankind; thus freeing them to explore
 knowledge, spurred by the ephemeral nature of mortal existence.
 
 Zeus is presented in the dialectic of the characters as a young tyrant, eager to
-make an example of those who would defy him. This is what has lead to the
+make an example of those who would defy him. This is what leads to the
 overzealous punishment of Prometheus, doomed to have his liver eaten daily and
 never die. This viewpoint of Zeus as arbitrary, capricious and tyrannical is
 also present in other works of this time period. Aeschylus seems to be solidly
@@ -57,8 +57,9 @@ revealing the prophecy of Zeus' possible downfall in lying with Thetis, whereby
 a son stronger than the father would be born. The redirection of this threat
 leads to the birth of [Achilles](/musings/the-iliad/).
 
+I read through the {{< external href="https://amzn.to/2JknOM1" text="University of Chicago Press edition" />}},
+however it is also available for free on {{< external href="https://www.gutenberg.org/files/27458/27458-h/27458-h.htm" text="Project Gutenberg" />}}.
 Reading the play and thinking about how you would direct it, or seeing it live
-is likely best. In lieu of that, here is the best online production of the play
-I could find:
+is likely the best way to grasp it fully. In lieu of that, here is the best online production of the play I could find:
 
 {{< vimeo 4756153 >}}
