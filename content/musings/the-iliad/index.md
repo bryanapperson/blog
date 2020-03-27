@@ -19,4 +19,6 @@ There are sundry other topics treated in the story, such as the malleability of 
 
 {{< figure src="/images/musings/the-iliad-book.jpg" caption="Muse, sing the rage of Peleus' son Achilles - Book One, The Iliad">}}
 
-The long journey of reading this work started with a short walk, down to a [local bookstore](https://logosbookstorenyc.com/). The store, named Logos, seemed a fitting place to purchase my paperback copy of the Robert Fagles translation. I'd be interested to reread this in the Pope translation. Though I found the Fagles translation enjoyable, I have heard that [Pope is worth a read](https://www.nytimes.com/1997/06/01/books/on-reading-pope-s-homer.html).
+### About the Translation
+
+The long journey of reading this work started with a short walk, down to a [local bookstore](https://logosbookstorenyc.com/). The store, named Logos, seemed a fitting place to purchase my paperback copy of the {{< external href="https://amzn.to/2Jff2PB" text="Robert Fagles translation" />}}. I'd be interested to reread this in the Pope translation. Though I found the Fagles translation enjoyable, I have heard that [Pope is worth a read](https://www.nytimes.com/1997/06/01/books/on-reading-pope-s-homer.html). To that end I might also give the Pope edition a {{< external href="https://www.audible.com/pd/The-Iliad-Audiobook/B003RB9V5O" text="listen on Audible" />}}.
