@@ -31,7 +31,8 @@ The later portrays him as the unfaithful husband, an absentee father, in no
 hurry to return home. Eventually, with the help of the Phaeacians, a lawful
 people, he returns home. There he restores the law and regains marital unity.
 
-Penelope is the anti-Clytemnestra; she is everything Helen is not. She is the
+Penelope is the anti-Clytaemestra, standing by her family against suitors 
+rather than betraying them; she is everything Helen is not. She is the
 ideal wife, as seen by Agamemnon in Hades, loyal, long-suffering, wise, holding
 the walls against the dissolution of hearth and home. She is faithful and
 sacrifices endlessly to defend Telemachus, spending twenty years of her prime
@@ -63,3 +64,12 @@ cautionary tale for those who would tarry away from home in search of wealth and
 glory, one that tells a story of returning home to find it no longer there. It
 elucidates true wisdom as fidelity, hospitality, and a swift return to those you
 love.
+
+### Thoughts on the Robert Fagles Translation
+
+I read through the {{< external href="https://amzn.to/3anJBhW" text="Robert
+Fagles translation"/>}} and found it enjoyable, more so than his
+[Iliad](/musings/the-iliad).  The reading was rich in imagery and, although I
+don't know ancient Greek yet to judge against Homer, it definitely had beautiful
+poetry. This read almost like a modern novel. There were few or no awkwardly
+rendered portions. It was something you could sit down and really fall into.
