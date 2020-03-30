@@ -2,9 +2,9 @@
 date = "2020-03-28 1:42:00"
 datepublished = "2020-03-28 01:42:00"
 title = "Agamemnon"
-description = "Agamemnon, the first part of The Orestia, is a story of aristocracy, family, corruption, and a vicous cycle of violence."
+description = "Agamemnon, the first part of The Orestia, is a story of aristocracy, family, corruption, and a vicious cycle of violence which inevitably leads to tyranny."
 keywords = ['aeschylus','orestia','agamemnon','clytaemestra','orestes','cassandra','iphigenia']
-tags = ['aeschylus','orestia','justice','aristocracy','family']
+tags = ['aeschylus','orestia','justice','aristocracy','family','tyranny']
 prev = "/musings/prometheus-bound"
 share_img = "images/clytaemestra-kills-agamemnon.jpg"
 images = ["images/clytaemestra-kills-agamemnon.jpg", "images/sacrifice-of-ipigenia.jpg"]
@@ -33,16 +33,16 @@ nobility, speaking directly to the Chorus. He bemoans the time he has been
 waiting and subtly hints at the misrule of "a lady's male strength of heart" and
 because of it he feels moved to "weep again the pity of this house no longer, as
 once, administered in the grand way". This subtlety indicates his dependence on
-the rulers, but he says "I speak to those who understand, but if they fail, I
-have forgotten everything". His monologue indicates that he is on the side of
-the people against the nobility should they have success, in an attempt to
+the rulers. His monologue indicates that he is on the side of
+the people against the aristocracy, should they have success, in an attempt to
 straddle the good graces of both sides.
 
 ## The Chorus
 
 {{< blockquote cite="Antistrophe C, Agamemnon L755" text="From high good fortune in the blood blossoms the quenchless agony." />}}
 
-The Chorus, who represent the people, play a passive role in Agamemnon. They
+The Chorus, who represent the people, play a passive role in Agamemnon. The
+represent the [common man](/musings/the-odyssey#eumaeus). They
 tell the audience the background story of the House of Atreus and it's curse.
 They tell of the sacrifice of Iphigenia, Agamemnon's daughter, at the outset 
 of the Trojan war. They hint at a mistrust of Clytaemestra in the beginning.
@@ -55,9 +55,10 @@ allow the tyrants to "soil justice, while the power is [theirs]".
 
 ## Clytaemestra
 
+{{< blockquote cite="Clytaemestra, Agamemnon L 1430" text="By my child's Justice driven to fulfillment, by her Wrath and Fury, to whom I sacrificed this man" />}}
+
 {{< figure src="images/clytaemestra-kills-agamemnon.jpg" alt="Clytaemestra and Aegisthus prepare to kill Agamemnon." attrlink="https://commons.wikimedia.org/wiki/File:Pierre-Narcisse_Gu%C3%A9rin_-_Clytemnestra_and_Agamemnon_-_WGA10974.jpg" >}}
 
-{{< blockquote cite="Clytaemestra, Agamemnon L 1430" text="By my child's Justice driven to fulfillment, by her Wrath and Fury, to whom I sacrificed this man" />}}
 
 Clytaemestra is unfaithful, but can we fault her? Her husband murdered
 his own child for luck in a meaningless war. His nature and the brutal legacy of
@@ -68,18 +69,19 @@ Her revenge for her child may have been justified, but lead to the deposition of
 her son Orestes, long absent, and the utter betrayal of her household. Her
 primary crime in the eyes of the ancients may have been hinted at in his speech
 about the "lady's male strength of heart" in crossing traditional gender role
-boundaries.
+boundaries. She is neither Helen, nor [Penelope](/musings/the-odyssey/#penelope), 
+but does that make her wrong?
 
 ## The Herald
 
-The Herald announces the return of the pythian king, or the king with the
-approval of Apollo. This is an appeal so that Apollo may show mercy on the
-Argives, now that the war has ended. An interchange occurs with the Chorus,
-where the Chorus Leader makes it apparent that the people have been oppressed
-under Clytaemestra's rule. The interchange ends with the good news that the war
-in fact has ended. Clytaemestra's tyranny and lies are seen to possibly be at an
-end. Unfortunately this hope remains unfulfilled. The herald further recalls the
-ruin of the Argive fleet, cementing the possibility of a coup.
+The Herald announces the return of the pythian king. This is an appeal so that
+Apollo may show mercy on the Argives, now that the war has ended. An interchange
+occurs with the Chorus, where the Chorus Leader makes it apparent that the
+people have been oppressed under Clytaemestra's rule. The interchange ends with
+the good news that the war in fact has ended. Clytaemestra's tyranny and lies
+are seen to possibly be at an end. Unfortunately this hope remains unfulfilled.
+The herald further recalls the ruin of the Argive fleet, cementing the
+possibility of a coup.
 
 ## Agamemnon
 
@@ -93,7 +95,9 @@ Cassandra, the daughter of Priam, arrives in Argos as Agamemnon's concubine.
 
 Aegisthus is legitimately grieved; why not seize the opportunity which presents
 itself? Revenge, a throne, even a queen are up for grabs. He has all the motive 
-and no reason not to indulge it. While this may be a tragic outcome for Agamemnon, 
-presented by the playwright as the returning hero, I cannot say that Aegisthus' 
-actions were unjust. They were in fact righteous, in avenging the atrocity 
-trespassed upon his branch of the family.
+and no reason not to indulge it. Once he gains the throne he quickly shows 
+himself to be the tyrant [Antinous](/musings/the-odyssey/#antinous) 
+would have become. While this may be a tragic outcome for Agamemnon, presented
+by the playwright as the returning hero, I cannot say that Aegisthus' actions
+were unjust. They were in fact righteous, in avenging the atrocity trespassed
+upon his branch of the family.
