@@ -1,7 +1,9 @@
 +++
+date = "2020-03-29 21:53:00"
+publishdate = "2020-02-26 23:32:00"
 title = "The Odyssey"
 description = "The Odyssey focuses us on common decency, family and justice suffered by the wicked."
-date = "2020-02-26 23:32:00"
+series = ['Great Books']
 keywords = ['Homer',  'justice', 'family', 'law', 'love', 'virtue and vice']
 tags = ['homer', 'justice', 'family', 'law', 'love', 'virtue and vice']
 [[resources]]
@@ -31,12 +33,12 @@ The later portrays him as the unfaithful husband, an absentee father, in no
 hurry to return home. Eventually, with the help of the Phaeacians, a lawful
 people, he returns home. There he restores the law and regains marital unity.
 
-Penelope is the anti-Clytaemestra, standing by her family against suitors 
-rather than betraying them; she is everything Helen is not. She is the
-ideal wife, as seen by Agamemnon in Hades, loyal, long-suffering, wise, holding
-the walls against the dissolution of hearth and home. She is faithful and
-sacrifices endlessly to defend Telemachus, spending twenty years of her prime
-with a missing husband.
+Penelope is the anti-[Clytaemestra](/musings/the-orestia), standing by her
+family against suitors rather than betraying them; she is everything Helen is
+not. She is the ideal wife, as seen by Agamemnon in Hades, loyal,
+long-suffering, wise, holding the walls against the dissolution of hearth and
+home. She is faithful and sacrifices endlessly to defend Telemachus, spending
+twenty years of her prime with a missing husband.
 
 Telemachus provides the prototypical coming of age story. From a boy, he grows
 into a lethal force and devises a plan to seize the reins of manhood. He becomes

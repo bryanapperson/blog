@@ -1,9 +1,12 @@
 +++
 title = "Prometheus Bound"
 description = "A tale of forethought confined for rebellion against the ruler of the universe."
-date = "2020-03-25 23:32:00"
+date = "2020-03-29 21:57:00"
+publishdate = "2020-03-25 23:32:00"
 keywords = ['Aeschylus',  'justice', 'sin', 'prophecy']
 tags = ['aeschylus', 'justice', 'sin', 'prophecy']
+series = ['Great Books']
+
 [[resources]]
   src = "**prometheus_bound.jpg"
   name = "header"
