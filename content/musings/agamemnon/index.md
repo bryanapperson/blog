@@ -1,6 +1,6 @@
 +++
-date = "2020-03-28 1:42:00"
-datepublished = "2020-03-28 01:42:00"
+date = "2020-04-11 21:45:00"
+datepublished = "2020-04-11 21:45:00"
 title = "Agamemnon"
 description = "Agamemnon, the first part of The Orestia, is a story of aristocracy, family, corruption, and a vicious cycle of violence which inevitably leads to tyranny."
 keywords = ['aeschylus','orestia','agamemnon','clytaemestra','orestes','cassandra','iphigenia']
