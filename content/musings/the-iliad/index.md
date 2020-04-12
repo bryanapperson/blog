@@ -1,8 +1,8 @@
 +++
+date = "2020-03-29 21:51:00"
+publishdate = "2020-01-26 21:45:00"
 title = "The Iliad"
 description = "The Iliad is a brutal war epic, perhaps the war epic. The work evokes images of Apocalypse now, or the landing at normandy."
-date = "2020-01-26 21:45:00"
-year = -768
 tags = ['war', 'death', 'other', 'duty', 'iliad', 'epic', 'poetry']
 series = ['Great Books']
 share_img = "/images/musings/the-iliad-book.jpg"
