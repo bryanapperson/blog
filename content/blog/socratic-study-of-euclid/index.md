@@ -31,7 +31,7 @@ first principles is another matter entirely. When I started my, what will likely
 be decades long, [study of the great books](/blog/a-study-of-the-great-books/) a
 few months ago, Euclid was on the list. I started study of Euclid by myself, but
 was fortunate enough to be able to engage in a seminar based study of book 1
-with [Online Great Books](https://onlinegreatbooks.com/).
+with {{<external href="https://onlinegreatbooks.com/" text="Online Great Books"/>}}.
 
 Approaching rigorous, proof based mathematics from millennia past might seem
 like a daunting task to some. It actually could not be further from daunting; it
