@@ -1,6 +1,6 @@
 +++
-date = "2020-04-26 1:42:00"
-datepublished = "2020-02-18 01:40:00"
+date = "2020-04-26 20:22:00"
+datepublished = "2020-04-26 20:22:00"
 title = "A Socratic Study of Euclid's Elements"
 description = "Using the Socratic approach for the study of Euclid's Elements to increase the breadth and depth of understanding."
 keywords = ['euclid', 'geometry', 'space']
