@@ -6,7 +6,6 @@ description = "Using the Socratic approach for the study of Euclid's Elements to
 keywords = ['euclid', 'geometry', 'space']
 tags = ["mind", "space", "order", "mathematics"]
 share_img = "/blog/socratic-study-of-euclid/images/socratic-study-of-euclid.jpg"
-toc = true
 images = [
   "/blog/socratic-study-of-euclid/images/socratic-study-of-euclid.jpg"
 ]
