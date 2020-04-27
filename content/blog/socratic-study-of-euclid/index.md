@@ -5,6 +5,11 @@ title = "A Socratic Study of Euclid's Elements"
 description = "Using the Socratic approach for the study of Euclid's Elements to increase the breadth and depth of understanding."
 keywords = ['euclid', 'geometry', 'space']
 tags = ["mind", "space", "order", "mathematics"]
+share_img = "/blog/socratic-study-of-euclid/images/socratic-study-of-euclid.jpg"
+toc = true
+images = [
+  "/blog/socratic-study-of-euclid/images/socratic-study-of-euclid.jpg"
+]
 
 [[resources]]
   src = "**socratic-study-of-euclid.jpg"
@@ -35,7 +40,8 @@ spacial relation that is geometry is the most natural math for the human maid to
 apprehend, and is a unique type of gymnastics for the mind. Plato required
 mastery of geometry before entry the academy. It's at the heart of the physical
 sciences, at the center of logic. This system remained unaltered for millennia,
-and to this day still mostly does, excluding the discovery of curved space.
+passing through the conflagration at Alexandria, and to this day still mostly 
+still does.
 
 The first step to a study of Euclid is to take a look over the proofs and draw
 them out on paper. Draw them by hand with nothing but a pencil, straight edge
@@ -60,5 +66,5 @@ is composed of, emerge with an understanding entirely other than anybody arrived
 with. The Socratic seminar is the key to getting a deeper understanding, broader
 context and better a calibration of how to approach the material. So to sum it
 up, pencil, paper, dividers, straightedge, fellow travelers; put all this in the
-format of a Socratic seminar, and you've got the elements for an elucidating
+format of a Socratic seminar, and you've got the bones of an elucidating
 study of _The Elements_.
