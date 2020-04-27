@@ -1,5 +1,5 @@
 +++
-date = "2020-04-26 20:22:00"
+date = "2020-04-26 20:58:00"
 datepublished = "2020-04-26 20:22:00"
 title = "A Socratic Study of Euclid's Elements"
 description = "Using the Socratic approach for the study of Euclid's Elements to increase the breadth and depth of understanding."
@@ -24,7 +24,7 @@ familiar to those who have completed high school maths; seeing Euclid's system
 come together to weave the fabric of maths and understanding the proofs from
 first principles is another matter entirely. When I started my, what will likely
 be decades long, [study of the great books](/blog/a-study-of-the-great-books/) a
-few months ago Euclid was on the list. I started study of Euclid by myself, but
+few months ago, Euclid was on the list. I started study of Euclid by myself, but
 was fortunate enough to be able to engage in a seminar based study of book 1
 with [Online Great Books](https://onlinegreatbooks.com/).
 
@@ -55,8 +55,10 @@ Once you've drawn out the proofs and thought about them, it is amazing to see
 the variety approaches and connections other folks in seminar bring to the
 table.
 
-Having others to discuss these concepts with is the key to getting both a deeper
-understanding and a calibration of how to approach the material. So to sum it
+Through the dialectic of the seminar, the group, along with the individuals it
+is composed of, emerge with an understanding entirely other than anybody arrived
+with. The Socratic seminar is the key to getting a deeper understanding, broader
+context and better a calibration of how to approach the material. So to sum it
 up, pencil, paper, dividers, straightedge, fellow travelers; put all this in the
 format of a Socratic seminar, and you've got the elements for an elucidating
 study of _The Elements_.
