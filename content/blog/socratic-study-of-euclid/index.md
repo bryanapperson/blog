@@ -1,5 +1,5 @@
 +++
-date = "2020-04-26 20:22:00"
+date = "2020-04-26 20:58:00"
 datepublished = "2020-04-26 20:22:00"
 title = "A Socratic Study of Euclid's Elements"
 description = "Using the Socratic approach for the study of Euclid's Elements to increase the breadth and depth of understanding."
