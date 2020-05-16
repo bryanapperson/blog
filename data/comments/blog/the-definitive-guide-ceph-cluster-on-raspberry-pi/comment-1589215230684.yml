@@ -1,0 +1,8 @@
+_id: 20622aa0-93a6-11ea-8da2-d30c5a1ea0d3
+_parent: the-definitive-guide-ceph-cluster-on-raspberry-pi
+reply_to: ''
+botpot: ''
+name: Fil
+email: 63463ed1650d3c2a502d279e2445559c
+body: "Hi, thank you very much for this guide. It's really helpful.\r\nI just wonder what the command `ssh user@ceph-server` is all about. I didn't find anything concrete in the [ceph documentation](https://docs.ceph.com/docs/master/rados/deployment/preflight-checklist/#create-a-user). Should I connect it here to the admin node to create a ceph-user via ssh?"
+date: '2020-05-11T16:40:30.683Z'
