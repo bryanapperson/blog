@@ -1,0 +1,34 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
+    <title>astable on Bryan Apperson</title>
+    <link>https://bryanapperson.com/tags/astable/</link>
+    <description>Recent content in astable on Bryan Apperson</description>
+    <image>
+      <title>astable on Bryan Apperson</title>
+      <link>https://bryanapperson.com/tags/astable/</link>
+      <url>https://source.unsplash.com/collection/983219/2000x1322</url>
+    </image>
+    <ttl>1440</ttl>
+    <generator>Hugo 0.71.0-DEV</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright>
+    <lastBuildDate>Sat, 16 May 2020 16:09:59 UT</lastBuildDate>
+    <atom:link href="https://bryanapperson.com/tags/astable/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Astable Multivibrator from Discrete Transistors</title>
+      <link>https://bryanapperson.com/blog/astable-multivibrator-from-discrete-transistors/</link>
+      <pubDate>Sun, 24 Jan 2016 00:00:00 UT</pubDate>
+      <dc:creator>Bryan Apperson</dc:creator>
+      <guid>https://bryanapperson.com/blog/astable-multivibrator-from-discrete-transistors/</guid>
+      <description>This blog post is about making an astable multivibrator from discrete transistors. This weekend I embarked on making a home-brew computer from discrete transistors. To test circuits like a JK flip-flop or SRAM, a clock is needed. In the spirit of keeping with an all discrete transistor computer, I used an astable multivibrator composed of two RTL NAND gates. I wanted to start with a very low frequency, so I targeted 10 seconds high, 10 low for the clock.</description>
+      <content:encoded><![CDATA[This blog post is about making an astable multivibrator from discrete transistors. This weekend I embarked on making a home-brew computer from discrete transistors. To test circuits like a JK flip-flop or SRAM, a clock is needed. In the spirit of keeping with an all discrete transistor computer, I used an astable multivibrator composed of two RTL NAND gates. I wanted to start with a very low frequency, so I targeted 10 seconds high, 10 low for the clock. Changing the size of the capacitor and resistor outside the NAND gates will adjust the frequency. The formula for the frequency of the clock works out to be something like this: $:f=\frac{1}{t}=\frac{1}{2RC}=\frac{1}{2 \times 4700\Omega \times 2200uF}=20.68s$.
+Designing the Astable Multivibrator I am new to low-level electronics like this, but I had used Arduino in the past and the designers of that micro-controller advocate Fritzing. I used Fritzing to design the schematic, breadboard and PCB. The first step was to design the schematic. I used and adaptation of a circuit I found here.
+The next step was to breadboard the circuit. The cover image of this blog post shows the real life version, however I was able to breadboard it in Fritzing to validate the circuit.
+After that I went ahead and breadboarded/tested the circuit. Everything worked as expected after making blue smoke out of an LED that was shorted.
+The final step for having a drop in circuit for a test clock was to design a PCB. I made considerations for being able to change R8 and C1 to change the frequency to something like .5hz for use in testing other components as I go down the homebrew computer road. That was convenient because I was able to fabricate the PCB from the program directly. I ordered a fabrication of the PCB from Fritzing Fab.
+In about two weeks the PCB will be here from Germany and the parts will go on the board. The Fritzing file for this circuit can be downloaded here. Hopefully this article is helpful to anybody looking to make a clock circuit from discrete transistors using resistor-transistor logic NAND gates. Let me know your thoughts in the comments.
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,97 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
+    <title>linux on Bryan Apperson</title>
+    <link>https://bryanapperson.com/tags/linux/</link>
+    <description>Recent content in linux on Bryan Apperson</description>
+    <image>
+      <title>linux on Bryan Apperson</title>
+      <link>https://bryanapperson.com/tags/linux/</link>
+      <url>https://source.unsplash.com/collection/983219/2000x1322</url>
+    </image>
+    <ttl>1440</ttl>
+    <generator>Hugo 0.71.0-DEV</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright>
+    <lastBuildDate>Sat, 16 May 2020 16:09:59 UT</lastBuildDate>
+    <atom:link href="https://bryanapperson.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup OpenVPN on Ubuntu the Easy Way</title>
+      <link>https://bryanapperson.com/blog/setup-openvpn-on-ubuntu-the-easy-way/</link>
+      <pubDate>Mon, 17 Feb 2020 21:03:31 UT</pubDate>
+      <dc:creator>Bryan Apperson</dc:creator>
+      <guid>https://bryanapperson.com/blog/setup-openvpn-on-ubuntu-the-easy-way/</guid>
+      <description>The best way to setup OpenVPN on Ubuntu, like many other things, is to script it. This way it&amp;rsquo;s easier to create uniform deployment across larger networks. So, this is how you setup OpenVPN on Ubuntu the easy way - this neat little script makes installing OpenVPN on an Ubuntu VPS simple:
+Go to your home directory:
+cd ~ Then create a file by running this command:
+cat &amp;gt; openvpn.sh #!</description>
+      <content:encoded><![CDATA[The best way to setup OpenVPN on Ubuntu, like many other things, is to script it. This way it&amp;rsquo;s easier to create uniform deployment across larger networks. So, this is how you setup OpenVPN on Ubuntu the easy way - this neat little script makes installing OpenVPN on an Ubuntu VPS simple:
+Go to your home directory:
+cd ~ Then create a file by running this command:
+cat &amp;gt; openvpn.sh #!/usr/bin/env bash # # Functions ok() { echo -e &amp;#39;\e[32m&amp;#39;$1&amp;#39;\e[m&amp;#39;; } die() { echo -e &amp;#39;\e[1;31m&amp;#39;$1&amp;#39;\e[m&amp;#39;; exit 1; } # Sanity check if [[ $(id -g) != &amp;#34;0&amp;#34; ]] ; then die &amp;#34;❯❯❯ Script must be run as root.&amp;#34; fi if [[ ! -e /dev/net/tun ]] ; then die &amp;#34;❯❯❯ TUN/TAP device is not available.&amp;#34; fi dpkg -l openvpn &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 if [[ $? -eq 0 ]]; then die &amp;#34;❯❯❯ OpenVPN is already installed.&amp;#34; fi # Install openvpn ok &amp;#34;❯❯❯ apt-get update&amp;#34; apt-get update -q &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 ok &amp;#34;❯❯❯ apt-get install openvpn curl openssl&amp;#34; apt-get install -qy openvpn curl &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 # IP Address SERVER_IP=$(curl ipv4.icanhazip.com) if [[ -z &amp;#34;${SERVER_IP}&amp;#34; ]]; then SERVER_IP=$(ip a | awk -F&amp;#34;[ /]&#43;&amp;#34; &amp;#39;/global/ &amp;amp;&amp;amp; !/127.0/ {print $3; exit}&amp;#39;) fi # Generate CA Config ok &amp;#34;❯❯❯ Generating CA Config&amp;#34; openssl dhparam -out /etc/openvpn/dh.pem 2048 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 openssl genrsa -out /etc/openvpn/ca-key.pem 2048 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 chmod 600 /etc/openvpn/ca-key.pem openssl req -new -key /etc/openvpn/ca-key.pem -out /etc/openvpn/ca-csr.pem -subj /CN=OpenVPN-CA/ &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 openssl x509 -req -in /etc/openvpn/ca-csr.pem -out /etc/openvpn/ca.pem -signkey /etc/openvpn/ca-key.pem -days 365 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 echo 01 &amp;gt; /etc/openvpn/ca.srl # Generate Server Config ok &amp;#34;❯❯❯ Generating Server Config&amp;#34; openssl genrsa -out /etc/openvpn/server-key.pem 2048 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 chmod 600 /etc/openvpn/server-key.pem openssl req -new -key /etc/openvpn/server-key.pem -out /etc/openvpn/server-csr.pem -subj /CN=OpenVPN/ &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 openssl x509 -req -in /etc/openvpn/server-csr.pem -out /etc/openvpn/server-cert.pem -CA /etc/openvpn/ca.pem -CAkey /etc/openvpn/ca-key.pem -days 365 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 cat &amp;gt; /etc/openvpn/udp1194.conf &amp;lt; /dev/null 2&amp;gt;&amp;amp;1 chmod 600 /etc/openvpn/client-key.pem openssl req -new -key /etc/openvpn/client-key.pem -out /etc/openvpn/client-csr.pem -subj /CN=OpenVPN-Client/ &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 openssl x509 -req -in /etc/openvpn/client-csr.pem -out /etc/openvpn/client-cert.pem -CA /etc/openvpn/ca.pem -CAkey /etc/openvpn/ca-key.pem -days 36525 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 cat &amp;gt; /etc/openvpn/client.ovpn &amp;lt; $(cat /etc/openvpn/client-key.pem) $(cat /etc/openvpn/client-cert.pem) $(cat /etc/openvpn/ca.pem) EOF # Iptables if [[ ! -f /proc/user_beancounters ]]; then N_INT = $(ip a |awk -v sip=&amp;#34;$SERVER_IP&amp;#34; &amp;#39;$0 ~ sip { print $7}&amp;#39;) iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o $N_INT -j MASQUERADE else iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -j SNAT --to-source $SERVER_IP fi iptables-save &amp;gt; /etc/iptables.conf cat &amp;gt; /etc/network/if-up.d/iptables &amp;lt; /proc/sys/net/ipv4/ip_forward # Restart Service ok &amp;#34;❯❯❯ service openvpn restart&amp;#34; service openvpn restart &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 ok &amp;#34;❯❯❯ Your client config is available at /etc/openvpn/client.ovpn&amp;#34; ok &amp;#34;❯❯❯ All done!&amp;#34;&amp;lt;/pre&amp;gt; Press CTRL&#43;D to save. Then:
+chmod 755 openvpn.sh This simple script will got OpenVPN installed and working on your VM or box easily. OpenVPN is a great way to connect to a work network, remain private, and encrypt your endpoint.
+In just a few seconds you are all set, the script will automatically install OpenVPN and all the necessary dependencies, configure, and add a new user. Then just connect via SFTP and download the files to connect. Place them in the OpenVPN config directory on Windows or setup the values to match on a linux desktop.
+OpenVPN is a very secure tunnel and I highly recommend it. I get near native speed running OpenVPN on a 512MB RAM Ubuntu 14.04 VM.
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Getting Started with an Ubuntu VPS Running 14.04</title>
+      <link>https://bryanapperson.com/blog/getting-started-with-an-ubuntu-vps-running-14-04/</link>
+      <pubDate>Mon, 17 Feb 2020 19:27:00 UT</pubDate>
+      <dc:creator>Bryan Apperson</dc:creator>
+      <guid>https://bryanapperson.com/blog/getting-started-with-an-ubuntu-vps-running-14-04/</guid>
+      <description>When you get a new Ubuntu VPS or server there are a few things you want to make sure are taken care of right off the bat. This will optimize the security and usability of your server, providing a reliable foundation for subsequent alterations. If you need an Ubuntu VPS you can get one for .
+Step One Logging into your new VPS is the first step. You&amp;rsquo;ll need to know the public IP address of the server to begin.</description>
+      <content:encoded><![CDATA[When you get a new Ubuntu VPS or server there are a few things you want to make sure are taken care of right off the bat. This will optimize the security and usability of your server, providing a reliable foundation for subsequent alterations. If you need an Ubuntu VPS you can get one for .
+Step One Logging into your new VPS is the first step. You&amp;rsquo;ll need to know the public IP address of the server to begin. You&amp;rsquo;ll also need to know the password for the &amp;ldquo;root&amp;rdquo; user. Once you know those two things you are ready to login. The public IP address is e-mailed to you and you can view the credentials you chose in your client area if the VPS is hosted with Bitronic Technologies (my company). In Linux the root user an administrator with sweeping privileges. Because the root user has the power to irreversibly damage a system you shouldn&amp;rsquo;t use root for daily use. It is best to login as a user with limited privileges and then to &amp;ldquo;sudo&amp;rdquo; root when you need to in the case of Ubuntu 14.04. In this tutorial we will cover how to login as root, create an alternate user for day-to-day use, disable root login and how to login as an alternate (non-root) user, then escalate to root. As mentioned, logging in is the first step to getting started with your Ubuntu 14.04 VPS. Initially the only account is the root account. If you are using Linux connect to the server using the &amp;ldquo;ssh&amp;rdquo; command at terminal. If you are using windows consider using an SSH program like putty. For purposes of this article we will assume you are running Linux on your PC, however all of the same steps will apply either way except for initial login. If you are using Windows you will need to open putty, enter the root@pub.lic.ipa.ddr (the dotted quad public IP of your VPS) then login and enter the password. On linux just run this command in terminal:
+ssh root@pub.lic.ipa.ddr
+Of course entering your public IP address in place of those letters. You will then most likely see a warning in your terminal that looks like this:
+established. ECDSA key fingerprint is 79:95:46:1a:ab:37:11:8e:86:54:36:38:bb:3c:fa:c0. Are you sure you want to continue connecting (yes/no)? Your computer is letting you know that it does not recognize your remote server. This is expected behaviour because it is the first time this connection is being made. However if you see this message in the future (on the same computer) it can be a sign that your server has been compromised (assuming you haven&amp;rsquo;t reinstalled the operating system). It is safe to type &amp;ldquo;yes&amp;rdquo; and accept the connection. Then you will need to enter the password for the root account.
+Step Two You may wish to change the root password to something more memorable. Make sure to use a strong password as root login is the &amp;ldquo;key to the kingdom&amp;rdquo; so to speak. A good password can be a sentence like &amp;ldquo;IlikedtheFordBroncoin1996!&amp;rdquo; or a random string. But it should ideally contain uppercase/lowercase letters, numbers and at least 1 special character. While logged in as root it is easy to change the password by typing:
+passwd
+You will be prompted to enter and then confirm your new root password. You will not see any characters display on the screen while you are typing (this is an intentional security measure).
+Step Three The third step in preparing and securing your new Ubuntu 14.04 VPS is to add a new user. This is going to be the account you&amp;rsquo;ll use to login after the end of the tutorial, so make sure the username is memorable. For the purposes of this tutorial we are going to make the username &amp;ldquo;demo&amp;rdquo;, but you should select a more meaningful username. So to add the user just run this command:
+adduser demo
+You will then be prompted with a few questions, starting with the password you want to use for the account. It is recommended that you choose a different password then the one you used for the root account as an added security measure. So go ahead and fill out the password, then optionally provide the other details requested. If you don&amp;rsquo;t want to fill those out you can just hit enter and Ubuntu will skip those fields.
+Step Four In step four we will provide the new user we just created in step three with the ability to escalate to root. This allows you to gain root access without having to allow remote root login, or logout and log back in as root if you do choose to leave root login over SSH enable (not recommended). In Ubuntu we use the command &amp;ldquo;sudo&amp;rdquo; to escalate to root. This allows a normal user to run a command that requires root privileges. You can also use the &amp;ldquo;sudo -i&amp;rdquo; command to assume the identity of root until you use the command &amp;ldquo;exit&amp;rdquo;. To add the new user we just created to the list of users who can use &amp;ldquo;sudo&amp;rdquo; to attain root, we need to use a command called &amp;ldquo;visudo&amp;rdquo;. This command will open a configuration file. Go ahead and type:
+visudo
+Then scroll down until you find a section that looks similar to this:
+# User privilege specification root ALL=(ALL:ALL) ALL This may look complex to you but that line is non-consequential and we don&amp;rsquo;t need to alter it. Just add another line below it that follows the format, replacing &amp;ldquo;demo&amp;rdquo; with the username you created in step three. The result should look like this:
+# User privilege specification root ALL=(ALL:ALL) ALL demo ALL=(ALL:ALL) ALL After you have made the changes, press CTRL-X to exit visudo. You will have to type &amp;ldquo;Y&amp;rdquo; to save the file and &amp;ldquo;ENTER&amp;rdquo; to confirm the location (you can use the provided value).
+Step Five (Optional) This step is optional but is highly recommended for optimal security going forward. You can secure your server a bit more by disabling root login over SSH entirely and changing SSH to a non default port. The process is fairly straightforward. Get started by opening the sshd configuration file with a text editor as root. You can use any text editor installed on your VPS but for this tutorial we will assume you use &amp;ldquo;nano&amp;rdquo;. Nano is a fairly easy to use command line text editor for Linux. So go ahead and type this command:
+nano /etc/ssh/sshd_config
+Step Five-A (Optional) The first thing to do is to change the port that SSHD listens on. Find the line that looks like this:
+Port 22
+Change this number to something between 1025 and 65536, make sure it does not conflict with the port of another program you plan on running. This is helpful in preventing unauthorized users from trying to break into the system over SSH. If you change from the default port it adds an extra step of sniffing for them to find it and you can even add a firewall rule to block IPs for port scanning of use a tool like ConfigServer Firewall to do so. If you do change this value make sure you remember it or write it down. You will need to know this port to reconnect to your server. For the purposes of this guide we will change the port to 3333. Remember you will need to tell your ssh client to connect to port 3333 (or the port you choose) in the future. So change the line to look like this (or the port you choose):
+Port 3333
+Save the file using &amp;ldquo;CTRL-O&amp;rdquo;, &amp;ldquo;Y&amp;rdquo; then exit &amp;ldquo;CTRL-X&amp;rdquo;. Now we are going to enable Ubuntu&amp;rsquo;s UFW (Uncomplicated Firewall). Enter this command:
+sudo ufw enable
+Then we are going to make sure that port 3333 or whatever port you chose is open. Run the command:
+sudo ufw allow 3333
+Replace 3333 with whatever port you decided to use then run:
+sudo service ufw restart sudo service ssh restart Now you can reconnect via the port you chose in the future.
+Step Five-B (Optional) The next thing we can do for added security is to restrict remote root login over SSH. Run the command:
+nano /etc/ssh/sshd_config
+Then find the line that looks like this:
+PermitRootLogin yes
+Change this to:
+PermitRootLogin no
+This is a much more secure setting as it discourages the direct brute force or the root password. This is especially effective if you use a different password for your &amp;ldquo;day-to-day&amp;rdquo; user then you do for root. If you run:
+sudo service ssh restart
+You will no longer be able to login as root, only as the alternate user you created.
+Step Five-C (Optional) If you wanted to go one step further you could explicitly specify which users can connect to your server via SSH. This might not be needed now, but can become useful as you add additional users. Any user not on the list you are about to configure will not be able to login over SSH at all. You should use caution when configuring this as you can lock your self out of your server entirely. We are going to need to open the SSHD configuration again:
+nano /etc/ssh/sshd_config
+You&amp;rsquo;ll have to add this line yourself as it does not exist by default. Make sure to replace &amp;ldquo;demo&amp;rdquo; with the username you created in step 3.
+AllowUsers demo
+When you have added the line and triple checked that the syntax and username are correct, save and close the file using &amp;ldquo;CTRL-O&amp;rdquo;, &amp;ldquo;Y&amp;rdquo; and then &amp;ldquo;CTRL-X&amp;rdquo; as we covered earlier. Then go ahead and restart SSHD again:
+sudo service ssh restart
+Before you log out of the server, test your configuration by opening another connection using the user, password and port that you have created in this guide. If you can&amp;rsquo;t connect go back and correct your errors using the original connection (which you should not close until you are sure that your settings work). If you followed this guide the command you would use is:
+ssh -p 3333 demo@ser.ver.ipa.ddr
+Replacing the port and user with the ones you chose. Then entering the password for the user you created in step 3. Remember from now on you will have to use the sudo command to run commands that need root:
+sudo your_command
+You can now close both connections by typing exit in each window.
+What&amp;rsquo;s Next? You now have a fairly secure server, however you can continue further securing you server by installing fail2ban or a similar utility to help prevent brute force and port scanning attacks. Outside of that you are ready to install LAMP, LEMP or whatever other programs you want to run on your VPS! Leave me your thoughts in the comments below and check out my other Ubuntu VPS articles.
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

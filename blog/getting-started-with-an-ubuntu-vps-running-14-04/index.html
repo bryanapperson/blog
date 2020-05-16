@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    
+
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:; connect-src 'self' wss: data:; font-src 'self' https: data:; img-src 'self' https: data:; object-src 'none'">
+
+
+    <meta name="generator" content="After Dark Hugo">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with an Ubuntu VPS Running 14.04 | Bryan Apperson</title>
+    <meta name="description" content="A basic guide on how to setup an Ubuntu 14.04 machine.">
+    <meta name="keywords" content="linux, tutorial">
+    
+    
+    
+    
+    <meta property="og:title" content="Getting Started with an Ubuntu VPS Running 14.04" />
+<meta property="og:description" content="A basic guide on how to setup an Ubuntu 14.04 machine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bryanapperson.com/blog/getting-started-with-an-ubuntu-vps-running-14-04/" />
+<meta property="og:image" content="https://source.unsplash.com/collection/983219/2000x1322"/>
+<meta property="article:published_time" content="2014-09-01T22:43:23+00:00" />
+<meta property="article:modified_time" content="2020-02-17T19:27:00+00:00" />
+
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://source.unsplash.com/collection/983219/2000x1322"/>
+
+<meta name="twitter:title" content="Getting Started with an Ubuntu VPS Running 14.04"/>
+<meta name="twitter:description" content="A basic guide on how to setup an Ubuntu 14.04 machine."/>
+
+    
+
+
+
+  <meta property="og:image" content="https://source.unsplash.com/collection/983219/2000x1322">
+
+
+    
+
+    
+    
+  <meta name="referrer" content="same-origin">
+
+
+    
+    
+    <script integrity="sha512-2t0yyNrUdtn9WGIoBVxq5vtoJQYfoDQDbqRPpOb75f1hiL39DGLdJKDrGP60fBhXfrFeKyVhzWJvHvLgln/ElA==">/*! Fetch Inject v2.0.4 | Copyright (C) Josh Habdas <jhabdas@protonmail.com> (https://habd.as) | @license Zlib */
+var fetchInject=function(){"use strict";const e=function(e,t,r,n,o,c,i){c=t.createElement(r),i=t.getElementsByTagName(r)[0],c.appendChild(t.createTextNode(n.text)),c.onload=o(n),i?i.parentNode.insertBefore(c,i):t.head.appendChild(c)};return function(t,r){if(!arguments.length)return Promise.reject(new ReferenceError("Failed to execute 'fetchInject': 1 argument required but only 0 present."));if(arguments[0]&&arguments[0].constructor!==Array)return Promise.reject(new TypeError("Failed to execute 'fetchInject': argument 1 must be of type 'Array'."));if(arguments[1]&&arguments[1].constructor!==Promise)return Promise.reject(new TypeError("Failed to execute 'fetchInject': argument 2 must be of type 'Promise'."));const n=[],o=r?[].concat(r):[],c=[];return t.forEach(e=>o.push(window.fetch(e).then(e=>[e.clone().text(),e.blob()]).then(e=>Promise.all(e).then(e=>{n.push({text:e[0],blob:e[1]})})))),Promise.all(o).then(()=>(n.forEach(t=>{c.push({then:r=>{t.blob.type.includes("text/css")?e(window,document,"style",t,r):e(window,document,"script",t,r)}})}),Promise.all(c)))}}();
+</script>
+    <script integrity="sha512-2XlvnxweZhaHgBdCoOK0PoCUWiSfKibb&#43;RCRZNgqLdvbnx0ZH67FDGKQqmpqCerjMJbZFv6fsXgbmJOOA9K&#43;qA==">/*!
+ * Copyright (C) 2019  Josh Habdas <jhabdas@protonmail.com>
+ *
+ * This file is part of After Dark.
+ *
+ * After Dark is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * After Dark is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+fetchInject(["/js/lazysizes.min.js"]);
+</script>
+    
+
+
+  
+    
+
+  <meta title="mod:fractal-forest" content="status:enabled">
+  
+    <script async src=/js/bpgdec8a.js integrity=sha384-8PG0go3BW8hLm63KbTxk/hNcehaoSbrAhKzsmy2Jhs/KY8QdiKKkjhdeyHY/Q/0I&#10;></script>
+  
+
+
+  
+  
+  
+  
+
+
+    
+    <link rel="canonical" href="https://bryanapperson.com/blog/getting-started-with-an-ubuntu-vps-running-14-04/">
+    
+    
+      <link rel="next" href="/blog/mariadb-10-1-setup-for-ubuntu-14-04-make-wordpress-fly">
+    
+    <link rel="icon" sizes="any" href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2046%2045'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EAfter%20Dark%3C/title%3E%3Cpath%20d='M.708%2045L23%20.416%2045.292%2045H.708zM35%2038L23%2019%2011%2038h24z'%20fill='%23000'/%3E%3C/svg%3E">
+
+    
+
+  
+  
+  
+  
+  
+  
+  
+    
+      
+        <style>html{font-size:12px}*{box-sizing:border-box;text-rendering:geometricPrecision}body{font-size:1rem;line-height:1.5rem;margin:0;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;word-wrap:break-word}h1,h2,h3,h4,h5,h6{line-height:1.3em}fieldset{border:none;padding:0;margin:0}pre{padding:2rem;margin:1.75rem 0;background-color:#fff;border:1px solid #ccc;overflow:auto}code[class*=language-],pre[class*=language-],pre code{font-weight:100;text-shadow:none;margin:1.75rem 0}a{cursor:pointer;color:#ff2e88;text-decoration:none;border-bottom:1px solid #ff2e88}a:hover{background-color:#ff2e88;color:#fff}.grid{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.grid.\-top{-ms-flex-align:start;align-items:flex-start}.grid.\-middle{-ms-flex-align:center;align-items:center}.grid.\-bottom{-ms-flex-align:end;align-items:flex-end}.grid.\-stretch{-ms-flex-align:stretch;align-items:stretch}.grid.\-baseline{-ms-flex-align:baseline;align-items:baseline}.grid.\-left{-ms-flex-pack:start;justify-content:flex-start}.grid.\-center{-ms-flex-pack:center;justify-content:center}.grid.\-right{-ms-flex-pack:end;justify-content:flex-end}.grid.\-between{-ms-flex-pack:justify;justify-content:space-between}.grid.\-around{-ms-flex-pack:distribute;justify-content:space-around}.cell{-ms-flex:1;flex:1;box-sizing:border-box}@media screen and (min-width:768px){.cell.\-1of12{-ms-flex:0 0 8.33333%;flex:0 0 8.33333%}.cell.\-2of12{-ms-flex:0 0 16.66667%;flex:0 0 16.66667%}.cell.\-3of12{-ms-flex:0 0 25%;flex:0 0 25%}.cell.\-4of12{-ms-flex:0 0 33.33333%;flex:0 0 33.33333%}.cell.\-5of12{-ms-flex:0 0 41.66667%;flex:0 0 41.66667%}.cell.\-6of12{-ms-flex:0 0 50%;flex:0 0 50%}.cell.\-7of12{-ms-flex:0 0 58.33333%;flex:0 0 58.33333%}.cell.\-8of12{-ms-flex:0 0 66.66667%;flex:0 0 66.66667%}.cell.\-9of12{-ms-flex:0 0 75%;flex:0 0 75%}.cell.\-10of12{-ms-flex:0 0 83.33333%;flex:0 0 83.33333%}.cell.\-11of12{-ms-flex:0 0 91.66667%;flex:0 0 91.66667%}}@media screen and (max-width:768px){.grid{-ms-flex-direction:column;flex-direction:column}.cell{-ms-flex:0 0 auto;flex:0 0 auto}}.hack,.hack blockquote,.hack code,.hack em,.hack h1,.hack h2,.hack h3,.hack h4,.hack h5,.hack h6,.hack strong{font-size:1rem;font-style:normal;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif}.hack blockquote,.hack code,.hack em,.hack strong{line-height:20px}.hack blockquote,.hack code,.hack footer,.hack h1,.hack h2,.hack h3,.hack h4,.hack h5,.hack h6,.hack header,.hack li,.hack ol,.hack p,.hack section,.hack ul{float:none;margin:0;padding:0}.hack blockquote,.hack h1,.hack ol,.hack p,.hack ul{margin-top:20px;margin-bottom:20px}.hack h1{position:relative;display:inline-block;display:table-cell;padding:20px 0 30px;margin:0;overflow:hidden}.hack h1:after{content:"====================================================================================================";position:absolute;bottom:10px;left:0}.hack h1+*{margin-top:0}.hack h2,.hack h3,.hack h4,.hack h5,.hack h6{position:relative;margin-bottom:1.75rem}.hack h2:before,.hack h3:before,.hack h4:before,.hack h5:before,.hack h6:before{display:inline}.hack h2:before{content:"## "}.hack h3:before{content:"### "}.hack h4:before{content:"#### "}.hack h5:before{content:"##### "}.hack h6:before{content:"###### "}.hack li{position:relative;display:block;padding-left:20px}.hack li:after{position:absolute;top:0;left:0}.hack ul>li:after{content:"-"}.hack ol{counter-reset:a}.hack ol>li:after{content:counter(a) ".";counter-increment:a}.hack ol li:nth-child(n+10):after{left:-7px}.hack blockquote{position:relative;padding-left:17px;padding-left:2ch;overflow:hidden}.hack blockquote:after{content:">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>";white-space:pre;position:absolute;top:0;left:0;line-height:20px}.hack em:after,.hack em:before{content:"*";display:inline}.hack pre code:after,.hack pre code:before{content:""}.hack code{font-weight:700}.hack code:after,.hack code:before{content:"`";display:inline}.hack hr{position:relative;height:20px;overflow:hidden;border:0;margin:20px 0}.hack hr:after{content:"----------------------------------------------------------------------------------------------------";position:absolute;top:0;left:0;line-height:20px;width:100%;word-wrap:break-word}@-moz-document url-prefix(){.hack h1{display:block}}.hack-ones ol>li:after{content:"1."}p{margin:0 0 1.75rem}.container{max-width:70rem}.container,.container-fluid{margin:0 auto;padding:0 1rem}.inner{padding:1rem}.inner2x{padding:2rem}.pull-left{float:left}.pull-right{float:right}.progress-bar{height:8px;opacity:.8;background-color:#ccc;margin-top:12px}.progress-bar.progress-bar-show-percent{margin-top:38px}.progress-bar-filled{background-color:gray;height:100%;transition:width .3s ease;position:relative;width:0}.progress-bar-filled:before{content:"";border:6px solid transparent;border-top-color:gray;position:absolute;top:-12px;right:-6px}.progress-bar-filled:after{color:gray;content:attr(data-filled);display:block;font-size:12px;white-space:nowrap;position:absolute;border:6px solid transparent;top:-38px;right:0;-ms-transform:translateX(50%);transform:translateX(50%)}table{width:100%;border-collapse:collapse;margin:1.75rem 0;color:#778087}table td,table th{vertical-align:top;border:1px solid #ccc;line-height:15px;padding:10px}table thead th{font-size:10px}table tbody td:first-child{font-weight:700;color:#333}.form{width:30rem}.form-group{margin-bottom:1.75rem;overflow:auto}.form-group label{border-bottom:2px solid #ccc;color:#333;width:10rem;display:inline-block;height:38px;line-height:38px;padding:0;float:left;position:relative}.form-group.form-success label{color:#4caf50!important;border-color:#4caf50!important}.form-group.form-warning label{color:#ff9800!important;border-color:#ff9800!important}.form-group.form-error label{color:#f44336!important;border-color:#f44336!important}.form-control{outline:none;border:none;border-bottom:2px solid #ccc;padding:.5rem 0;width:20rem;height:38px;background-color:transparent}.form-control:focus{border-color:#555}.form-group.form-textarea label:after{position:absolute;content:"";width:2px;background-color:#fff;right:-2px;top:0;bottom:0}textarea.form-control{height:auto;resize:none;padding:1rem 0;border-bottom:2px solid #ccc;border-left:2px solid #ccc;padding:.5rem}select.form-control{border-radius:0;background-color:transparent;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none}.help-block{color:#999;margin-top:.5rem}.form-actions{margin-bottom:1.75rem}.btn{display:-ms-inline-flexbox;display:inline-flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;cursor:pointer;outline:none;padding:.65rem 2rem;font-size:1rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;z-index:1}.btn:active{box-shadow:inset 0 1px 3px rgba(0,0,0,.12)}.btn.btn-ghost{border-color:#757575;color:#757575;background-color:transparent}.btn.btn-ghost:focus,.btn.btn-ghost:hover{border-color:#424242;color:#424242;z-index:2}.btn.btn-ghost:hover{background-color:transparent}.btn-block{width:100%;display:-ms-flexbox;display:flex}.btn-default{color:#fff;background-color:#e0e0e0;border:1px solid #e0e0e0;color:#333}.btn-default:focus:not(.btn-ghost),.btn-default:hover{background-color:#dcdcdc;border-color:#dcdcdc}.btn-success{color:#fff;background-color:#4caf50;border:1px solid #4caf50}.btn-success:focus:not(.btn-ghost),.btn-success:hover{background-color:#43a047;border-color:#43a047}.btn-success.btn-ghost{border-color:#4caf50;color:#4caf50}.btn-success.btn-ghost:focus,.btn-success.btn-ghost:hover{border-color:#388e3c;color:#388e3c;z-index:2}.btn-error{color:#fff;background-color:#f44336;border:1px solid #f44336}.btn-error:focus:not(.btn-ghost),.btn-error:hover{background-color:#e53935;border-color:#e53935}.btn-error.btn-ghost{border-color:#f44336;color:#f44336}.btn-error.btn-ghost:focus,.btn-error.btn-ghost:hover{border-color:#d32f2f;color:#d32f2f;z-index:2}.btn-warning{color:#fff;background-color:#ff9800;border:1px solid #ff9800}.btn-warning:focus:not(.btn-ghost),.btn-warning:hover{background-color:#fb8c00;border-color:#fb8c00}.btn-warning.btn-ghost{border-color:#ff9800;color:#ff9800}.btn-warning.btn-ghost:focus,.btn-warning.btn-ghost:hover{border-color:#f57c00;color:#f57c00;z-index:2}.btn-info{color:#fff;background-color:#00bcd4;border:1px solid #00bcd4}.btn-info:focus:not(.btn-ghost),.btn-info:hover{background-color:#00acc1;border-color:#00acc1}.btn-info.btn-ghost{border-color:#00bcd4;color:#00bcd4}.btn-info.btn-ghost:focus,.btn-info.btn-ghost:hover{border-color:#0097a7;color:#0097a7;z-index:2}.btn-primary{color:#fff;background-color:#2196f3;border:1px solid #2196f3}.btn-primary:focus:not(.btn-ghost),.btn-primary:hover{background-color:#1e88e5;border-color:#1e88e5}.btn-primary.btn-ghost{border-color:#2196f3;color:#2196f3}.btn-primary.btn-ghost:focus,.btn-primary.btn-ghost:hover{border-color:#1976d2;color:#1976d2;z-index:2}.btn-group{overflow:auto}.btn-group .btn{float:left}.btn-group .btn-ghost:not(:first-child){margin-left:-1px}.card{border:1px solid #ccc}.card .card-header{color:#333;text-align:center;background-color:#ddd;padding:.5rem 0}.alert{color:#ccc;padding:1rem;border:1px solid #ccc;margin-bottom:1.75rem}.alert-success{color:#4caf50;border-color:#4caf50}.alert-error{color:#f44336;border-color:#f44336}.alert-info{color:#00bcd4;border-color:#00bcd4}.alert-warning{color:#ff9800;border-color:#ff9800}.media:not(:last-child){margin-bottom:1.25rem}.media-left{padding-right:1rem}.media-left,.media-right{display:table-cell;vertical-align:top}.media-right{padding-left:1rem}.media-body{display:table-cell;vertical-align:top}.media-heading{font-size:1.16667rem;font-weight:700}.media-content{margin-top:.3rem}.avatarholder,.placeholder{background-color:#f0f0f0;text-align:center;color:#b9b9b9;font-size:1rem;border:1px solid #f0f0f0}.avatarholder{width:48px;height:48px;line-height:46px;font-size:2rem;background-size:cover;background-position:50%;background-repeat:no-repeat}.avatarholder.rounded{border-radius:33px}.loading{display:inline-block;content:"&nbsp;";height:20px;width:20px;margin:0 .5rem;animation:a .6s infinite linear;border:2px solid #e91e63;border-right-color:transparent;border-radius:50%}.btn .loading{margin-bottom:0;width:14px;height:14px}.btn div.loading{float:left}.alert .loading{margin-bottom:-5px}@keyframes a{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.menu{width:100%}.menu .menu-item{display:block;color:#616161;border-color:#616161}.menu .menu-item.active,.menu .menu-item:hover{color:#000;border-color:#000;background-color:transparent}@media screen and (max-width:768px){.form-group label{display:block;border-bottom:none;width:100%}.form-group.form-textarea label:after{display:none}.form-control{width:100%}textarea.form-control{border-left:none;padding:.5rem 0}pre::-webkit-scrollbar{height:3px}}@media screen and (max-width:480px){.form{width:100%}}.dark{color:#ccc}.dark,.dark pre{background-color:#000}.dark pre{padding:0;border:none}.dark pre code{color:#00bcd4}.dark h1 a,.dark h2 a,.dark h3 a,.dark h4 a,.dark h5 a{color:#ccc}.dark code,.dark strong{color:#fff}.dark code{font-weight:100}.dark table{color:#ccc}.dark table td,.dark table th{border-color:#444}.dark table tbody td:first-child{color:#fff}.dark .form-group label{color:#ccc;border-color:rgba(95,95,95,.78)}.dark .form-group.form-textarea label:after{background-color:#000}.dark .form-control{color:#ccc;border-color:rgba(95,95,95,.78)}.dark .form-control:focus{border-color:#ccc;color:#ccc}.dark textarea.form-control{color:#ccc}.dark .card{border-color:rgba(95,95,95,.78)}.dark .card .card-header{background-color:transparent;color:#ccc;border-bottom:1px solid rgba(95,95,95,.78)}.dark .btn.btn-ghost.btn-default{border-color:#ababab;color:#ababab}.dark .btn.btn-ghost.btn-default:focus,.dark .btn.btn-ghost.btn-default:hover{border-color:#9c9c9c;color:#9c9c9c;z-index:1}.dark .btn.btn-ghost.btn-default:focus,.dark .btn.btn-ghost.btn-default:hover{border-color:#e0e0e0;color:#e0e0e0}.dark .btn.btn-ghost.btn-primary:focus,.dark .btn.btn-ghost.btn-primary:hover{border-color:#64b5f6;color:#64b5f6}.dark .btn.btn-ghost.btn-success:focus,.dark .btn.btn-ghost.btn-success:hover{border-color:#81c784;color:#81c784}.dark .btn.btn-ghost.btn-info:focus,.dark .btn.btn-ghost.btn-info:hover{border-color:#4dd0e1;color:#4dd0e1}.dark .btn.btn-ghost.btn-error:focus,.dark .btn.btn-ghost.btn-error:hover{border-color:#e57373;color:#e57373}.dark .btn.btn-ghost.btn-warning:focus,.dark .btn.btn-ghost.btn-warning:hover{border-color:#ffb74d;color:#ffb74d}.dark .avatarholder,.dark .placeholder{background-color:transparent;border-color:#333}.dark .menu .menu-item{color:#ccc;border-color:rgba(95,95,95,.78)}.dark .menu .menu-item.active,.dark .menu .menu-item:hover{color:#fff;border-color:#ccc}/*!* Copyright (C) 2019 Josh Habdas <jhabdas@protonmail.com>
+*
+* This file is part of After Dark.
+*
+* After Dark is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published
+* by the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* After Dark is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program. If not, see <https://www.gnu.org/licenses/>.*/:root{scroll-behavior:smooth;--screen-size-small: 30em}@keyframes intro{0%{opacity:0}100%{opacity:1}}.blur-up.lazyloading{filter:blur(5px);opacity:1;transition:opacity 1s,filter 1.5s}.blur-up.lazyload{opacity:0;filter:blur(10px)}.blur-up.lazyloaded{filter:blur(0);transition:filter 1s}.hack .readmore{margin-bottom:2.2em}.responsive-iframe,.ratio-container{position:relative;padding-bottom:56.25%;padding-top:25px;height:0}.responsive-iframe iframe,.ratio-container>*:not([itemprop=caption]){position:absolute;top:0;left:0;width:100%;height:100%}iframe{border:0}main,footer{animation:intro .3s both;animation-delay:.15s}header:first-of-type+details{margin:20px 0}footer time[datetime$=M]:before{content:"\2013\0020"}body>footer p.muted{margin-bottom:0}@media only screen and (max-width:768px){footer time[datetime$=M]{display:none}}blockquote cite{display:block}blockquote cite::before{content:"\2014\00A0"}:target{filter:brightness(1.2)}:disabled{cursor:not-allowed}.hack li ul{margin:0}.hack ol li{padding-left:27px}.main{padding:20px 10px}input.form-control{border-radius:0;background-color:initial;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none}input.form-control,textarea.form-control,select.form-control,.help-block{font-size:initial}@media only screen and (max-width:768px){.help-block{font-size:unset}}html{font-size:13px}.hack .form input,.hack .form textarea,.hack .form button,.hack .form label{font-size:1rem}.hack .alert .highlight:first-of-type .chroma,.hack .card .highlight:first-of-type .chroma,.hack .alert pre:first-of-type,.hack .alert p:first-of-type,.hack .card pre:first-of-type,.hack .card p:first-of-type{margin-top:unset}.hack .alert .highlight:last-of-type .chroma,.hack .card .highlight:last-of-type .chroma,.hack .alert pre:last-of-type,.hack .alert p:last-of-type,.hack .card pre:last-of-type,.hack .card p:last-of-type{margin-bottom:unset}.hack blockquote,.hack blockquote:after{line-height:1.5}.hack figure,.standard figure{margin:unset}.hack figure a{border-bottom:none}.hack figure a:hover{background-color:inherit}article header img{width:100%;border-radius:3px}table td,table th{line-height:inherit}table a{border-bottom:unset}img{max-width:100%}@media only screen and (min-width:768px){html{font-size:16px}.container{max-width:50rem}}@media only screen and (min-width:768px),(-ms-high-contrast:active),(-ms-high-contrast:none){html{margin-left:calc(100vw - 100%)}}/*!
+ * Copyright (C) 2019  Josh Habdas <jhabdas@protonmail.com>
+ *
+ * This file is part of After Dark.
+ *
+ * After Dark is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * After Dark is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+a[rel*="external"]::after {
+  content: " " url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-external'%20viewBox='0%200%2032%2032'%20width='14'%20height='14'%20fill='none'%20stroke='%23ff9800'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='9.38%'%3E%3Cpath%20d='M14%209%20L3%209%203%2029%2023%2029%2023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E");
+}
+nav a.active {
+  background-color: inherit;
+  color: #fff;
+}
+a[itemprop="url"] {
+  color: #ff9800;
+}
+a[itemprop="url"]:hover {
+  color: #fff;
+}
+.muted, .help-block {
+  opacity: 0.70;
+}
+.hack .muted,
+.hack .help-block {
+  color: #e0e0e0;
+}
+.highlighttable td,th{padding:0;border:0;}td.code{width:95%;}
+
+.form-group {
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+fieldset {
+    border: 0px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #212121;
+  border: none;
+  color: #FAFAFA;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.post-comments {
+  margin-top: 60px;
+}
+
+.post-comment {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.post-comment-header {
+  margin-bottom: 20px;
+}
+
+.post-comment-avatar {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.post-comment-info {
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.post-comment-field {
+  display: block;
+  font: inherit;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.dialog {
+  display: none;
+  position: fixed;
+  padding: 25px;
+  background-color: #FAFAFA;
+  padding-top: 20%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.dialog:target {
+  display: block;
+}
+</style>
+        
+
+
+  
+    <meta name="theme-color" content=#000>
+  
+
+
+      
+    
+  
+
+
+    
+    
+      <script integrity="sha512-ISTAV0GadOIz/NXXHOS+eCM0ysXVVHhQTlvA6LJxz/DeA5yIxm0Vqf5IE+WH0yuuXkayAKtoZkQ326nch5f/fg==">fetchInject(["/css/syntax.css"]);</script>
+      <noscript>
+        <link href="/css/syntax.css" rel="stylesheet">
+      </noscript>
+    
+  </head>
+  
+  
+  
+  <body class="hack dark main container">
+    <header>
+  
+
+  
+    
+      
+      
+  <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+    <meta itemprop="name" content="Main Menu">
+    
+      
+      
+        <a itemprop="url" href="/">Home</a>
+      
+    
+      
+      
+        <a itemprop="url" class="active" href="/blog/">Blogs</a>
+      
+    
+      
+      
+        <a itemprop="url" href="/musings/">Musings</a>
+      
+    
+      
+      
+        <a itemprop="url" rel="search" href="/search/">Search</a>
+      
+    
+  </nav>
+
+
+    
+  
+
+
+</header>
+    <main>
+  
+    
+      <style>{{ -}}.hack header figure[itemtype*=ImageObject]{position:relative}.hack header figure[itemtype*=ImageObject] figcaption{position:absolute;bottom:0;right:0;text-align:right;padding:15px;font-style:oblique;font-size:smaller;mix-blend-mode:soft-light}.hack header figure[itemtype*=ImageObject] [itemprop=headline]{font-weight:700}</style>
+    
+  
+  <article itemscope itemtype="https://schema.org/BlogPosting">
+    <meta itemprop="name" content="Getting Started with an Ubuntu VPS Running 14.04">
+<meta itemprop="description" content="A basic guide on how to setup an Ubuntu 14.04 machine.">
+<meta itemprop="datePublished" content="2014-09-01T22:43:23&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-17T19:27:00&#43;00:00" />
+<meta itemprop="wordCount" content="1798">
+<meta itemprop="image" content="https://source.unsplash.com/collection/983219/2000x1322"/>
+
+
+
+<meta itemprop="keywords" content="linux,tutorial," />
+    <header>
+      <h1 itemprop="headline name">Getting Started with an Ubuntu VPS Running 14.04</h1>
+      <p class="muted">
+        <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <circle cx="16" cy="16" r="14" />
+  <path d="M16 8 L16 16 20 20" />
+</svg>
+<span>9 minute read</span>
+<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
+</svg>
+
+  Modified: <time datetime="2020-02-17T19:27:00&#43;00:00">17 Feb, 2020</time>
+
+
+      </p>
+      
+        <blockquote itemprop="description">A basic guide on how to setup an Ubuntu 14.04 machine.</blockquote>
+      
+      
+
+
+
+    </header>
+    
+
+    <div itemprop="articleBody">
+      <p>When you get a new Ubuntu VPS or server there are a few things you want to make
+sure are taken care of right off the bat. This will optimize the security and
+usability of your server, providing a reliable foundation for subsequent
+alterations. If you need an Ubuntu VPS you can get one for <img src="https://www.vultr.com" alt="here">.</p>
+<h3 id="step-one">Step One</h3>
+<p>Logging into your new VPS is the first step. You&rsquo;ll need to know the public IP
+address of the server to begin. You&rsquo;ll also need to know the password for the
+&ldquo;root&rdquo; user. Once you know those two things you are ready to login. The public
+IP address is e-mailed to you and you can view the credentials you chose in your
+client area if the VPS is hosted with Bitronic Technologies (my company). In
+Linux the root user an administrator with sweeping privileges. Because the root
+user has the power to irreversibly damage a system you shouldn&rsquo;t use root for
+daily use. It is best to login as a user with limited privileges and then to
+&ldquo;sudo&rdquo; root when you need to in the case of Ubuntu 14.04. In this tutorial we
+will cover how to login as root, create an alternate user for day-to-day use,
+disable root login and how to login as an alternate (non-root) user, then
+escalate to root. As mentioned, logging in is the first step to getting started
+with your Ubuntu 14.04 VPS. Initially the only account is the root account. If
+you are using Linux connect to the server using the &ldquo;ssh&rdquo; command at terminal.
+If you are using windows consider using an SSH program like putty. For purposes
+of this article we will assume you are running Linux on your PC, however all of
+the same steps will apply either way except for initial login. If you are using
+Windows you will need to open putty, enter the <a href="mailto:root@pub.lic.ipa.ddr">root@pub.lic.ipa.ddr</a> (the dotted
+quad public IP of your VPS) then login and enter the password. On linux just run
+this command in terminal:</p>
+<p><code>ssh root@pub.lic.ipa.ddr</code></p>
+<p>Of course entering your public IP address in place of those letters. You will
+then most likely see a warning in your terminal that looks like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">established.  ECDSA key fingerprint is
+79:95:46:1a:ab:37:11:8e:86:54:36:38:bb:3c:fa:c0.  Are you sure you want to
+<span class="k">continue</span> connecting <span class="o">(</span>yes/no<span class="o">)</span>?
+</code></pre></div><p>Your computer is letting you know that it does not recognize your remote server.
+This is expected behaviour because it is the first time this connection is being
+made. However if you see this message in the future (on the same computer) it
+can be a sign that your server has been compromised (assuming you haven&rsquo;t
+reinstalled the operating system). It is safe to type &ldquo;yes&rdquo; and accept the
+connection. Then you will need to enter the password for the root account.</p>
+<h3 id="step-two">Step Two</h3>
+<p>You may wish to change the root password to something more memorable. Make sure
+to use a strong password as root login is the &ldquo;key to the kingdom&rdquo; so to speak.
+A good password can be a sentence like &ldquo;IlikedtheFordBroncoin1996!&rdquo; or a random
+string. But it should ideally contain uppercase/lowercase letters, numbers and
+at least 1 special character. While logged in as root it is easy to change the
+password by typing:</p>
+<p><code>passwd</code></p>
+<p>You will be prompted to enter and then confirm your new root password. You will
+not see any characters display on the screen while you are typing (this is an
+intentional security measure).</p>
+<h3 id="step-three">Step Three</h3>
+<p>The third step in preparing and securing your new Ubuntu 14.04 VPS is to add a
+new user. This is going to be the account you&rsquo;ll use to login after the end of
+the tutorial, so make sure the username is memorable. For the purposes of this
+tutorial we are going to make the username &ldquo;demo&rdquo;, but you should select a more
+meaningful username. So to add the user just run this command:</p>
+<p><code>adduser demo</code></p>
+<p>You will then be prompted with a few questions, starting with the password you
+want to use for the account. It is recommended that you choose a different
+password then the one you used for the root account as an added security
+measure. So go ahead and fill out the password, then optionally provide the
+other details requested. If you don&rsquo;t want to fill those out you can just hit
+enter and Ubuntu will skip those fields.</p>
+<h3 id="step-four">Step Four</h3>
+<p>In step four we will provide the new user we just created in step three with the
+ability to escalate to root. This allows you to gain root access without having
+to allow remote root login, or logout and log back in as root if you do choose
+to leave root login over SSH enable (not recommended). In Ubuntu we use the
+command &ldquo;sudo&rdquo; to escalate to root. This allows a normal user to run a command
+that requires root privileges. You can also use the &ldquo;sudo -i&rdquo; command to assume
+the identity of root until you use the command &ldquo;exit&rdquo;. To add the new user we
+just created to the list of users who can use &ldquo;sudo&rdquo; to attain root, we need to
+use a command called &ldquo;visudo&rdquo;. This command will open a configuration file. Go
+ahead and type:</p>
+<p><code>visudo</code></p>
+<p>Then scroll down until you find a section that looks similar to this:</p>
+<pre><code># User privilege specification root ALL=(ALL:ALL) ALL
+</code></pre><p>This may look complex to you but that line is non-consequential and we don&rsquo;t
+need to alter it. Just add another line below it that follows the format,
+replacing &ldquo;demo&rdquo; with the username you created in step three. The result should
+look like this:</p>
+<pre><code># User privilege specification root ALL=(ALL:ALL) ALL demo ALL=(ALL:ALL) ALL
+</code></pre><p>After you have made the changes, press CTRL-X to exit visudo. You will have to
+type &ldquo;Y&rdquo; to save the file and &ldquo;ENTER&rdquo; to confirm the location (you can use the
+provided value).</p>
+<h3 id="step-five-optional">Step Five (Optional)</h3>
+<p>This step is optional but is highly recommended for optimal security going
+forward. You can secure your server a bit more by disabling root login over SSH
+entirely and changing SSH to a non default port. The process is fairly
+straightforward. Get started by opening the sshd configuration file with a text
+editor as root. You can use any text editor installed on your VPS but for this
+tutorial we will assume you use &ldquo;nano&rdquo;. Nano is a fairly easy to use command
+line text editor for Linux. So go ahead and type this command:</p>
+<p><code>nano /etc/ssh/sshd_config</code></p>
+<h3 id="step-five-a-optional">Step Five-A (Optional)</h3>
+<p>The first thing to do is to change the port that SSHD listens on. Find the line
+that looks like this:</p>
+<p><code>Port 22</code></p>
+<p>Change this number to something between 1025 and 65536, make sure it does not
+conflict with the port of another program you plan on running. This is helpful
+in preventing unauthorized users from trying to break into the system over SSH.
+If you change from the default port it adds an extra step of sniffing for them
+to find it and you can even add a firewall rule to block IPs for port scanning
+of use a tool like ConfigServer Firewall to do so. If you do change this value
+make sure you remember it or write it down. You will need to know this port to
+reconnect to your server. For the purposes of this guide we will change the port
+to 3333. Remember you will need to tell your ssh client to connect to port 3333
+(or the port you choose) in the future. So change the line to look like this (or
+the port you choose):</p>
+<p><code>Port 3333</code></p>
+<p>Save the file using &ldquo;CTRL-O&rdquo;, &ldquo;Y&rdquo; then exit &ldquo;CTRL-X&rdquo;. Now we are going to enable
+Ubuntu&rsquo;s UFW (Uncomplicated Firewall). Enter this command:</p>
+<p><code>sudo ufw enable</code></p>
+<p>Then we are going to make sure that port 3333 or whatever port you chose is
+open. Run the command:</p>
+<p><code>sudo ufw allow 3333</code></p>
+<p>Replace 3333 with whatever port you decided to use then run:</p>
+<pre><code>sudo service ufw restart sudo service ssh restart
+</code></pre><p>Now you can reconnect via the port you chose in the future.</p>
+<h3 id="step-five-b-optional">Step Five-B (Optional)</h3>
+<p>The next thing we can do for added security is to restrict remote root login
+over SSH. Run the command:</p>
+<p><code>nano /etc/ssh/sshd_config</code></p>
+<p>Then find the line that looks like this:</p>
+<p><code>PermitRootLogin yes</code></p>
+<p>Change this to:</p>
+<p><code>PermitRootLogin no</code></p>
+<p>This is a much more secure setting as it discourages the direct brute force or
+the root password. This is especially effective if you use a different password
+for your &ldquo;day-to-day&rdquo; user then you do for root. If you run:</p>
+<p><code>sudo service ssh restart</code></p>
+<p>You will no longer be able to login as root, only as the alternate user you
+created.</p>
+<h3 id="step-five-c-optional">Step Five-C (Optional)</h3>
+<p>If you wanted to go one step further you could explicitly specify which users
+can connect to your server via SSH. This might not be needed now, but can become
+useful as you add additional users. Any user not on the list you are about to
+configure will not be able to login over SSH at all. You should use caution when
+configuring this as you can lock your self out of your server entirely. We are
+going to need to open the SSHD configuration again:</p>
+<p><code>nano /etc/ssh/sshd_config</code></p>
+<p>You&rsquo;ll have to add this line yourself as it does not exist by default. Make sure
+to replace &ldquo;demo&rdquo; with the username you created in step 3.</p>
+<p><code>AllowUsers demo</code></p>
+<p>When you have added the line and triple checked that the syntax and username are
+correct, save and close the file using &ldquo;CTRL-O&rdquo;, &ldquo;Y&rdquo; and then &ldquo;CTRL-X&rdquo; as we
+covered earlier. Then go ahead and restart SSHD again:</p>
+<p><code>sudo service ssh restart</code></p>
+<p>Before you log out of the server, test your configuration by opening another
+connection using the user, password and port that you have created in this
+guide. If you can&rsquo;t connect go back and correct your errors using the original
+connection (which you should not close until you are sure that your settings
+work). If you followed this guide the command you would use is:</p>
+<p><code>ssh -p 3333 demo@ser.ver.ipa.ddr</code></p>
+<p>Replacing the port and user with the ones you chose. Then entering the password
+for the user you created in step 3. Remember from now on you will have to use
+the sudo command to run commands that need root:</p>
+<p><code>sudo your_command</code></p>
+<p>You can now close both connections by typing exit in each window.</p>
+<h3 id="whats-next">What&rsquo;s Next?</h3>
+<p>You now have a fairly secure server, however you can continue further securing
+you server by installing fail2ban or a similar utility to help prevent brute
+force and port scanning attacks. Outside of that you are ready to install LAMP,
+LEMP or whatever other programs you want to run on your VPS! Leave me your
+thoughts in the comments below and check out my other Ubuntu VPS articles.</p>
+
+    </div>
+    <footer>
+      <hr>
+      <p>
+  Published
+  
+    
+      by <span itemprop="author">Bryan Apperson</span>
+    
+  
+  <time itemprop="datePublished" datetime="2014-09-01T22:43:23&#43;00:00">
+    1 Sep, 2014
+  </time>
+  
+  
+    and tagged <a rel="tag" href="/tags/linux/">linux</a> and <a rel="tag" href="/tags/tutorial/">tutorial</a>
+  
+  using <span itemprop="wordCount">1798</span> words.
+</p>
+
+      
+
+
+
+
+      <div id="comment-submitted" class="dialog">
+  <h3>Thank you</h3>
+  <p>Your comment has been submitted and will be published once it has been approved. You can <a href="https://bryanapperson.com/blog/getting-started-with-an-ubuntu-vps-running-14-04/">go back</a> now. Thank You!</p>
+  
+    <p><a href="https://github.com/bryanapperson/blog/pulls">Click here</a> to see the pull request you generated.</p>
+  
+</div>
+
+<div id="comment-error" class="dialog">
+  <h3>OOPS!</h3>
+  <p>Your comment has not been submitted. Please <a href="https://bryanapperson.com/blog/getting-started-with-an-ubuntu-vps-running-14-04/">go back</a> and try again. Thank You!</p>
+  <p>If this error persists, please open an issue by <a href="https://github.com/bryanapperson/blog/issues"> clicking here</a>.</p>
+</div>
+
+<div id="comment-form">
+  <h2 id="comment-form-header">Say something</h2>
+  <form method="POST" action="https://dev.staticman.net/v3/entry/github/bryanapperson/blog/master/comments">
+    <input type="hidden" name="options[redirect]" value="https://bryanapperson.com/blog/getting-started-with-an-ubuntu-vps-running-14-04/#comment-submitted">
+    <input type="hidden" name="options[redirectError]" value="https://bryanapperson.com/blog/getting-started-with-an-ubuntu-vps-running-14-04/#comment-error">
+    <input type="hidden" name="options[slug]" value="getting-started-with-an-ubuntu-vps-running-14-04">
+    <input type="hidden" name="options[section]" value="blog">
+    <input type="hidden" name="options[origin]" value="https://bryanapperson.com/blog/getting-started-with-an-ubuntu-vps-running-14-04/">
+    <input type="hidden" name="options[parent]" value="getting-started-with-an-ubuntu-vps-running-14-04">
+    <input type="hidden" name="fields[reply_to]" value="">
+    <input type="address" name="fields[botpot]" placeholder="botpot (do not fill!)" style="display:none">
+    
+
+    <fieldset>
+      <input name="fields[name]" type="text" placeholder="Your name">
+    </fieldset>
+
+    <fieldset>
+      <input name="fields[email]" type="email" placeholder="Your email address">
+    </fieldset>
+
+    <fieldset>
+      <textarea name="fields[body]" placeholder="You can use Markdown syntax" rows="10"></textarea>
+    </fieldset>
+
+    
+
+    <fieldset>
+      
+
+      <input type="submit" value="Submit" id="submit-button" class="right">
+      <input type="reset" value="Reset" class="right">
+    </fieldset>
+
+  </form>
+</div>
+
+
+  
+
+  
+
+  
+  
+
+
+
+ 
+<script async src='/js/staticman.js' ></script>
+
+
+    </footer>
+  </article>
+</main>
+    <footer>
+  <small class="muted">
+    
+  
+    Copyright &copy; Bryan Apperson. Licensed under <a target="_blank" rel="external noopener license" href="https://creativecommons.org/licenses/by-nd/4.0/">CC-BY-ND-4.0</a>. Hosted on <a href="https://github.com/bryanapperson/blog" rel="external" target="_blank">Github</a>.
+  
+
+
+  </small>
+</footer>
+    
+    
+    
+      
+    
+  </body>
+</html>
