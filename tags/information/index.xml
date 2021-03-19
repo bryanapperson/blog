@@ -1,28 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <channel>
-    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
-    <title>information on Bryan Apperson</title>
-    <link>https://bryanapperson.com/tags/information/</link>
-    <description>Recent content in information on Bryan Apperson</description>
-    <image>
-      <title>information on Bryan Apperson</title>
-      <link>https://bryanapperson.com/tags/information/</link>
-      <url>https://source.unsplash.com/collection/983219/2000x1322</url>
-    </image>
-    <ttl>1440</ttl>
-    <generator>Hugo 0.71.0-DEV</generator>
-    <language>en-US</language>
-    <copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright>
-    <lastBuildDate>Sat, 16 May 2020 16:09:59 UT</lastBuildDate>
-    <atom:link href="https://bryanapperson.com/tags/information/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Creating a Zettelkasten with Hugo</title>
-      <link>https://bryanapperson.com/blog/creating-a-zettelkasten-with-hugo/</link>
-      <pubDate>Tue, 18 Feb 2020 01:42:00 UT</pubDate>
-      <dc:creator>Bryan Apperson</dc:creator>
-      <guid>https://bryanapperson.com/blog/creating-a-zettelkasten-with-hugo/</guid>
-      <description>Why do I need a Zettelkasten? The idea of a Zettelkasten struck me in a chat recently. I have been keeping physical journals, using a modified form of bullet journalling, for a while; I had been keeping less structured notes before that, and ruminating on how to digitize them. After learning about the concept of Zettelkasten, it seemed like the solution; and that led me down the rabbit hole of investigation.</description>
-      <content:encoded><![CDATA[Why do I need a Zettelkasten? The idea of a Zettelkasten struck me in a chat recently. I have been keeping physical journals, using a modified form of bullet journalling, for a while; I had been keeping less structured notes before that, and ruminating on how to digitize them. After learning about the concept of Zettelkasten, it seemed like the solution; and that led me down the rabbit hole of investigation. Because of that investigation, I am now building a Zettlekasten for myself. The idea of a way to grok all notes for eternity is an obvious boon to any knowledge worker. This system has less obvious, and much greater benefits beyond just digitizing notes.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><docs>https://blogs.law.harvard.edu/tech/rss</docs><title>information on Bryan Apperson</title><link>https://bryanapperson.com/tags/information/</link><description>Recent content in information on Bryan Apperson</description><image><title>information on Bryan Apperson</title><link>https://bryanapperson.com/tags/information/</link><url>https://source.unsplash.com/collection/983219/2000x1322</url></image><ttl>1440</ttl><generator>Hugo 0.81.0</generator><language>en-US</language><copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright><lastBuildDate>Fri, 19 Mar 2021 02:46:39 UT</lastBuildDate><atom:link href="https://bryanapperson.com/tags/information/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating a Zettelkasten with Hugo</title><link>https://bryanapperson.com/blog/creating-a-zettelkasten-with-hugo/</link><pubDate>Tue, 18 Feb 2020 01:42:00 UT</pubDate><dc:creator>Bryan Apperson</dc:creator><guid>https://bryanapperson.com/blog/creating-a-zettelkasten-with-hugo/</guid><description>Why do I need a Zettelkasten? The idea of a Zettelkasten struck me in a chat recently. I have been keeping physical journals, using a modified form of bullet journalling, for a while; I had been keeping less structured notes before that, and ruminating on how to digitize them. After learning about the concept of Zettelkasten, it seemed like the solution; and that led me down the rabbit hole of investigation.</description><content:encoded><![CDATA[Why do I need a Zettelkasten? The idea of a Zettelkasten struck me in a chat recently. I have been keeping physical journals, using a modified form of bullet journalling, for a while; I had been keeping less structured notes before that, and ruminating on how to digitize them. After learning about the concept of Zettelkasten, it seemed like the solution; and that led me down the rabbit hole of investigation. Because of that investigation, I am now building a Zettlekasten for myself. The idea of a way to grok all notes for eternity is an obvious boon to any knowledge worker. This system has less obvious, and much greater benefits beyond just digitizing notes.
 What is a Zettelkasten? The Zettelkasten is a concept, essentially, of a graph of data interconnected by metadata, links and taxonomies. It was originally laid out by a German sociologist: If you wish to educate a partner in communication, it will be good to provide him with independence from the beginning. A slip box, which has been made according to the suggestions just given can exhibit great independence.
 Communicating With Slip Boxes, by Niklas Luhmann  It was also explored in this physical format by Umberto Eco (1977) in How to Write a Thesis. This format involved drawers full of annotated index cards.
 This loosely organized graph allows a Cartesian explosion of complexity. The core idea of the system is a second brain, one mirroring the structure of the human mind. This organic structure is how zufall, or randomness, eventually emerges, resulting in serendipitous discovery. The weighting of links produces more prominent and less prominent regions, much like search engine rankings. This starts to sound an awful lot like a preeminent description of the internet and search engines. There is, however, another aspect to consider:
@@ -42,7 +18,4 @@ The only caveat on the theme is that it uses Fuse.js for search. I am not sure i
 When the CI pipeline runs to build the blog, does not have permissions to pull the Zettelkasten, which is secured by private key. But when I run a local development server, I have both my Zettelkasten and my blog, an outflow, searchable at my fingertips.
 What about portability? Here is the cool part, Hugo can run on android. So with git, I can just clone my blog on my phone and run a local web server. More to follow on that in another blog post.
 What&amp;rsquo;s Next? I still have to approach getting all of my notes into zettels. Maybe I&amp;rsquo;ll have more to say after that. I&amp;rsquo;ll also likely add a technical step by step for setting up a Zettelkasten using Hugo and the After Dark theme, as time permits. Leave your thoughts in the comments below.
-]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

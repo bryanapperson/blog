@@ -1,47 +1,7 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <channel>
-    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
-    <title>Bryan Apperson</title>
-    <link>https://bryanapperson.com/</link>
-    <description>Recent content on Bryan Apperson</description>
-    <image>
-      <title>Bryan Apperson</title>
-      <link>https://bryanapperson.com/</link>
-      <url>https://source.unsplash.com/collection/983219/2000x1322</url>
-    </image>
-    <ttl>1440</ttl>
-    <generator>Hugo 0.71.0-DEV</generator>
-    <language>en-US</language>
-    <copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright>
-    <lastBuildDate>Sat, 16 May 2020 16:09:59 UT</lastBuildDate>
-    <atom:link href="https://bryanapperson.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Blogs</title>
-      <link>https://bryanapperson.com/blog/</link>
-      <dc:creator>Bryan Apperson</dc:creator>
-      <guid>https://bryanapperson.com/blog/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>Musings</title>
-      <link>https://bryanapperson.com/musings/</link>
-      <dc:creator>Bryan Apperson</dc:creator>
-      <guid>https://bryanapperson.com/musings/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    <item>
-      <title>Bryan Apperson</title>
-      <link>https://bryanapperson.com/resume/</link>
-      <pubDate>Thu, 01 Aug 2019 21:48:42 UT</pubDate>
-      <dc:creator>Bryan Apperson</dc:creator>
-      <guid>https://bryanapperson.com/resume/</guid>
-      <description>Website: https://www.bryanapperson.com
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><docs>https://blogs.law.harvard.edu/tech/rss</docs><title>Bryan Apperson</title><link>https://bryanapperson.com/</link><description>Recent content on Bryan Apperson</description><image><title>Bryan Apperson</title><link>https://bryanapperson.com/</link><url>https://source.unsplash.com/collection/983219/2000x1322</url></image><ttl>1440</ttl><generator>Hugo 0.81.0</generator><language>en-US</language><copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright><lastBuildDate>Fri, 19 Mar 2021 02:46:39 UT</lastBuildDate><atom:link href="https://bryanapperson.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Blogs</title><link>https://bryanapperson.com/blog/</link><dc:creator>Bryan Apperson</dc:creator><guid>https://bryanapperson.com/blog/</guid><description/><content:encoded></content:encoded></item><item><title>Musings</title><link>https://bryanapperson.com/musings/</link><dc:creator>Bryan Apperson</dc:creator><guid>https://bryanapperson.com/musings/</guid><description/><content:encoded></content:encoded></item><item><title>Bryan Apperson</title><link>https://bryanapperson.com/resume/</link><pubDate>Thu, 01 Aug 2019 21:48:42 UT</pubDate><dc:creator>Bryan Apperson</dc:creator><guid>https://bryanapperson.com/resume/</guid><description>Website: https://www.bryanapperson.com
 Github: bryanapperson
 Location: New York, NY USA
-Why I Want to Join Your Team  Being an asset to my team and providing value are my primary motivators. Automation, continuous delivery and cloud native design are at the forefront of my skill set. My interests are in distributed systems reliability, storage and compute technologies. I am a self educated engineer, a self-starter and a go-getter. I enjoy being part of a vibrant team of ruckus makers where I can learn from, as well as mentor others, while building reliable infrastructure.</description>
-      <content:encoded><![CDATA[Website: https://www.bryanapperson.com
+Why I Want to Join Your Team Being an asset to my team and providing value are my primary motivators. Automation, continuous delivery and cloud native design are at the forefront of my skill set. My interests are in distributed systems reliability, storage and compute technologies. I am a self educated engineer, a self-starter and a go-getter. I enjoy being part of a vibrant team of ruckus makers where I can learn from, as well as mentor others, while building reliable infrastructure.</description><content:encoded><![CDATA[Website: https://www.bryanapperson.com
 Github: bryanapperson
 Location: New York, NY USA
 Why I Want to Join Your Team  Being an asset to my team and providing value are my primary motivators. Automation, continuous delivery and cloud native design are at the forefront of my skill set. My interests are in distributed systems reliability, storage and compute technologies. I am a self educated engineer, a self-starter and a go-getter. I enjoy being part of a vibrant team of ruckus makers where I can learn from, as well as mentor others, while building reliable infrastructure.
@@ -49,15 +9,4 @@ Why I Want to Join Your Team  Being an asset to my team and providing value are 
  Building integration around open source Ansible automation for Ceph deployment, configuration and management. Implementing agile software development methodologies for the team and acting as scrum master. Architecture and implementation of a highly available REST based dynamic inventory provider to provide hardware information and injectable variables for Ansible automation. Spearheading the migration to our internal fully managed linux solution to reduce operational load on the storage team. A key contributor in operating one of the largest all flash ceph S3 clusters in the world.  Storage Integration Engineer Concurrent Technology Inc, Atlanta, GA Mar 2015-Dec 2017
  Building enterprise management APIs and UI around ceph storage. Writing ansible automation to deploy ceph clusters. Second engineer on POC that resulted in sucessful sale of business unit. On site and offsite level 3 support and project engineering.  Founder and Public Cloud Architect Bitronic Technologies Southold, NY Oct 2007-Oct 2015
  Founding a web hosting company and building it from the ground up. Architecting public cloud, shared hosting and bare metal server product offerings. Providing support to 2000&#43; customers. Sucessful exit and sale of the company in October of 2015. Working with frontend development, full stack development, network architecture, cloud architecture, ceph, kvm, QEMU, libvirt, xen, cpanel, openstack, marketing, sales, billing and more.  Scripting and Programming Languages   Python, Bash, C&#43;&#43;, Javascript, HTML, CSS   Tools/Platforms   Linux, Ansible, Ceph, Apache, Nginx, MySQL, Docker, Vagrant, MacOS   Education  Seth Godin&amp;rsquo;s AltMBA July 2019
- Shipping 14 projects in 4 weeks with 4 teams in the rapid fire leadership, business and marketing workshop.   ]]></content:encoded>
-    </item>
-    <item>
-      <title>Search</title>
-      <link>https://bryanapperson.com/search/</link>
-      <dc:creator>Bryan Apperson</dc:creator>
-      <guid>https://bryanapperson.com/search/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+ Shipping 14 projects in 4 weeks with 4 teams in the rapid fire leadership, business and marketing workshop.   ]]></content:encoded></item><item><title>Search</title><link>https://bryanapperson.com/search/</link><dc:creator>Bryan Apperson</dc:creator><guid>https://bryanapperson.com/search/</guid><description/><content:encoded></content:encoded></item></channel></rss>

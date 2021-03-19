@@ -1,38 +1,11 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <channel>
-    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
-    <title>tunnel on Bryan Apperson</title>
-    <link>https://bryanapperson.com/tags/tunnel/</link>
-    <description>Recent content in tunnel on Bryan Apperson</description>
-    <image>
-      <title>tunnel on Bryan Apperson</title>
-      <link>https://bryanapperson.com/tags/tunnel/</link>
-      <url>https://source.unsplash.com/collection/983219/2000x1322</url>
-    </image>
-    <ttl>1440</ttl>
-    <generator>Hugo 0.71.0-DEV</generator>
-    <language>en-US</language>
-    <copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright>
-    <lastBuildDate>Sat, 16 May 2020 16:09:59 UT</lastBuildDate>
-    <atom:link href="https://bryanapperson.com/tags/tunnel/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Setup OpenVPN on Ubuntu the Easy Way</title>
-      <link>https://bryanapperson.com/blog/setup-openvpn-on-ubuntu-the-easy-way/</link>
-      <pubDate>Mon, 17 Feb 2020 21:03:31 UT</pubDate>
-      <dc:creator>Bryan Apperson</dc:creator>
-      <guid>https://bryanapperson.com/blog/setup-openvpn-on-ubuntu-the-easy-way/</guid>
-      <description>The best way to setup OpenVPN on Ubuntu, like many other things, is to script it. This way it&amp;rsquo;s easier to create uniform deployment across larger networks. So, this is how you setup OpenVPN on Ubuntu the easy way - this neat little script makes installing OpenVPN on an Ubuntu VPS simple:
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><docs>https://blogs.law.harvard.edu/tech/rss</docs><title>tunnel on Bryan Apperson</title><link>https://bryanapperson.com/tags/tunnel/</link><description>Recent content in tunnel on Bryan Apperson</description><image><title>tunnel on Bryan Apperson</title><link>https://bryanapperson.com/tags/tunnel/</link><url>https://source.unsplash.com/collection/983219/2000x1322</url></image><ttl>1440</ttl><generator>Hugo 0.81.0</generator><language>en-US</language><copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright><lastBuildDate>Fri, 19 Mar 2021 02:46:39 UT</lastBuildDate><atom:link href="https://bryanapperson.com/tags/tunnel/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup OpenVPN on Ubuntu the Easy Way</title><link>https://bryanapperson.com/blog/setup-openvpn-on-ubuntu-the-easy-way/</link><pubDate>Mon, 17 Feb 2020 21:03:31 UT</pubDate><dc:creator>Bryan Apperson</dc:creator><guid>https://bryanapperson.com/blog/setup-openvpn-on-ubuntu-the-easy-way/</guid><description>The best way to setup OpenVPN on Ubuntu, like many other things, is to script it. This way it&amp;rsquo;s easier to create uniform deployment across larger networks. So, this is how you setup OpenVPN on Ubuntu the easy way - this neat little script makes installing OpenVPN on an Ubuntu VPS simple:
 Go to your home directory:
 cd ~ Then create a file by running this command:
-cat &amp;gt; openvpn.sh #!</description>
-      <content:encoded><![CDATA[The best way to setup OpenVPN on Ubuntu, like many other things, is to script it. This way it&amp;rsquo;s easier to create uniform deployment across larger networks. So, this is how you setup OpenVPN on Ubuntu the easy way - this neat little script makes installing OpenVPN on an Ubuntu VPS simple:
+cat &amp;gt; openvpn.sh #!</description><content:encoded><![CDATA[The best way to setup OpenVPN on Ubuntu, like many other things, is to script it. This way it&amp;rsquo;s easier to create uniform deployment across larger networks. So, this is how you setup OpenVPN on Ubuntu the easy way - this neat little script makes installing OpenVPN on an Ubuntu VPS simple:
 Go to your home directory:
 cd ~ Then create a file by running this command:
 cat &amp;gt; openvpn.sh #!/usr/bin/env bash # # Functions ok() { echo -e &amp;#39;\e[32m&amp;#39;$1&amp;#39;\e[m&amp;#39;; } die() { echo -e &amp;#39;\e[1;31m&amp;#39;$1&amp;#39;\e[m&amp;#39;; exit 1; } # Sanity check if [[ $(id -g) != &amp;#34;0&amp;#34; ]] ; then die &amp;#34;❯❯❯ Script must be run as root.&amp;#34; fi if [[ ! -e /dev/net/tun ]] ; then die &amp;#34;❯❯❯ TUN/TAP device is not available.&amp;#34; fi dpkg -l openvpn &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 if [[ $? -eq 0 ]]; then die &amp;#34;❯❯❯ OpenVPN is already installed.&amp;#34; fi # Install openvpn ok &amp;#34;❯❯❯ apt-get update&amp;#34; apt-get update -q &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 ok &amp;#34;❯❯❯ apt-get install openvpn curl openssl&amp;#34; apt-get install -qy openvpn curl &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 # IP Address SERVER_IP=$(curl ipv4.icanhazip.com) if [[ -z &amp;#34;${SERVER_IP}&amp;#34; ]]; then SERVER_IP=$(ip a | awk -F&amp;#34;[ /]&#43;&amp;#34; &amp;#39;/global/ &amp;amp;&amp;amp; !/127.0/ {print $3; exit}&amp;#39;) fi # Generate CA Config ok &amp;#34;❯❯❯ Generating CA Config&amp;#34; openssl dhparam -out /etc/openvpn/dh.pem 2048 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 openssl genrsa -out /etc/openvpn/ca-key.pem 2048 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 chmod 600 /etc/openvpn/ca-key.pem openssl req -new -key /etc/openvpn/ca-key.pem -out /etc/openvpn/ca-csr.pem -subj /CN=OpenVPN-CA/ &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 openssl x509 -req -in /etc/openvpn/ca-csr.pem -out /etc/openvpn/ca.pem -signkey /etc/openvpn/ca-key.pem -days 365 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 echo 01 &amp;gt; /etc/openvpn/ca.srl # Generate Server Config ok &amp;#34;❯❯❯ Generating Server Config&amp;#34; openssl genrsa -out /etc/openvpn/server-key.pem 2048 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 chmod 600 /etc/openvpn/server-key.pem openssl req -new -key /etc/openvpn/server-key.pem -out /etc/openvpn/server-csr.pem -subj /CN=OpenVPN/ &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 openssl x509 -req -in /etc/openvpn/server-csr.pem -out /etc/openvpn/server-cert.pem -CA /etc/openvpn/ca.pem -CAkey /etc/openvpn/ca-key.pem -days 365 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 cat &amp;gt; /etc/openvpn/udp1194.conf &amp;lt; /dev/null 2&amp;gt;&amp;amp;1 chmod 600 /etc/openvpn/client-key.pem openssl req -new -key /etc/openvpn/client-key.pem -out /etc/openvpn/client-csr.pem -subj /CN=OpenVPN-Client/ &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 openssl x509 -req -in /etc/openvpn/client-csr.pem -out /etc/openvpn/client-cert.pem -CA /etc/openvpn/ca.pem -CAkey /etc/openvpn/ca-key.pem -days 36525 &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 cat &amp;gt; /etc/openvpn/client.ovpn &amp;lt; $(cat /etc/openvpn/client-key.pem) $(cat /etc/openvpn/client-cert.pem) $(cat /etc/openvpn/ca.pem) EOF # Iptables if [[ ! -f /proc/user_beancounters ]]; then N_INT = $(ip a |awk -v sip=&amp;#34;$SERVER_IP&amp;#34; &amp;#39;$0 ~ sip { print $7}&amp;#39;) iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o $N_INT -j MASQUERADE else iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -j SNAT --to-source $SERVER_IP fi iptables-save &amp;gt; /etc/iptables.conf cat &amp;gt; /etc/network/if-up.d/iptables &amp;lt; /proc/sys/net/ipv4/ip_forward # Restart Service ok &amp;#34;❯❯❯ service openvpn restart&amp;#34; service openvpn restart &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 ok &amp;#34;❯❯❯ Your client config is available at /etc/openvpn/client.ovpn&amp;#34; ok &amp;#34;❯❯❯ All done!&amp;#34;&amp;lt;/pre&amp;gt; Press CTRL&#43;D to save. Then:
 chmod 755 openvpn.sh This simple script will got OpenVPN installed and working on your VM or box easily. OpenVPN is a great way to connect to a work network, remain private, and encrypt your endpoint.
 In just a few seconds you are all set, the script will automatically install OpenVPN and all the necessary dependencies, configure, and add a new user. Then just connect via SFTP and download the files to connect. Place them in the OpenVPN config directory on Windows or setup the values to match on a linux desktop.
 OpenVPN is a very secure tunnel and I highly recommend it. I get near native speed running OpenVPN on a 512MB RAM Ubuntu 14.04 VM.
-]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

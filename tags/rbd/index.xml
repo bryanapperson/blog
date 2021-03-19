@@ -1,29 +1,5 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <channel>
-    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
-    <title>rbd on Bryan Apperson</title>
-    <link>https://bryanapperson.com/tags/rbd/</link>
-    <description>Recent content in rbd on Bryan Apperson</description>
-    <image>
-      <title>rbd on Bryan Apperson</title>
-      <link>https://bryanapperson.com/tags/rbd/</link>
-      <url>https://source.unsplash.com/collection/983219/2000x1322</url>
-    </image>
-    <ttl>1440</ttl>
-    <generator>Hugo 0.71.0-DEV</generator>
-    <language>en-US</language>
-    <copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright>
-    <lastBuildDate>Sat, 16 May 2020 16:09:59 UT</lastBuildDate>
-    <atom:link href="https://bryanapperson.com/tags/rbd/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mounting RBD at Boot Under CentOS 7</title>
-      <link>https://bryanapperson.com/blog/mounting-rbd-at-boot-under-centos-7/</link>
-      <pubDate>Tue, 18 Feb 2020 00:17:32 UT</pubDate>
-      <dc:creator>Bryan Apperson</dc:creator>
-      <guid>https://bryanapperson.com/blog/mounting-rbd-at-boot-under-centos-7/</guid>
-      <description>This tutorial covers mounting an RBD image at boot under CentOS 7. Make sure to unmount the RBD you want to have mount at boot before following this tutorial. This tutorial requires a CentOS 7 client with a client or admin keyring from Ceph, and a working Ceph cluster. This tutorial also assumes you have already created the RBD image you want to be mounted at boot. Let&amp;rsquo;s begin!
-Assumptions This tutorial assumes the node you are implementing this on has connectivity to a working ceph cluster and also assumes that kernel module RBD is enabled.</description>
-      <content:encoded><![CDATA[This tutorial covers mounting an RBD image at boot under CentOS 7. Make sure to unmount the RBD you want to have mount at boot before following this tutorial. This tutorial requires a CentOS 7 client with a client or admin keyring from Ceph, and a working Ceph cluster. This tutorial also assumes you have already created the RBD image you want to be mounted at boot. Let&amp;rsquo;s begin!
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><docs>https://blogs.law.harvard.edu/tech/rss</docs><title>rbd on Bryan Apperson</title><link>https://bryanapperson.com/tags/rbd/</link><description>Recent content in rbd on Bryan Apperson</description><image><title>rbd on Bryan Apperson</title><link>https://bryanapperson.com/tags/rbd/</link><url>https://source.unsplash.com/collection/983219/2000x1322</url></image><ttl>1440</ttl><generator>Hugo 0.81.0</generator><language>en-US</language><copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright><lastBuildDate>Fri, 19 Mar 2021 02:46:39 UT</lastBuildDate><atom:link href="https://bryanapperson.com/tags/rbd/index.xml" rel="self" type="application/rss+xml"/><item><title>Mounting RBD at Boot Under CentOS 7</title><link>https://bryanapperson.com/blog/mounting-rbd-at-boot-under-centos-7/</link><pubDate>Tue, 18 Feb 2020 00:17:32 UT</pubDate><dc:creator>Bryan Apperson</dc:creator><guid>https://bryanapperson.com/blog/mounting-rbd-at-boot-under-centos-7/</guid><description>This tutorial covers mounting an RBD image at boot under CentOS 7. Make sure to unmount the RBD you want to have mount at boot before following this tutorial. This tutorial requires a CentOS 7 client with a client or admin keyring from Ceph, and a working Ceph cluster. This tutorial also assumes you have already created the RBD image you want to be mounted at boot. Let&amp;rsquo;s begin!
+Assumptions This tutorial assumes the node you are implementing this on has connectivity to a working ceph cluster and also assumes that kernel module RBD is enabled.</description><content:encoded><![CDATA[This tutorial covers mounting an RBD image at boot under CentOS 7. Make sure to unmount the RBD you want to have mount at boot before following this tutorial. This tutorial requires a CentOS 7 client with a client or admin keyring from Ceph, and a working Ceph cluster. This tutorial also assumes you have already created the RBD image you want to be mounted at boot. Let&amp;rsquo;s begin!
 Assumptions This tutorial assumes the node you are implementing this on has connectivity to a working ceph cluster and also assumes that kernel module RBD is enabled. For the purposes of this tutorial I will place variables, the values specified here:
 export poolname = your_pools_name export rbdimage = the_name_of_your_rbd_image export mountpoint = place_to_mount_the rbd Create A systemd service to map and mount automatically on boot / demand You will want to automatically load the kernel module, map the appropriate rbd storage to a local device and mount the ceph image. Here is a simple script for mounting and un-mounting RBD images create one at /usr/bin/mount-rbd-$poolname-$rbdimage for each of your RBD images:
 #!/bin/bash # Image mount/unmount and pool are passed from the systems service as arguments # Determine if we are mounting or unmounting if [ &amp;#34;$1&amp;#34; == &amp;#34;m&amp;#34; ]; then modprobe rbd rbd map --pool $poolname $rbdimage --id admin --keyring /etc/ceph/ceph.client.admin.keyring mkdir -p $mountpoint mount /dev/rbd/$poolname/$rbdimage $mountpoint fi if [ &amp;#34;$1&amp;#34; == &amp;#34;u&amp;#34; ]; then umount $mountpoint rbd unmap /dev/rbd/$poolname/$rbdimage fi Create a new systemd service unit (/etc/systemd/system/mount-rbd-$poolname-$rbdimage.service) for each of your remote rbd images:
@@ -32,7 +8,4 @@ systemctl start mount-rbd-$poolname-$rbdimage
 Mounting an RBD at Boot Under CentOS 7 is Easy! If everything seems to be fine, enable the service to start on boot:
 systemctl enable mount-rbd-$poolname-$rbdimage
 You now have a working RBD mount at boot time! I wil be following this up with a complete tutorial on the entire process of creating an RBD at some point in the future. Leave your thoughts in the comments below.
-]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

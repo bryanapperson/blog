@@ -1,28 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <channel>
-    <docs>https://blogs.law.harvard.edu/tech/rss</docs>
-    <title>blog on Bryan Apperson</title>
-    <link>https://bryanapperson.com/tags/blog/</link>
-    <description>Recent content in blog on Bryan Apperson</description>
-    <image>
-      <title>blog on Bryan Apperson</title>
-      <link>https://bryanapperson.com/tags/blog/</link>
-      <url>https://source.unsplash.com/collection/983219/2000x1322</url>
-    </image>
-    <ttl>1440</ttl>
-    <generator>Hugo 0.71.0-DEV</generator>
-    <language>en-US</language>
-    <copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright>
-    <lastBuildDate>Sat, 16 May 2020 16:09:59 UT</lastBuildDate>
-    <atom:link href="https://bryanapperson.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>From WordPress to Hugo</title>
-      <link>https://bryanapperson.com/blog/from-wordpress-to-hugo/</link>
-      <pubDate>Mon, 17 Feb 2020 00:00:00 UT</pubDate>
-      <dc:creator>Bryan Apperson</dc:creator>
-      <guid>https://bryanapperson.com/blog/from-wordpress-to-hugo/</guid>
-      <description>Hugo static blogs are awesome    Migrating to Hugo It is 2019, enter the brave new world of serverless computing and static blogging. After years of using WordPress, and a few years without any updates this blog is in need of a refresh. When I originally created this blog I had servers (a whole web hosting company in fact). Now I just want to be able to create content and have a lightning fast website that is easy to maintain.</description>
-      <content:encoded><![CDATA[    Hugo static blogs are awesome    Migrating to Hugo It is 2019, enter the brave new world of serverless computing and static blogging. After years of using WordPress, and a few years without any updates this blog is in need of a refresh. When I originally created this blog I had servers (a whole web hosting company in fact). Now I just want to be able to create content and have a lightning fast website that is easy to maintain.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><docs>https://blogs.law.harvard.edu/tech/rss</docs><title>blog on Bryan Apperson</title><link>https://bryanapperson.com/tags/blog/</link><description>Recent content in blog on Bryan Apperson</description><image><title>blog on Bryan Apperson</title><link>https://bryanapperson.com/tags/blog/</link><url>https://source.unsplash.com/collection/983219/2000x1322</url></image><ttl>1440</ttl><generator>Hugo 0.81.0</generator><language>en-US</language><copyright>Copyright &amp;copy; Bryan Apperson. Licensed under CC-BY-ND-4.0. Hosted on Github.</copyright><lastBuildDate>Fri, 19 Mar 2021 02:46:39 UT</lastBuildDate><atom:link href="https://bryanapperson.com/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>From WordPress to Hugo</title><link>https://bryanapperson.com/blog/from-wordpress-to-hugo/</link><pubDate>Mon, 17 Feb 2020 00:00:00 UT</pubDate><dc:creator>Bryan Apperson</dc:creator><guid>https://bryanapperson.com/blog/from-wordpress-to-hugo/</guid><description>Hugo static blogs are awesome Migrating to Hugo It is 2019, enter the brave new world of serverless computing and static blogging. After years of using WordPress, and a few years without any updates this blog is in need of a refresh. When I originally created this blog I had servers (a whole web hosting company in fact). Now I just want to be able to create content and have a lightning fast website that is easy to maintain.</description><content:encoded><![CDATA[    Hugo static blogs are awesome    Migrating to Hugo It is 2019, enter the brave new world of serverless computing and static blogging. After years of using WordPress, and a few years without any updates this blog is in need of a refresh. When I originally created this blog I had servers (a whole web hosting company in fact). Now I just want to be able to create content and have a lightning fast website that is easy to maintain.
 Earlier today I was doing some research, came across Hugo and decided to rebuild this blog using it and host it using github pages, at least initially. This site will likely be a work in progress for some time, however at least the text of the old content is migrated now. As I do this migration I will put out a series of articles on the how and the why of the migration.
 Why Hugo and the Coder theme? Hugo is lightning fast at rendering pages and simple to use, plus the workflow with github pages is straightforward. The coder theme was chosed for now because I like the aesthetics.
 Migrating from Wordpress I wanted a pretty fresh start, so I just used WordPress to export XML and then found a script here. Then I modified it for python 3 as follows:
@@ -30,8 +6,5 @@ Migrating from Wordpress I wanted a pretty fresh start, so I just used WordPress
 Github Pages I chose github pages because I already have a github account and the workflow seemed good. Plus there is an easy way I plan to automate publishing master using travis-ci in the near future have automated publishing. I followed the Hugo docs, using the gh-pages branch based workflow. The repo for this blog now lives here.
 Travis CI I adapted this guide on Travis CI and Hugo to automate the build and publish of my blog to github pages. It is pretty straightforward and I highly recommend it.
 Here is the .travis.yml that I ended up with after optimizing a bit for faster builds of Hugo:
-# Credit to:#https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/# https://docs.travis-ci.com/user/deployment/pages/# https://docs.travis-ci.com/user/reference/xenial/# https://docs.travis-ci.com/user/languages/go/# https://docs.travis-ci.com/user/customizing-the-build/cache:directories:- $HOME/.cache/go-build- $HOME/gopath/pkg/moddist:xeniallanguage:gogo:- 1.12.x# Only clone the most recent commit.git:depth:1# before_install# install - install any dependencies requiredinstall:- go get github.com/gohugoio/hugobefore_script:- rm -rf public 2&amp;gt; /dev/null# script - run the build scriptscript:- hugodeploy:provider:pagesskip-cleanup:truegithub-token:$GITHUB_TOKEN # Set in travis-ci.org dashboard, marked secureemail:$GITHUB_EMAILname:$GITHUB_USERNAMEverbose:truelocal-dir:publicfqdn:bryanapperson.comon:branch:master # branch contains Hugo generator codeConclusion Overall the initial learning curve, setup, customization and migration took about 8 hours. I would say that is pretty good. There will definitely be more posts to follow on my journey with blogging using Hugo.
-]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+# Credit to:#https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/# https://docs.travis-ci.com/user/deployment/pages/# https://docs.travis-ci.com/user/reference/xenial/# https://docs.travis-ci.com/user/languages/go/# https://docs.travis-ci.com/user/customizing-the-build/cache:directories:- $HOME/.cache/go-build- $HOME/gopath/pkg/moddist:xeniallanguage:gogo:- 1.12.x# Only clone the most recent commit.git:depth:1# before_install# install - install any dependencies requiredinstall:- go get github.com/gohugoio/hugobefore_script:- rm -rf public 2&amp;gt; /dev/null# script - run the build scriptscript:- hugodeploy:provider:pagesskip-cleanup:truegithub-token:$GITHUB_TOKEN# Set in travis-ci.org dashboard, marked secureemail:$GITHUB_EMAILname:$GITHUB_USERNAMEverbose:truelocal-dir:publicfqdn:bryanapperson.comon:branch:master# branch contains Hugo generator codeConclusion Overall the initial learning curve, setup, customization and migration took about 8 hours. I would say that is pretty good. There will definitely be more posts to follow on my journey with blogging using Hugo.
+]]></content:encoded></item></channel></rss>
