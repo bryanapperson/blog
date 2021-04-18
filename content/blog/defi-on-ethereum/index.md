@@ -93,5 +93,4 @@ combined with fiat payment systems like Venmo and Zelle.
 What are you going to build? Why aren't you earning 35% on your USD pegged 
 savings? These are the questions which become immediately apparent when 
 you start to dig into DeFi. For now, the answer might be transaction fees, 
-but it won't be forever. I, for one, intend to go all in on self custodial,
-decentralized finance.
+but it won't be forever.
