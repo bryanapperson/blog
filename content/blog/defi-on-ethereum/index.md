@@ -25,7 +25,7 @@ images = [
 
 Decentralized finance is changing the world of lending, borrowing, swapping 
 assets, investing, insurance, and more. This is all happening in a trustless
-fashion via smart contracts, primarly on the Ethereum blockchain. When I 
+fashion via smart contracts, primarily on the Ethereum blockchain. When I 
 realized this, perhaps a bit late, in January of 2021; I became borderline 
 obsessed. For the first time ever, regular people can act as their own 
 banks, lending out money, swapping assets directly with counterparties, 
